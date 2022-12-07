@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
 package model.Users;
 
 import model.Employee.Employee;
@@ -27,6 +28,7 @@ public class Users {
     private String gender;
     private boolean isUserAvailable;
     private boolean isUserAvailableforOrganDonation;
+
     
     public Users() {
         workQueue = new WorkQueue();
@@ -151,8 +153,11 @@ public class Users {
     public void setIsUserAvailableforOrganDonation(boolean isUserAvailableforOrganDonation) {
         this.isUserAvailableforOrganDonation = isUserAvailableforOrganDonation;
     }
+
+    
     
         
+
     
     
     
@@ -162,3 +167,4 @@ public class Users {
     }
     
 }
+

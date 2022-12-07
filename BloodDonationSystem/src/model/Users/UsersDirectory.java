@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
 package model.Users;
 
 import java.util.ArrayList;
@@ -14,7 +15,6 @@ import model.Role.Role;
  * @author sahithigaddam
  */
 public class UsersDirectory {
-    
     
         private ArrayList<Users> listOfAccounts;
 
@@ -34,11 +34,11 @@ public class UsersDirectory {
         return null;
     }
     
-        public Users createUserAccount(String username, String password, Employee employee, Role userRole ){
+        public Users createUserAccount(String name, String password, Employee emp, Role userRole ){
                 Users user = new Users();
-                user.setUserName(username);
+                user.setUserName(name);
                 user.setUserPassword(password);
-                user.setEmployee(employee);
+                user.setEmployee(emp);
                 user.setUserRole(userRole);
                 if(listOfAccounts.contains(user)){
                     JOptionPane.showMessageDialog(null, "Username Already Exists");
@@ -48,27 +48,27 @@ public class UsersDirectory {
                     return user;
     }
     
-    public Users createUserAccount(String username, String userpassword,String phoneNumber,String address,String qualification, String gender,
-            boolean isUserAvailabile, int age, Employee emp, Role userRole,boolean bloodAvailability){
-        Users Account = new Users();
-        Account.setUserName(username);
-        Account.setUserPassword(userpassword);
-        Account.setEmployee(emp);
-        Account.setUserRole(userRole);
-        Account.setPhoneNumber(phoneNumber);
-        Account.setUserAddress(address);
-        Account.setAge(age);
-        Account.setGender(gender);
-        Account.setIsUserAvailable(isUserAvailabile);
-        Account.setQualifications(qualification);
-        Account.setIsUserAvailableforOrganDonation(bloodAvailability);
-        listOfAccounts.add(Account);
-        return Account;
+    public Users createUserAccount(String username, String password,String contact,String add,String qualification, String gender,
+            boolean availabile, int age, Employee emp, Role userRole,boolean bloodAvailability){
+        Users user = new Users();
+        user.setUserName(username);
+        user.setUserPassword(password);
+        user.setEmployee(emp);
+        user.setUserRole(userRole);
+        user.setPhoneNumber(contact);
+        user.setUserAddress(add);
+        user.setAge(age);
+        user.setGender(gender);
+        user.setIsUserAvailable(availabile);
+        user.setQualifications(qualification);
+        user.setIsUserAvailableforOrganDonation(bloodAvailability);
+        listOfAccounts.add(user);
+        return user;
     }
     
     public boolean checkIfUsernameIsUnique(String username){
-        for (Users users : listOfAccounts){
-            if (users.getUserName().equals(username))
+        for (Users user : listOfAccounts){
+            if (user.getUserName().equals(username))
                 return false;
         }
         return true;
@@ -76,8 +76,7 @@ public class UsersDirectory {
 
     public void createUserAccount(String userName, String password, String contact, 
             String address, String qualification, String file_path) {
-        throw new UnsupportedOperationException("Unsupported Operation"); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported Yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
-
