@@ -2,50 +2,68 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Business.Users;
 
-import Business.Employee.Employee;
-import Business.Role.Role;
-import Business.WorkQueue.WorkQueue;
+package model.Users;
+
+import model.Employee.Employee;
+import model.Role.Role;
+import model.WorkQueue.WorkQueue;
 
 /**
  *
- * @author sindhurabandaru
+ * @author sahithigaddam
  */
 public class Users {
     
-    private String uName;
-    private String password;
+    private String userName;
+    private String userPassword;
     private Employee employee;
-    private Role role;
+    private Role userRole;
     private WorkQueue workQueue;
-    private String contact;
+    private String phoneNumber;
     private String userAddress;
     private String qualifications;
-    private String profile;
+    private String userProfile;
     private int age;
     private String gender;
-    private boolean userIsAvailable;
-    private boolean userIsAvailableforOrganDonation;
+    private boolean isUserAvailable;
+    private boolean isUserAvailableforOrganDonation;
+
     
     public Users() {
         workQueue = new WorkQueue();
     }
 
-    public String getuName() {
-        return uName;
+    public Users(String userName, String userPassword, Employee employee, Role userRole, WorkQueue workQueue, String phoneNumber, String userAddress, String qualifications, String userProfile, int age, String gender, boolean isUserAvailable, boolean isUserAvailableforOrganDonation) {
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.employee = employee;
+        this.userRole = userRole;
+        this.workQueue = workQueue;
+        this.phoneNumber = phoneNumber;
+        this.userAddress = userAddress;
+        this.qualifications = qualifications;
+        this.userProfile = userProfile;
+        this.age = age;
+        this.gender = gender;
+        this.isUserAvailable = isUserAvailable;
+        this.isUserAvailableforOrganDonation = isUserAvailableforOrganDonation;
     }
 
-    public void setuName(String uName) {
-        this.uName = uName;
+    public String getUserName() {
+        return userName;
     }
 
-    public String getPassword() {
-        return password;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
     public Employee getEmployee() {
@@ -56,12 +74,12 @@ public class Users {
         this.employee = employee;
     }
 
-    public Role getRole() {
-        return role;
+    public Role getUserRole() {
+        return userRole;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setUserRole(Role userRole) {
+        this.userRole = userRole;
     }
 
     public WorkQueue getWorkQueue() {
@@ -72,12 +90,12 @@ public class Users {
         this.workQueue = workQueue;
     }
 
-    public String getContact() {
-        return contact;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setContact(String contact) {
-        this.contact = contact;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getUserAddress() {
@@ -96,12 +114,12 @@ public class Users {
         this.qualifications = qualifications;
     }
 
-    public String getProfile() {
-        return profile;
+    public String getUserProfile() {
+        return userProfile;
     }
 
-    public void setProfile(String profile) {
-        this.profile = profile;
+    public void setUserProfile(String userProfile) {
+        this.userProfile = userProfile;
     }
 
     public int getAge() {
@@ -120,28 +138,33 @@ public class Users {
         this.gender = gender;
     }
 
-    public boolean isUserIsAvailable() {
-        return userIsAvailable;
+    public boolean isIsUserAvailable() {
+        return isUserAvailable;
     }
 
-    public void setUserIsAvailable(boolean userIsAvailable) {
-        this.userIsAvailable = userIsAvailable;
+    public void setIsUserAvailable(boolean isUserAvailable) {
+        this.isUserAvailable = isUserAvailable;
     }
 
-    public boolean isUserIsAvailableforOrganDonation() {
-        return userIsAvailableforOrganDonation;
+    public boolean isIsUserAvailableforOrganDonation() {
+        return isUserAvailableforOrganDonation;
     }
 
-    public void setUserIsAvailableforOrganDonation(boolean userIsAvailableforOrganDonation) {
-        this.userIsAvailableforOrganDonation = userIsAvailableforOrganDonation;
+    public void setIsUserAvailableforOrganDonation(boolean isUserAvailableforOrganDonation) {
+        this.isUserAvailableforOrganDonation = isUserAvailableforOrganDonation;
     }
+
     
+    
+        
+
     
     
     
      @Override
     public String toString() {
-        return uName;
+        return userName;
     }
     
 }
+
