@@ -8,6 +8,6 @@ package model.Role;
  *
  * @author varshareddykumbham
  */
-public class BloodFindingTeamHead {
+public class BloodFindingTeam {
     
 }

@@ -49,7 +49,7 @@ public abstract class Enterprise extends Organization{
     
     public Enterprise(String name,EnterpriseType type){
         super(name);
-        this.name=type;
+        this.enterpriseType=type;
         organizationDirectory=new OrganizationDirectory();
     }    
 }
