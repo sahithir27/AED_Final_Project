@@ -8,6 +8,6 @@ package model.Enterprise;
  *
  * @author varshareddykumbham
  */
-public class NGOEnterprise {
+public class BloodBankEnterprise {
     
 }
