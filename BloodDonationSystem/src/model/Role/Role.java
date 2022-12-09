@@ -5,6 +5,10 @@
 package model.Role;
 
 import javax.swing.JPanel;
+import model.Enterprise.Enterprise;
+import model.Organization.Organization;
+import model.Person.DonorsDirectory;
+import model.Users.Users;
 
 /**
  *
@@ -15,13 +19,13 @@ public abstract class Role {
        Sysadmin("Syadmin") ,
        Admin("Admin"),
        Doctor("Doctor"),
-       LabTechnician("Lab Technician"),
-       ProcurementTeamHead("Procurement Team Head"),
+       Physicist("Physicist"),
+       BloodFindingTeamHead("Blood Finding Team Head"),
        HealthOfficer("Health Officer"),
        EventOrganiser("Event Organiser"),
        Donor("Donor"),
-       OrganBankManager("Organ Bank Manager"),
-       PhysioTherapist("Physio Therapist");
+       BloodBankManager("Organ Bank Manager"),
+       Physician("Physician");
        
         private RoleType(String value){
             this.value = value;

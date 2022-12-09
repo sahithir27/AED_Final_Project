@@ -4,10 +4,22 @@
  */
 package model.Enterprise;
 
+import java.util.ArrayList;
+import model.Role.Role;
+
 /**
  *
  * @author varshareddykumbham
  */
-public class BloodBankEnterprise {
+
+public class BloodBankEnterprise extends Enterprise{
+     public BloodBankEnterprise(String name){
+        super(name,Enterprise.EnterpriseType.BloodBank);
+    }
     
+    @Override
+    public ArrayList<Role> getRole() {
+        return null;
+    }
 }
+
