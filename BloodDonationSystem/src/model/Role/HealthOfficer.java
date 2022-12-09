@@ -4,7 +4,6 @@
  */
 package model.Role;
 
-import Business.Network.Network;
 import javax.swing.JPanel;
 import model.EcoSystem;
 import model.Enterprise.Enterprise;
