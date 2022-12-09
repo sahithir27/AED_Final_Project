@@ -16,25 +16,25 @@ import model.WorkQueue.WorkQueue;
  * @author sahithigaddam
  */
 public abstract class Organization {
-    private String name;
+    private String organizationName;
     private WorkQueue workQueue;
     private EmployeeDirectory listOfEmployees;
     private UsersDirectory listOfUsers;
     private PatientsDirectory listOfPatients;
-    private int orgID;
+    private int organizationId;
     private static int count=0;
     private OrganizationType organizationType;
 
     
     public enum OrganizationType{
-        Medical("Medical"), 
-        Diagnostics("Diagnostics"), 
-        Facilities("Facilities"),
+        MedicalCare("Medical Care"), 
+        MedicalDiagnostics("Medical Diagnostics"), 
+        MedicalFacilities("Medical Facilities"),
         OrganManagement("Organ Management"),
         PoliciesFinance("Policies and Finance"),
-        AwarnessCampaign("Awarness Campaign"),
+        MedicalAwarnessCampaign("MedicalAwarnessCampaign"),
         User("User"),
-        Therapist("Therapist");
+        Physician("Physician");
         private String type;
         private OrganizationType(String type) {
             this.type = type;
@@ -45,21 +45,23 @@ public abstract class Organization {
     }
 
     public Organization(String name) {
-        this.name = name;
+        this.organizationName = name;
         workQueue = new WorkQueue();
         listOfEmployees = new EmployeeDirectory();
         listOfUsers = new UsersDirectory();
         listOfPatients=new PatientsDirectory();
-        orgID = count;
+        organizationId = count;
         ++count;
     }
+    
+    public abstract ArrayList<Role> getRole();
 
-    public String getName() {
-        return name;
+    public String getOrganizationName() {
+        return organizationName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
     }
 
     public WorkQueue getWorkQueue() {
@@ -94,12 +96,12 @@ public abstract class Organization {
         this.listOfPatients = listOfPatients;
     }
 
-    public int getOrgID() {
-        return orgID;
+    public int getOrganizationId() {
+        return organizationId;
     }
 
-    public void setOrgID(int orgID) {
-        this.orgID = orgID;
+    public void setOrganizationId(int organizationId) {
+        this.organizationId = organizationId;
     }
 
     public static int getCount() {
@@ -120,6 +122,6 @@ public abstract class Organization {
     
     @Override
     public String toString() {
-        return name;
+        return organizationName;
     }
 }
