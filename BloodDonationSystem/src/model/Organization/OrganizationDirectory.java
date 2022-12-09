@@ -28,25 +28,25 @@ public class OrganizationDirectory {
      public Organization createOrganization(OrganizationType organizationType,String name){
         Organization organization = null;
         if (organizationType.getValue().equals(OrganizationType.MedicalCare.getValue())){
-            organization = new Medical(name);
+            organization = new MedicalCare(name);
             listOfOrganizations.add(organization);
         }else if (organizationType.getValue().equals(OrganizationType.MedicalDiagnostics.getValue())){
-            organization = new Diagnostics(name);
+            organization = new DiagnosticCenter(name);
             listOfOrganizations.add(organization);
         }else if (organizationType.getValue().equals(OrganizationType.MedicalFacilities.getValue())){
-            organization = new Facilities(name);
+            organization = new MedicalFacilities(name);
             listOfOrganizations.add(organization);
-        }else if (organizationType.getValue().equals(OrganizationType.OrganManagement.getValue())){
-            organization = new OrganManagement(name);
+        }else if (organizationType.getValue().equals(OrganizationType.BloodManagement.getValue())){
+            organization = new BloodManagement(name);
             listOfOrganizations.add(organization);
         }else if(organizationType.getValue().equals(OrganizationType.PoliciesFinance.getValue())){
-          organization = new PoliciesAndFinance(name);
+          organization = new PoliciesFinance(name);
           listOfOrganizations.add(organization);
         }else if(organizationType.getValue().equals(OrganizationType.MedicalAwarnessCampaign.getValue())){
-             organization = new AwarnessCampaign(name);
+             organization = new MedicalAwarnessCampaign(name);
             listOfOrganizations.add(organization);
         }else if(organizationType.getValue().equals(OrganizationType.Physician.getValue())){
-             organization = new Therapists(name);
+             organization = new Physicians(name);
              listOfOrganizations.add(organization);
         }
         return organization;

@@ -61,7 +61,7 @@ public class UsersDirectory {
         user.setGender(gender);
         user.setIsUserAvailable(availabile);
         user.setQualifications(qualification);
-        user.setIsUserAvailableforOrganDonation(bloodAvailability);
+        user.setIsUserAvailableforBloodDonation(bloodAvailability);
         listOfAccounts.add(user);
         return user;
     }

@@ -30,11 +30,12 @@ public abstract class Organization {
         MedicalCare("Medical Care"), 
         MedicalDiagnostics("Medical Diagnostics"), 
         MedicalFacilities("Medical Facilities"),
-        OrganManagement("Organ Management"),
+        BloodManagement("Blood Management"),
         PoliciesFinance("Policies and Finance"),
         MedicalAwarnessCampaign("MedicalAwarnessCampaign"),
         User("User"),
         Physician("Physician");
+        
         private String type;
         private OrganizationType(String type) {
             this.type = type;
@@ -54,7 +55,7 @@ public abstract class Organization {
         ++count;
     }
     
-    public abstract ArrayList<Role> getRole();
+    public abstract ArrayList<Role> getSupportedRole();
 
     public String getOrganizationName() {
         return organizationName;
