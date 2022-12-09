@@ -6,6 +6,9 @@ package ui;
 
 import java.awt.CardLayout;
 import model.DB4OUtil.DB4OUtil;
+import javax.swing.JOptionPane;
+import model.Organization.Organization;
+import model.Users.Users;
 
 /**
  *
@@ -206,7 +209,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     if(userAccount==null){
                         //Step 3:check against each organization for each enterprise
                         for(Organization organization:enterprise.getoDirectory().getListOfOrganizations()){
-                            userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
+                            userAccount=organization.getListOfUsers().authenticateUser(userName, password);
                             if(userAccount!=null){
                                 inNetwork=network;
                                 inEnterprise=enterprise;
@@ -235,7 +238,7 @@ public class MainJFrame extends javax.swing.JFrame {
         }
         else{
             CardLayout layout=(CardLayout)loginContainer.getLayout();
-            loginContainer.add("workArea",userAccount.getRole().createWorkArea(loginContainer, userAccount, inOrganization, inEnterprise, system, inNetwork, donorDirectory));
+            loginContainer.add("workArea",userAccount.getUserRole().createWorkArea(loginContainer, userAccount, inOrganization, inEnterprise, system, inNetwork, donorDirectory));
             layout.next(loginContainer);
         }
 
