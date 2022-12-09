@@ -13,8 +13,8 @@ import model.Users.Users;
  * @author sindhurabandaru
  */
 public class ConfigureASystem {
-    public static EcoSystemConfig configure(){
-        EcoSystemConfig ecoSystem = EcoSystemConfig.getInstance();
+    public static EcoSystem configure(){
+        EcoSystem ecoSystem = EcoSystem.getInstance();
         
         Employee employeeList = ecoSystem.getEmployeeDirectory().createEmployee(1, "systemadmin");
         Users userAdminList  = ecoSystem.getUsersDirectory().createUserAccount("systemadmin", "systemadmin", employeeList, new SystemAdmin());
