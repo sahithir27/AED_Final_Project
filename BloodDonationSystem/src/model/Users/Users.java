@@ -27,14 +27,16 @@ public class Users {
     private int age;
     private String gender;
     private boolean isUserAvailable;
-    private boolean isUserAvailableforOrganDonation;
+    private boolean isUserAvailableforBloodDonation;
 
     
     public Users() {
         workQueue = new WorkQueue();
     }
 
-    public Users(String userName, String userPassword, Employee employee, Role userRole, WorkQueue workQueue, String phoneNumber, String userAddress, String qualifications, String userProfile, int age, String gender, boolean isUserAvailable, boolean isUserAvailableforOrganDonation) {
+    public Users(String userName, String userPassword, Employee employee, Role userRole, WorkQueue workQueue, 
+            String phoneNumber, String userAddress, String qualifications, String userProfile, int age, String gender, 
+            boolean isUserAvailable, boolean isUserAvailableforBloodDonation) {
         this.userName = userName;
         this.userPassword = userPassword;
         this.employee = employee;
@@ -47,7 +49,7 @@ public class Users {
         this.age = age;
         this.gender = gender;
         this.isUserAvailable = isUserAvailable;
-        this.isUserAvailableforOrganDonation = isUserAvailableforOrganDonation;
+        this.isUserAvailableforBloodDonation = isUserAvailableforBloodDonation;
     }
 
     public String getUserName() {
@@ -146,12 +148,12 @@ public class Users {
         this.isUserAvailable = isUserAvailable;
     }
 
-    public boolean isIsUserAvailableforOrganDonation() {
-        return isUserAvailableforOrganDonation;
+    public boolean isIsUserAvailableforBloodDonation() {
+        return isUserAvailableforBloodDonation;
     }
 
-    public void setIsUserAvailableforOrganDonation(boolean isUserAvailableforOrganDonation) {
-        this.isUserAvailableforOrganDonation = isUserAvailableforOrganDonation;
+    public void setIsUserAvailableforBloodDonation(boolean isUserAvailableforBloodDonation) {
+        this.isUserAvailableforBloodDonation = isUserAvailableforBloodDonation;
     }
 
     
