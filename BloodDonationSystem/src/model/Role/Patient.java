@@ -4,10 +4,25 @@
  */
 package model.Role;
 
+import Business.Network.Network;
+import javax.swing.JPanel;
+import model.Enterprise.Enterprise;
+import model.Organization.Organization;
+import model.Person.DonorsDirectory;
+import model.Person.Patients;
+
 /**
  *
  * @author varshareddykumbham
  */
-public class Patient {
+public class Patient extends Role{
+    
+    
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, Users userAccount, Organization organization, Enterprise enterprise, EcoSystem ecosystem,
+            Network network, DonorsDirectory donorDirectory) {
+        return new Patients(userProcessContainer, enterprise);
+    }
     
 }
+

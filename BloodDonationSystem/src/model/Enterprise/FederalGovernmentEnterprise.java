@@ -4,10 +4,24 @@
  */
 package model.Enterprise;
 
+import java.util.ArrayList;
+import model.Role.Role;
+
 /**
  *
  * @author varshareddykumbham
  */
-public class FederalGovernmentEnterprise {
+
+
+public class FederalGovernmentEnterprise extends Enterprise{
     
+   public FederalGovernmentEnterprise(String name){
+        super(name,EnterpriseType.FederalGovernment);
+    }
+        
+    @Override
+    public ArrayList<Role> getRole() {
+        return null;
+    }
 }
+
