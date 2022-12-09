@@ -6,7 +6,9 @@ package model.Role;
 
 import Business.Network.Network;
 import javax.swing.JPanel;
+import model.EcoSystem;
 import model.Enterprise.Enterprise;
+import model.Network.Network;
 import model.Organization.Organization;
 import model.Person.DonorsDirectory;
 import model.Users.Users;
