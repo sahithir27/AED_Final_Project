@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Business.Users;
+package model.Users;
 
-import Business.Employee.Employee;
-import Business.Role.Role;
-import Business.WorkQueue.WorkQueue;
+import model.Employee.Employee;
+import model.Role.Role;
+import model.WorkQueue.WorkQueue;
 
 /**
  *
