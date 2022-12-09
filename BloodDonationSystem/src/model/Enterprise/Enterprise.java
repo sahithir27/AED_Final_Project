@@ -5,6 +5,7 @@
 package model.Enterprise;
 
 import model.Organization.Organization;
+import model.Organization.OrganizationDirectory;
 
 /**
  *

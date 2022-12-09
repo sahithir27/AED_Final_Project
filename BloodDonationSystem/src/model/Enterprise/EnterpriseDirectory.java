@@ -31,14 +31,14 @@ public class EnterpriseDirectory {
         if(type==Enterprise.EnterpriseType.Hospital){
             enterprise=new HospitalEnterprise(name);
             eList.add(enterprise);
-        }else if (type==Enterprise.EnterpriseType.OrganBank){
-            enterprise = new OrganBankEnterprise(name);
+        }else if (type==Enterprise.EnterpriseType.BloodBank){
+            enterprise = new BloodBankEnterprise(name);
             eList.add(enterprise);    
-        }else if(type==Enterprise.EnterpriseType.NGO){
-            enterprise = new NGOEnterprise(name);
+        }else if(type==Enterprise.EnterpriseType.FederalGovernment){
+            enterprise = new FederalGovernmentEnterprise(name);
             eList.add(enterprise);    
-        }else if(type==Enterprise.EnterpriseType.Physio){
-            enterprise = new PhysioEnterprise(name);
+        }else if(type==Enterprise.EnterpriseType.Rehab){
+            enterprise = new RehabEnterprise(name);
             eList.add(enterprise);    
         }
         return enterprise;

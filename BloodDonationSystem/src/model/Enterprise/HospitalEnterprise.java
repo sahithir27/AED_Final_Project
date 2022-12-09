@@ -5,6 +5,7 @@
 package model.Enterprise;
 
 import java.util.ArrayList;
+import model.Role.Role;
 
 /**
  *
