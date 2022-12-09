@@ -5,6 +5,7 @@
 package model.Organization;
 
 import java.util.ArrayList;
+import model.Role.HealthOfficer;
 import model.Role.Role;
 
 /**
@@ -20,7 +21,7 @@ public class PoliciesFinance extends Organization{
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> role = new ArrayList();
-        role.add(new Doctor());
+        role.add(new HealthOfficer());
         return role;
     }
     
