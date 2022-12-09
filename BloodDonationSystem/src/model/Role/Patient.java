@@ -9,7 +9,6 @@ import model.Enterprise.Enterprise;
 import model.Network.Network;
 import model.Organization.Organization;
 import model.Person.DonorsDirectory;
-import model.Person.Patients;
 import model.Users.Users;
 
 /**
