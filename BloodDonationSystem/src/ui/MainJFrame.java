@@ -7,7 +7,11 @@ package ui;
 import java.awt.CardLayout;
 import model.DB4OUtil.DB4OUtil;
 import javax.swing.JOptionPane;
+import model.EcoSystem;
+import model.Enterprise.Enterprise;
+import model.Network.Network;
 import model.Organization.Organization;
+import model.Person.DonorsDirectory;
 import model.Users.Users;
 
 /**
@@ -19,6 +23,9 @@ public class MainJFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainJFrame
      */
+    private EcoSystem system;
+    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+    private DonorsDirectory donorDirectory;
     public MainJFrame() {
         initComponents();
     }
@@ -191,7 +198,7 @@ public class MainJFrame extends javax.swing.JFrame {
         char[] passwordCharArray = tfPassword.getPassword();
         String password = String.valueOf(passwordCharArray);
 
-        Users userAccount=system.getUserAccountDirectory().authenticateUser(userName, password);
+        Users userAccount=system.getListOfUsers().authenticateUser(userName, password);
 
         Enterprise inEnterprise=null;
         Organization inOrganization=null;
@@ -199,16 +206,16 @@ public class MainJFrame extends javax.swing.JFrame {
 
         if(userAccount==null){
             //Step 2: Go inside each network and check each enterprise
-            for(Network network:system.getNetwork_List()){
-                System.out.println(network.geteList().geteList());
+            for(Network network:system.getNetworkList()){
+                System.out.println(network.getListOfEnterprises().getEnterpriseList());
                 //Step 2.a: check against each enterprise
-                for(Enterprise enterprise:network.geteList().geteList()){
+                for(Enterprise enterprise:network.getListOfEnterprises().getEnterpriseList()){
                     System.out.println(enterprise);
-                    userAccount=enterprise.getUserAccountDirectory().authenticateUser(userName, password);
+                    userAccount=enterprise.getListOfUsers().authenticateUser(userName, password);
                     inNetwork=network;
                     if(userAccount==null){
                         //Step 3:check against each organization for each enterprise
-                        for(Organization organization:enterprise.getoDirectory().getListOfOrganizations()){
+                        for(Organization organization:enterprise.getLisOfOrganizations().getOrganizationList()){
                             userAccount=organization.getListOfUsers().authenticateUser(userName, password);
                             if(userAccount!=null){
                                 inNetwork=network;

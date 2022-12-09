@@ -11,18 +11,18 @@ import java.util.ArrayList;
  * @author varshareddykumbham
  */
 public class EnterpriseDirectory {
-    private ArrayList<Enterprise> eList;
+    private ArrayList<Enterprise> enterpriseList;
 
-    public ArrayList<Enterprise> geteList() {
-        return eList;
+    public ArrayList<Enterprise> getEnterpriseList() {
+        return enterpriseList;
     }
 
-    public void seteList(ArrayList<Enterprise> eList) {
-        this.eList = eList;
+    public void setEnterpriseList(ArrayList<Enterprise> eList) {
+        this.enterpriseList = eList;
     }
     
     public EnterpriseDirectory(){
-        eList=new ArrayList<Enterprise>();
+        enterpriseList=new ArrayList<Enterprise>();
     }
     
       //Create enterprise
@@ -30,16 +30,16 @@ public class EnterpriseDirectory {
         Enterprise enterprise=null;
         if(type==Enterprise.EnterpriseType.Hospital){
             enterprise=new HospitalEnterprise(name);
-            eList.add(enterprise);
+            enterpriseList.add(enterprise);
         }else if (type==Enterprise.EnterpriseType.BloodBank){
             enterprise = new BloodBankEnterprise(name);
-            eList.add(enterprise);    
+            enterpriseList.add(enterprise);    
         }else if(type==Enterprise.EnterpriseType.FederalGovernment){
             enterprise = new FederalGovernmentEnterprise(name);
-            eList.add(enterprise);    
+            enterpriseList.add(enterprise);    
         }else if(type==Enterprise.EnterpriseType.Rehab){
             enterprise = new RehabEnterprise(name);
-            eList.add(enterprise);    
+            enterpriseList.add(enterprise);    
         }
         return enterprise;
     }
