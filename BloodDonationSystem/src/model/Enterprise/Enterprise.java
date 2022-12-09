@@ -20,9 +20,9 @@ public abstract class Enterprise extends Organization{
 
     public enum EnterpriseType{
         Hospital("Hospital"),
-        OrganBank("Organ Bank"),
-        NGO("NGO"),
-        Physio("Physio");
+        BloodBank("Blood Bank"),
+        FederalGovernment("Federal Government"),
+        Rehab("Rehabilitation Center");
 
         private String type;
         

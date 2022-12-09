@@ -4,10 +4,19 @@
  */
 package model.Enterprise;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author varshareddykumbham
  */
-public class HospitalEnterprise {
+public class HospitalEnterprise extends Enterprise{
+    public HospitalEnterprise(String name){
+        super(name,Enterprise.EnterpriseType.Hospital);
+    }
     
+    @Override
+    public ArrayList<Role> getRole() {
+        return null;
+    }
 }
