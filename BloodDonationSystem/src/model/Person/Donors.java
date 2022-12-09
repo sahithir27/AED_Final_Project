@@ -6,6 +6,7 @@ package model.Person;
 
 import java.util.ArrayList;
 import java.util.List;
+import model.BloodType.BloodType;
 
 /**
  *
@@ -25,6 +26,9 @@ public class Donors {
     private String network;
     private String emergencyName;
     private String emergencyContact;
+    private boolean isBloodAvailibility;
+    List<String> bloodTypeList;
+    private ArrayList<BloodType> bloodtypeDirectory = new ArrayList<BloodType>();
 
     public Donors() {
     }
@@ -149,5 +153,27 @@ public class Donors {
         this.emergencyContact = emergencyContact;
     }
 
-    
+    public boolean isIsBloodAvailibility() {
+        return isBloodAvailibility;
+    }
+
+    public void setIsBloodAvailibility(boolean isBloodAvailibility) {
+        this.isBloodAvailibility = isBloodAvailibility;
+    }
+
+    public List<String> getBloodTypeList() {
+        return bloodTypeList;
+    }
+
+    public void setBloodTypeList(List<String> bloodTypeList) {
+        this.bloodTypeList = bloodTypeList;
+    }
+
+    public ArrayList<BloodType> getBloodtypeDirectory() {
+        return bloodtypeDirectory;
+    }
+
+    public void setBloodtypeDirectory(ArrayList<BloodType> bloodtypeDirectory) {
+        this.bloodtypeDirectory = bloodtypeDirectory;
+    }
 }

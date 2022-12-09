@@ -8,11 +8,12 @@ import model.Role.Role;
 import model.Person.Donors;
 import model.Network.Network;
 import model.Organization.Organization;
-import model.Role.SystemAdminRole;
+import model.Role.SystemAdmin;
 import model.Waitlist.Wait;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
+import model.Role.Donor;
 
 /**
  *
@@ -36,19 +37,19 @@ public class EcoSystem extends Organization{
     
     
     public Donor createDonor(String donorName, int donorAge, String donorSex, String donorBloodGroup, String donorContactAddress, String donorAddress,
-                String donorEmail, String donorPOC, String donorPOCNum, boolean organAvalailabity,List<String >organsList){
+                String donorEmail, String donorPOC, String donorPOCNum, boolean organAvalailabity,List<String >bloodTypeList){
         
         Donors donorList = new Donors();
-        donorList.setdName(donorName);
-        donorList.setdAge(donorAge);
-        donorList.setdGender(donorSex);
-        donorList.setdBloodGroup(donorBloodGroup);
+        donorList.setDonorName(donorName);
+        donorList.setDonorAge(donorAge);
+        donorList.setDonorGender(donorSex);
+        donorList.setDonorBloodGroup(donorBloodGroup);
         donorList.setContact(donorContactAddress);
-        donorList.setdAddress(donorAddress);
-        donorList.setdEmail(donorEmail);
-        donorList.setpName(donorPOC);
-        donorList.setpContact(donorPOCNum);
-        donorList.setOrganList(organsList);
+        donorList.setDonorAddress(donorAddress);
+        donorList.setDonorEmail(donorEmail);
+        donorList.setEmergencyName(donorPOC);
+        donorList.setEmergencyContact(donorPOCNum);
+        donorList.setBloodTypeList(bloodTypeList);
         donorListDirectory.add(donorList);
         return donorList;
     }
@@ -136,7 +137,7 @@ public class EcoSystem extends Organization{
     
     public Network getNetworkByName(String networkName){
         for(Network network:networkListDirectory){
-            if(network.getName().equals(networkName)){
+            if(network.getEnterpriseName().equals(networkName)){
                 return network;
             }
         }
@@ -156,7 +157,7 @@ public class EcoSystem extends Organization{
     @Override
     public ArrayList<Role> getRole() {
         ArrayList<Role> roleList=new ArrayList<Role>();
-        roleList.add(new SystemAdminRole());
+        roleList.add(new SystemAdmin ());
         return roleList;
     }
     private EcoSystem(){
