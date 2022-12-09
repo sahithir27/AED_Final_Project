@@ -1,6 +1,7 @@
-package Business.Network;
+package model.Network;
 
-import Business.Enterprise.EnterpriseDirectory;
+import model.Enterprise.EnterpriseDirectory;
+import model.Enterprise.EnterpriseDirectory;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -13,10 +14,10 @@ import Business.Enterprise.EnterpriseDirectory;
  */
 public class Network {
     private String enterpriseName;
-    private EnterpriseList enterpriseList;
+    private EnterpriseDirectory listOfEnterprises;
     
     public Network(){
-        enterpriseList=new EnterpriseList();
+        listOfEnterprises=new EnterpriseDirectory();
     }
     public String getEnterpriseName() {
         return enterpriseName;
@@ -26,12 +27,12 @@ public class Network {
         this.enterpriseName = enterpriseName;
     }
 
-    public EnterpriseList getEnterpriseList() {
-        return enterpriseList;
+    public EnterpriseDirectory getListOfEnterprises() {
+        return listOfEnterprises;
     }
 
-    public void setEnterpriseList(EnterpriseList enterpriseList) {
-        this.enterpriseList = enterpriseList;
+    public void setListOfEnterprises(EnterpriseDirectory listOfEnterprises) {
+        this.listOfEnterprises = listOfEnterprises;
     }
     
     
