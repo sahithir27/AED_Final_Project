@@ -8,7 +8,7 @@ import model.Role.Role;
 import model.Person.Donors;
 import model.Network.Network;
 import model.Organization.Organization;
-import model.Role.SystemAdminRole;
+import model.Role.SystemAdmin;
 import model.Waitlist.Wait;
 import java.util.ArrayList;
 import java.util.List;
