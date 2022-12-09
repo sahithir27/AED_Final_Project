@@ -4,10 +4,13 @@
  */
 package model.Role;
 
-import Business.Network.Network;
+import model.Network.Network;
 import javax.swing.JPanel;
+import model.EcoSystem;
 import model.Enterprise.Enterprise;
+import model.Network.Network;
 import model.Organization.Organization;
+import model.Organization.Physicians;
 import model.Person.DonorsDirectory;
 import model.Users.Users;
 
@@ -22,7 +25,7 @@ public class Physician extends Role{
     public JPanel createWorkArea(JPanel userProcessContainer, Users userAccount, 
             Organization organization, Enterprise enterprise, 
             EcoSystem business, Network network, DonorsDirectory donorDirectory) {
-         return new PhysioTherapistWorkAreaJPanel(userProcessContainer, userAccount, (PhysioTherapist)organization, enterprise,business, network);
+         return new PhysioTherapistWorkAreaJPanel(userProcessContainer, userAccount, (Physicians)organization, enterprise,business, network);
     }
     
 }

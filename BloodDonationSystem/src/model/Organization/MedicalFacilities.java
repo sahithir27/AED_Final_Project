@@ -5,6 +5,7 @@
 package model.Organization;
 
 import java.util.ArrayList;
+import model.Role.Doctor;
 import model.Role.Role;
 
 /**

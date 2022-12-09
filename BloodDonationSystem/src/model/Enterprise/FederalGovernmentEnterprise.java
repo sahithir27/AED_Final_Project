@@ -20,7 +20,7 @@ public class FederalGovernmentEnterprise extends Enterprise{
     }
         
     @Override
-    public ArrayList<Role> getRole() {
+    public ArrayList<Role> getSupportedRole() {
         return null;
     }
 }

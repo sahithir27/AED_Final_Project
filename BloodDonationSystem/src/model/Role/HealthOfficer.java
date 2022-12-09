@@ -6,8 +6,12 @@ package model.Role;
 
 import Business.Network.Network;
 import javax.swing.JPanel;
+import model.EcoSystem;
 import model.Enterprise.Enterprise;
+import model.Network.Network;
 import model.Organization.Organization;
+import model.Organization.PoliciesFinance;
+import model.Person.DonorsDirectory;
 import model.Users.Users;
 
 /**
@@ -21,6 +25,6 @@ public class HealthOfficer extends Role{
     public JPanel createWorkArea(JPanel userProcessContainer, Users userAccount, Organization org, Enterprise enterprise, EcoSystem ecosystem,
             Network network, DonorsDirectory donorDirectory) {
         return new HealthOfficerJPanel(userProcessContainer,userAccount,
-                (FinanceEvent)org, enterprise,ecosystem, network);
+                (PoliciesFinance)org, enterprise,ecosystem, network);
     }
 }

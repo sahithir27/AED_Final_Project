@@ -21,13 +21,15 @@ public class Patients {
     private boolean isAlive;
     private boolean isDonor;
     private boolean isDirectDonation;
-    private ArrayList<String> organList;
+    private ArrayList<String> bloodTypeList;
     private ArrayList<String> testDataList;
 
     public Patients() {
     }
 
-    public Patients(int patientId, String patientName, String patientAge, String gender, String contact, String speciality, String doctor, boolean isAlive, boolean isDonor, boolean isDirectDonation, ArrayList<String> organList, ArrayList<String> testDataList) {
+    public Patients(int patientId, String patientName, String patientAge, String gender, String contact, String speciality,
+            String doctor, boolean isAlive, boolean isDonor, boolean isDirectDonation, ArrayList<String> bloodTypeList, 
+            ArrayList<String> testDataList) {
         this.patientId = patientId;
         this.patientName = patientName;
         this.patientAge = patientAge;
@@ -38,7 +40,7 @@ public class Patients {
         this.isAlive = isAlive;
         this.isDonor = isDonor;
         this.isDirectDonation = isDirectDonation;
-        this.organList = organList;
+        this.bloodTypeList = bloodTypeList;
         this.testDataList = testDataList;
     }
 
@@ -122,12 +124,12 @@ public class Patients {
         this.isDirectDonation = isDirectDonation;
     }
 
-    public ArrayList<String> getOrganList() {
-        return organList;
+    public ArrayList<String> getBloodTypeList() {
+        return bloodTypeList;
     }
 
-    public void setOrganList(ArrayList<String> organList) {
-        this.organList = organList;
+    public void setBloodTypeList(ArrayList<String> bloodTypeList) {
+        this.bloodTypeList = bloodTypeList;
     }
 
     public ArrayList<String> getTestDataList() {

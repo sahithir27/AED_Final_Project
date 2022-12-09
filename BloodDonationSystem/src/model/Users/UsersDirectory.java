@@ -16,18 +16,18 @@ import model.Role.Role;
  */
 public class UsersDirectory {
     
-        private ArrayList<Users> listOfAccounts;
+        private ArrayList<Users> listOfUsers;
 
         public UsersDirectory() {
-            listOfAccounts = new ArrayList();
+            listOfUsers = new ArrayList();
         }
 
     public ArrayList<Users> getAccountList() {
-        return listOfAccounts;
+        return listOfUsers;
     }
     
     public Users authenticateUser(String username, String password){
-        for (Users user : listOfAccounts)
+        for (Users user : listOfUsers)
             if (user.getUserName().equals(username) && user.getUserPassword().equals(password)){
                 return user;
             }
@@ -40,10 +40,10 @@ public class UsersDirectory {
                 user.setUserPassword(password);
                 user.setEmployee(emp);
                 user.setUserRole(userRole);
-                if(listOfAccounts.contains(user)){
+                if(listOfUsers.contains(user)){
                     JOptionPane.showMessageDialog(null, "Username Already Exists");
                 }else{
-                    listOfAccounts.add(user);
+                    listOfUsers.add(user);
             }
                     return user;
     }
@@ -62,12 +62,12 @@ public class UsersDirectory {
         user.setIsUserAvailable(availabile);
         user.setQualifications(qualification);
         user.setIsUserAvailableforBloodDonation(bloodAvailability);
-        listOfAccounts.add(user);
+        listOfUsers.add(user);
         return user;
     }
     
     public boolean checkIfUsernameIsUnique(String username){
-        for (Users user : listOfAccounts){
+        for (Users user : listOfUsers){
             if (user.getUserName().equals(username))
                 return false;
         }

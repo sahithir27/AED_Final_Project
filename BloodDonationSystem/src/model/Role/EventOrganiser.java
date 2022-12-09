@@ -6,8 +6,10 @@ package model.Role;
 
 import Business.Network.Network;
 import javax.swing.JPanel;
+import model.EcoSystem;
 import model.Enterprise.Enterprise;
 import model.Network.Network;
+import model.Organization.MedicalAwarnessCampaign;
 import model.Organization.Organization;
 import model.Person.DonorsDirectory;
 import model.Users.Users;
@@ -22,7 +24,7 @@ public class EventOrganiser extends Role{
      @Override
     public JPanel createWorkArea(JPanel userProcessContainer, Users userAccount, Organization org, Enterprise enterprise, EcoSystem ecosystem,
             Network network, DonorsDirectory donorDirectory) {
-        return new EventOrganizerWorkAreaJPanel(userProcessContainer, userAccount,(AwarnessEvent) org, ecosystem);
+        return new EventOrganizerWorkAreaJPanel(userProcessContainer, userAccount,(MedicalAwarnessCampaign) org, ecosystem);
     }
     
 }
