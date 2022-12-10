@@ -23,7 +23,8 @@ public class EventOrganiser extends Role{
      @Override
     public JPanel createWorkArea(JPanel userProcessContainer, Users userAccount, Organization org, Enterprise enterprise, EcoSystem ecosystem,
             Network network, DonorsDirectory donorDirectory) {
-        return new EventOrganizerJPanel(userProcessContainer, userAccount,(MedicalAwarnessCampaign) org, ecosystem);
+        //return new EventOrganizerJPanel(userProcessContainer, userAccount,(MedicalAwarnessCampaign) org, ecosystem);
+        return null;
     }
     
 }

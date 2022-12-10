@@ -213,7 +213,7 @@ public class DiagnosticsJPanel extends javax.swing.JPanel {
         else{
             request.setStatus("Processing");
 
-            ProcessDiagnosticsJPanel processdiag = new ProcessDiagnosticsJPanel(userProcessContainer, request);
+            ProcessDiagnosticJPanel processdiag = new ProcessDiagnosticJPanel(userProcessContainer, request);
             System.out.println(request.getTests()+" +++++ Tests");
             userProcessContainer.add("ProcessDiagnostics", processdiag);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
