@@ -13,18 +13,18 @@ import model.Enterprise.EnterpriseDirectory;
  * @author sindhurabandaru
  */
 public class Network {
-    private String enterpriseName;
+    private String name;
     private EnterpriseDirectory listOfEnterprises;
     
     public Network(){
         listOfEnterprises=new EnterpriseDirectory();
     }
-    public String getEnterpriseName() {
-        return enterpriseName;
+    public String getName() {
+        return name;
     }
 
-    public void setEnterpriseName(String enterpriseName) {
-        this.enterpriseName = enterpriseName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public EnterpriseDirectory getListOfEnterprises() {
@@ -38,7 +38,7 @@ public class Network {
     
     @Override
     public String toString(){
-        return enterpriseName;
+        return name;
     }
     
 }

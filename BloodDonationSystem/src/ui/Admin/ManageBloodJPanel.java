@@ -53,7 +53,7 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         
         for(Network network: ecoSystem.getNetworkList()){
-            if(network.getEnterpriseName().equalsIgnoreCase(network.getEnterpriseName())) { 
+            if(network.getName().equalsIgnoreCase(network.getName())) { 
                 for(Enterprise enterprise: network.getListOfEnterprises().getEnterpriseList()){
                     if(enterprise instanceof BloodBankEnterprise){
                         if(enterprise.getWorkQueue()== null){
@@ -94,7 +94,7 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
          model.setRowCount(0);
          for(Network n: ecoSystem.getNetworkList()){
 
-            if(n.getEnterpriseName().equalsIgnoreCase(network.getEnterpriseName())) { 
+            if(n.getName().equalsIgnoreCase(network.getName())) { 
             for(Enterprise enterprise: n.getListOfEnterprises().getEnterpriseList()){
                 System.out.println(enterprise);
                 if(enterprise instanceof BloodBankEnterprise){
