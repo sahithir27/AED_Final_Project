@@ -21,7 +21,7 @@ import model.WorkQueue.WorkQueue;
 
 /**
  *
- * @author Admin
+ * @author sindhurabandaru
  */
 public class CreateEventJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
@@ -35,8 +35,12 @@ public class CreateEventJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateEventJPanel
      */
-    public CreateEventJPanel() {
-        initComponents();
+    public CreateEventJPanel(JPanel userProcessContainer,Users userAccount,Enterprise enterprise,EcoSystem ecosystem) {
+       initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.userAccount = userAccount;
+        this.enterprise = enterprise;
+        this.ecoSystem = ecoSystem;
     }
 
     /**
@@ -172,7 +176,7 @@ public class CreateEventJPanel extends javax.swing.JPanel {
                                         .addGap(18, 18, 18)
                                         .addComponent(tfMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(tfComments, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(tfDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(tfDate, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(353, 353, 353)
                         .addComponent(btnCreateEvent, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
