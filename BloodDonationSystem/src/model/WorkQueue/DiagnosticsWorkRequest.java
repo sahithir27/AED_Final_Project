@@ -20,14 +20,6 @@ public class DiagnosticsWorkRequest extends WorkRequest{
     private String patientId;
     private ArrayList <String> tests = new ArrayList<String>();
 
-    public DiagnosticsWorkRequest(String fileName, Patients patient, ArrayList<String> testData, String testResult, String patientName, String patientId) {
-        this.fileName = fileName;
-        this.patient = patient;
-        this.testData = testData;
-        this.testResult = testResult;
-        this.patientName = patientName;
-        this.patientId = patientId;
-    }
 
     public String getFileName() {
         return fileName;
