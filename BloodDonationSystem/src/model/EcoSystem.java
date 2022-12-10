@@ -8,11 +8,12 @@ import model.Role.Role;
 import model.Person.Donors;
 import model.Network.Network;
 import model.Organization.Organization;
-import model.Role.SystemAdminRole;
-import model.Waitlist.Wait;
+import model.Role.SystemAdmin;
+import model.Waitlist.Waitlist;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
+import model.Role.Donor;
 
 /**
  *
@@ -20,9 +21,9 @@ import javax.swing.JOptionPane;
  */
 public class EcoSystem extends Organization{
     private static EcoSystem businessName;
-    private ArrayList<Network> networkListDirectory;
-    private ArrayList<Donors> donorListDirectory;
-    private ArrayList<Wait> waitListDirectory;
+    private ArrayList<Network> networkList;
+    private ArrayList<Donors> listOfDonors;
+    private ArrayList<Waitlist> waitList;
     int patientId;
     int employeeId;
     int donorId;
@@ -35,30 +36,26 @@ public class EcoSystem extends Organization{
     }
     
     
-    public Donor createDonor(String donorName, int donorAge, String donorSex, String donorBloodGroup, String donorContactAddress, String donorAddress,
-                String donorEmail, String donorPOC, String donorPOCNum, boolean organAvalailabity,List<String >organsList){
+    public Donors createDonor(String donorName, int donorAge, String donorSex, String donorBloodGroup, String donorContactAddress, String donorAddress,
+                String donorEmail, String donorPOC, String donorPOCNum, boolean organAvalailabity,List<String >bloodTypeList){
         
-        Donors donorList = new Donors();
-        donorList.setdName(donorName);
-        donorList.setdAge(donorAge);
-        donorList.setdGender(donorSex);
-        donorList.setdBloodGroup(donorBloodGroup);
-        donorList.setContact(donorContactAddress);
-        donorList.setdAddress(donorAddress);
-        donorList.setdEmail(donorEmail);
-        donorList.setpName(donorPOC);
-        donorList.setpContact(donorPOCNum);
-        donorList.setOrganList(organsList);
-        donorListDirectory.add(donorList);
-        return donorList;
+        Donors donor = new Donors();
+        donor.setDonorName(donorName);
+        donor.setDonorAge(donorAge);
+        donor.setDonorGender(donorSex);
+        donor.setDonorBloodGroup(donorBloodGroup);
+        donor.setContact(donorContactAddress);
+        donor.setDonorAddress(donorAddress);
+        donor.setDonorEmail(donorEmail);
+        donor.setEmergencyName(donorPOC);
+        donor.setEmergencyContact(donorPOCNum);
+        donor.setBloodTypeList(bloodTypeList);
+        listOfDonors.add(donor);
+        return donor;
     }
     
-    public ArrayList<Donors> getDonorListDirectory() {
-        return donorListDirectory;
-    }
-
-    public void setDonorDirectory(ArrayList<Donors> donorListDirectory) {
-        this.donorListDirectory = donorListDirectory;
+    public void setListOfDonors(ArrayList<Donors> listOfDonors) {
+        this.listOfDonors = listOfDonors;
     }
 
     public static EcoSystem getBusinessName() {
@@ -69,33 +66,29 @@ public class EcoSystem extends Organization{
         EcoSystem.businessName = businessName;
     }
 
-    public ArrayList<Network> getNetworkListDirectory() {
-        return networkListDirectory;
+    public ArrayList<Network> getNetworkList() {
+        return networkList;
     }
 
-    public void setNetworkListDirectory(ArrayList<Network> networkListDirectory) {
-        this.networkListDirectory = networkListDirectory;
+    public void setNetworkList(ArrayList<Network> networkList) {
+        this.networkList = networkList;
     }
 
-    public ArrayList<Donors> getDonorListDirectory() {
-        return donorListDirectory;
+    public ArrayList<Donors> getListOfDonors() {
+        return listOfDonors;
     }
 
-    public void setDonorListDirectory(ArrayList<Donors> donorListDirectory) {
-        this.donorListDirectory = donorListDirectory;
+    public ArrayList<Waitlist> getWaitList() {
+        return waitList;
     }
 
-    public ArrayList<Wait> getWaitListDirectory() {
-        return waitListDirectory;
-    }
-
-    public void setWaitListDirectory(ArrayList<Wait> waitListDirectory) {
-        this.waitListDirectory = waitListDirectory;
+    public void setWaitList(ArrayList<Waitlist> waitList) {
+        this.waitList = waitList;
     }
     
-    public void addWaitlist(Wait waitList){
-        waitListDirectory.add(waitList);
-        JOptionPane.showMessageDialog(null, "Patient is added to the national waitlist");
+    public void addWaitlist(Waitlist wait_list){
+        waitList.add(wait_list);
+        JOptionPane.showMessageDialog(null, "Patient is added to the waitlist");
     }
 
     public int getPatientId() {
@@ -135,8 +128,8 @@ public class EcoSystem extends Organization{
     }
     
     public Network getNetworkByName(String networkName){
-        for(Network network:networkListDirectory){
-            if(network.getName().equals(networkName)){
+        for(Network network:networkList){
+            if(network.getEnterpriseName().equals(networkName)){
                 return network;
             }
         }
@@ -144,25 +137,25 @@ public class EcoSystem extends Organization{
     }
     
     public void deleteNetwork(Network network){
-        networkListDirectory.remove(network);
+        networkList.remove(network);
     }
     
     public Network createAndAddNetwork(){
         Network network=new Network();
-        networkListDirectory.add(network);
+        networkList.add(network);
         return network;
     }
     
     @Override
-    public ArrayList<Role> getRole() {
+    public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roleList=new ArrayList<Role>();
-        roleList.add(new SystemAdminRole());
+        roleList.add(new SystemAdmin ());
         return roleList;
     }
     private EcoSystem(){
         super(null);
-        networkListDirectory=new ArrayList<Network>();
-        donorListDirectory = new ArrayList<Donors>();
+        networkList=new ArrayList<Network>();
+        listOfDonors = new ArrayList<Donors>();
         popDonor();
     }
     
@@ -172,12 +165,12 @@ public class EcoSystem extends Organization{
     }
     
     public boolean checkIfUserIsUnique(String userName){
-        if(!this.getUserAccountDirectory().checkIfUsernameIsUnique(userName)){
+        if(!this.getListOfUsers().checkIfUsernameIsUnique(userName)){
             return false;
         }
         
         //todo
-        for(Network network:networkListDirectory){
+        for(Network network:networkList){
             
         }
         return true;
