@@ -13,6 +13,15 @@ import model.Role.Role;
  * @author sahithigaddam
  */
 public class MedicalFacilities extends Organization{
+    int counter;
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
     
     public MedicalFacilities(String name) {
         super(name);
