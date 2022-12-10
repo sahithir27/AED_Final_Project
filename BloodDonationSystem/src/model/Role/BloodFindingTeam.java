@@ -12,6 +12,7 @@ import model.Organization.MedicalFacilities;
 import model.Organization.Organization;
 import model.Person.DonorsDirectory;
 import model.Users.Users;
+import ui.ProcurementTeam.ProcurementTeamJPanel;
 
 /**
  *
