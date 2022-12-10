@@ -12,6 +12,7 @@ import model.Organization.DiagnosticCenter;
 import model.Organization.Organization;
 import model.Person.DonorsDirectory;
 import model.Users.Users;
+import ui.Physicist.DiagnosticsJPanel;
 
 /**
  *
@@ -22,7 +23,7 @@ public class Physicist extends Role{
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, Users userAccount, Organization organization, Enterprise enterprise, EcoSystem ecosystem, Network network, 
             DonorsDirectory donorDirectory) {
-         return new DiagnosticsWorkAreaJPanel(userProcessContainer, userAccount, (DiagnosticCenter)organization,ecosystem,enterprise);
+         return new DiagnosticsJPanel(userProcessContainer, userAccount, (DiagnosticCenter)organization,ecosystem,enterprise);
     }
     
 }
