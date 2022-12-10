@@ -5,6 +5,7 @@
 package ui;
 
 import java.awt.CardLayout;
+import java.util.ArrayList;
 import model.DB4OUtil.DB4OUtil;
 import javax.swing.JOptionPane;
 import model.EcoSystem;
@@ -13,6 +14,7 @@ import model.Network.Network;
 import model.Organization.Organization;
 import model.Person.DonorsDirectory;
 import model.Users.Users;
+import model.WorkQueue.WorkQueue;
 import ui.Donor.DonorRegistrationJPanel;
 
 /**
@@ -29,6 +31,24 @@ public class MainJFrame extends javax.swing.JFrame {
     private DonorsDirectory donorDirectory;
     public MainJFrame() {
         initComponents();
+        system = dB4OUtil.retrieveSystem();
+        this.setSize(1200, 800);
+        
+        if(system.getEmployeeId()==0){
+            system.setEmployeeId(20211001);
+        }
+        if(system.getDonorId()==0){
+            system.setDonorId(9001);
+        }
+        if(system.getPatientId()==0){
+            system.setPatientId(1001);
+        }
+        if(system.getWaitList()==null){
+            system.setWaitList(new ArrayList<>());
+        }
+        if(system.getWorkQueue()==null){
+            system.setWorkQueue(new WorkQueue());
+        }
     }
 
     /**

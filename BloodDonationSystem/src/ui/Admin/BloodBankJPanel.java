@@ -155,7 +155,7 @@ public class BloodBankJPanel extends javax.swing.JPanel {
     private void btnRequestsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestsActionPerformed
         // TODO add your handling code here:
         ManageBloodJPanel manageBlood = new ManageBloodJPanel(usersPanel, enterprise.getLisOfOrganizations(),enterprise,ecoSystem,network);
-        usersPanel.add("manageOrgan", manageBlood);
+        usersPanel.add("manageBlood", manageBlood);
         CardLayout layout = (CardLayout) usersPanel.getLayout();
         layout.next(usersPanel);
     }//GEN-LAST:event_btnRequestsActionPerformed
