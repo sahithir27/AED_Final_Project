@@ -12,6 +12,7 @@ import model.Organization.Organization;
 import model.Organization.Physicians;
 import model.Person.DonorsDirectory;
 import model.Users.Users;
+import ui.Physician.PhysicianJPanel;
 
 /**
  *
@@ -24,7 +25,7 @@ public class Physician extends Role{
     public JPanel createWorkArea(JPanel userProcessContainer, Users userAccount, 
             Organization organization, Enterprise enterprise, 
             EcoSystem business, Network network, DonorsDirectory donorDirectory) {
-         return new PhysioTherapistWorkAreaJPanel(userProcessContainer, userAccount, (Physicians)organization, enterprise,business, network);
+         return new PhysicianJPanel(userProcessContainer, userAccount, (Physicians)organization, enterprise,business, network);
     }
     
 }
