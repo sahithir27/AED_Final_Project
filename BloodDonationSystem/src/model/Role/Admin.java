@@ -11,6 +11,7 @@ import model.Network.Network;
 import model.Organization.Organization;
 import model.Person.DonorsDirectory;
 import model.Users.Users;
+import ui.Admin.BloodBankJPanel;
 import ui.Admin.HospitalAdminJPanel;
 
 /**
@@ -27,13 +28,13 @@ public class Admin extends Role{
             jp=new HospitalAdminJPanel(userProcessContainer, enterprise, business,network);
         }
         else if(enterprise.getClass().getTypeName().contains("OrganBankEnterprise")){
-            jp=new OrganBankJPanel (userProcessContainer, enterprise, business,network);
+            jp=new BloodBankJPanel (userProcessContainer, enterprise, business,network);
         }
         else{
             jp=new AdminWorkAreaJPanel(userProcessContainer, enterprise, business,network);
         }
         return jp;
     }
-    
+
 }
 
