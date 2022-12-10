@@ -12,6 +12,7 @@ import model.Organization.MedicalCare;
 import model.Organization.Organization;
 import model.Person.DonorsDirectory;
 import model.Users.Users;
+import ui.Doctor.DoctorJPanel;
 
 /**
  *
@@ -20,7 +21,7 @@ import model.Users.Users;
 public class Doctor extends Role{
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, Users account, Organization organization, Enterprise enterprise, EcoSystem business,Network network, DonorsDirectory donorDirectory) {
-        return new DoctorWorkAreaJPanel(userProcessContainer,account, (MedicalCare)organization, enterprise,business, network);
+        return new DoctorJPanel(userProcessContainer,account, (MedicalCare)organization, enterprise,business, network);
     }
     
 }

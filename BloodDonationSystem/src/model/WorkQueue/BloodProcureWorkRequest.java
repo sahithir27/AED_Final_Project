@@ -17,11 +17,6 @@ public class BloodProcureWorkRequest extends WorkRequest{
     Patients patient;
     String team;
 
-    public BloodProcureWorkRequest(Patients patient, String team) {
-        this.patient = patient;
-        this.team = team;
-    }
-
     public ArrayList<String> getListOfBloodTypes() {
         return listOfBloodTypes;
     }
