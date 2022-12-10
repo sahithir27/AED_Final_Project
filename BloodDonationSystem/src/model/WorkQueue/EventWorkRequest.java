@@ -18,15 +18,6 @@ public class EventWorkRequest extends WorkRequest{
       private String amount;
       private String testResult;
 
-    public EventWorkRequest(String eventVenue, Date eventDate, String eventTime, String comment, String amount, String testResult) {
-        this.eventVenue = eventVenue;
-        this.eventDate = eventDate;
-        this.eventTime = eventTime;
-        this.comment = comment;
-        this.amount = amount;
-        this.testResult = testResult;
-    }
-
     public String getEventVenue() {
         return eventVenue;
     }
