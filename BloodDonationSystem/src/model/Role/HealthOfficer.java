@@ -12,6 +12,7 @@ import model.Organization.Organization;
 import model.Organization.PoliciesFinance;
 import model.Person.DonorsDirectory;
 import model.Users.Users;
+import ui.HealthOfficer.HealthOfficerJPanel;
 
 /**
  *

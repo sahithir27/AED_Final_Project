@@ -10,6 +10,7 @@ import model.Network.Network;
 import model.Organization.Organization;
 import model.Person.DonorsDirectory;
 import model.Users.Users;
+import ui.Patient.Patients;
 
 /**
  *
@@ -21,7 +22,7 @@ public class Patient extends Role{
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, Users userAccount, Organization organization, Enterprise enterprise, EcoSystem ecosystem,
             Network network, DonorsDirectory donorDirectory) {
-        return new PatientsJPanel(userProcessContainer, enterprise);
+        return new Patients(userProcessContainer, enterprise);
     }
 }
 
