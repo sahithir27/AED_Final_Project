@@ -33,7 +33,6 @@ public class MainJFrame extends javax.swing.JFrame {
         initComponents();
         system = dB4OUtil.retrieveSystem();
         this.setSize(1200, 800);
-        
         if(system.getEmployeeId()==0){
             system.setEmployeeId(20211001);
         }
