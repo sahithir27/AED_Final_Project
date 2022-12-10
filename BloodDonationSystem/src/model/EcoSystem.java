@@ -13,8 +13,6 @@ import model.Waitlist.Waitlist;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
-import model.Role.Donor;
-
 /**
  *
  * @author sindhurabandaru
@@ -129,7 +127,7 @@ public class EcoSystem extends Organization{
     
     public Network getNetworkByName(String networkName){
         for(Network network:networkList){
-            if(network.getEnterpriseName().equals(networkName)){
+            if(network.getName().equals(networkName)){
                 return network;
             }
         }
