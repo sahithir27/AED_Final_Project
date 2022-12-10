@@ -15,13 +15,13 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Admin
+ * @author sindhurabandaru
  */
 public class NetworkJPanel extends javax.swing.JPanel {
     
      private JPanel userProcessContainer;
-    private EcoSystem system;
-    ArrayList<String> networkstring = new ArrayList<String>();
+    private EcoSystem ecoSystem;
+    ArrayList<String> networkString = new ArrayList<String>();
 
     /**
      * Creates new form NetworkJPanel
@@ -34,24 +34,24 @@ public class NetworkJPanel extends javax.swing.JPanel {
      *
      * Creates new form ManageNetworkJPanel
      */
-    public NetworkJPanel(JPanel userProcessContainer, EcoSystem system) {
+    public NetworkJPanel(JPanel userProcessContainer, EcoSystem ecoSystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
-        this.system = system;
+        this.ecoSystem = ecoSystem;
         addanewnetworks();
         LoadNetworkTable();
     }
     public void addanewnetworks(){
-        for(Network n:system.getNetworkList()){
-            networkstring.add(n.toString());
+        for(Network n:ecoSystem.getNetworkList()){
+            networkString.add(n.toString());
         }
     }
 
     private void LoadNetworkTable() {
-        DefaultTableModel model = (DefaultTableModel) tbl_list_of_network.getModel();
+        DefaultTableModel model = (DefaultTableModel) tbllistOfNetworks.getModel();
         //set the row count as zero on initial page load
         model.setRowCount(0);
-        for (Network network : system.getNetworkList()) {
+        for (Network network : ecoSystem.getNetworkList()) {
             Object[] row = new Object[1];
             row[0] = network.getName();
             model.addRow(row);
@@ -68,20 +68,20 @@ public class NetworkJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_list_of_network = new javax.swing.JTable();
+        tbllistOfNetworks = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        lbl_CitiesPresentInNetwork = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lblNetworkOfCities = new javax.swing.JLabel();
+        lblCitiesPresentInNetwork = new javax.swing.JLabel();
+        lblCityToNetwork = new javax.swing.JLabel();
         btnAddCity = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        txt_city_Name = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        tfCityName = new javax.swing.JTextField();
+        lblCityName = new javax.swing.JLabel();
 
-        tbl_list_of_network.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tbl_list_of_network.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        tbl_list_of_network.setForeground(new java.awt.Color(255, 0, 51));
-        tbl_list_of_network.setModel(new javax.swing.table.DefaultTableModel(
+        tbllistOfNetworks.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tbllistOfNetworks.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        tbllistOfNetworks.setForeground(new java.awt.Color(255, 0, 51));
+        tbllistOfNetworks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -104,9 +104,9 @@ public class NetworkJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        tbl_list_of_network.setSelectionBackground(new java.awt.Color(255, 102, 102));
-        tbl_list_of_network.setSelectionForeground(new java.awt.Color(255, 255, 51));
-        jScrollPane1.setViewportView(tbl_list_of_network);
+        tbllistOfNetworks.setSelectionBackground(new java.awt.Color(255, 102, 102));
+        tbllistOfNetworks.setSelectionForeground(new java.awt.Color(255, 255, 51));
+        jScrollPane1.setViewportView(tbllistOfNetworks);
 
         btnBack.setBackground(new java.awt.Color(255, 0, 51));
         btnBack.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
@@ -118,19 +118,19 @@ public class NetworkJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Network of Cities");
+        lblNetworkOfCities.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
+        lblNetworkOfCities.setForeground(new java.awt.Color(255, 0, 51));
+        lblNetworkOfCities.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNetworkOfCities.setText("Network of Cities");
 
-        lbl_CitiesPresentInNetwork.setBackground(new java.awt.Color(255, 255, 255));
-        lbl_CitiesPresentInNetwork.setFont(new java.awt.Font("Cambria", 2, 18)); // NOI18N
-        lbl_CitiesPresentInNetwork.setForeground(new java.awt.Color(255, 0, 51));
-        lbl_CitiesPresentInNetwork.setText("Cities present in network");
+        lblCitiesPresentInNetwork.setBackground(new java.awt.Color(255, 255, 255));
+        lblCitiesPresentInNetwork.setFont(new java.awt.Font("Cambria", 2, 18)); // NOI18N
+        lblCitiesPresentInNetwork.setForeground(new java.awt.Color(255, 0, 51));
+        lblCitiesPresentInNetwork.setText("Cities present in network");
 
-        jLabel4.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel4.setText("Add a city to the network");
+        lblCityToNetwork.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
+        lblCityToNetwork.setForeground(new java.awt.Color(255, 0, 51));
+        lblCityToNetwork.setText("Add a city to the network");
 
         btnAddCity.setBackground(new java.awt.Color(255, 0, 51));
         btnAddCity.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
@@ -142,12 +142,12 @@ public class NetworkJPanel extends javax.swing.JPanel {
             }
         });
 
-        txt_city_Name.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
+        tfCityName.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setText("Name:");
+        lblCityName.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
+        lblCityName.setForeground(new java.awt.Color(255, 0, 51));
+        lblCityName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblCityName.setText("Name:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -159,20 +159,20 @@ public class NetworkJPanel extends javax.swing.JPanel {
                         .addContainerGap()
                         .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(125, 125, 125)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblNetworkOfCities, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
+                            .addComponent(lblCityToNetwork)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txt_city_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tfCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnAddCity))))
                         .addGap(96, 96, 96)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_CitiesPresentInNetwork)
+                            .addComponent(lblCitiesPresentInNetwork)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -185,19 +185,19 @@ public class NetworkJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(lblNetworkOfCities))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
+                        .addComponent(lblCityToNetwork)
                         .addGap(23, 23, 23)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel1)
-                            .addComponent(txt_city_Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblCityName)
+                            .addComponent(tfCityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(btnAddCity, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl_CitiesPresentInNetwork)
+                        .addComponent(lblCitiesPresentInNetwork)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(89, 89, 89)
@@ -219,10 +219,10 @@ public class NetworkJPanel extends javax.swing.JPanel {
     private void btnAddCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddCityActionPerformed
 
         int Flag=0;
-        String name = txt_city_Name.getText();
+        String name = tfCityName.getText();
         if (name.matches("^([A-Za-z]+)(\\s[A-Za-z]+)*\\s?$")) {
             name = name.trim();
-            for(String s:networkstring){
+            for(String s:networkString){
                 if(s.equalsIgnoreCase(name)){
                     JOptionPane.showMessageDialog(null, "Please add another city, the city already exists in the network");
                     Flag=1;
@@ -230,11 +230,11 @@ public class NetworkJPanel extends javax.swing.JPanel {
                 }
             }
             if(Flag==0){
-                networkstring.add(name);
-                Network network = system.createAndAddNetwork();
+                networkString.add(name);
+                Network network = ecoSystem.createAndAddNetwork();
                 network.setName(name);
                 LoadNetworkTable();
-                txt_city_Name.setText("");
+                tfCityName.setText("");
             }
         } else {
             //Throw a dialog box if a special character is used
@@ -248,13 +248,13 @@ public class NetworkJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btn_back_button;
     private javax.swing.JButton btn_back_button1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lbl_CitiesPresentInNetwork;
-    private javax.swing.JTable tbl_list_of_network;
-    private javax.swing.JTextField txt_city_Name;
+    private javax.swing.JLabel lblCitiesPresentInNetwork;
+    private javax.swing.JLabel lblCityName;
+    private javax.swing.JLabel lblCityToNetwork;
+    private javax.swing.JLabel lblNetworkOfCities;
+    private javax.swing.JTable tbllistOfNetworks;
+    private javax.swing.JTextField tfCityName;
     // End of variables declaration//GEN-END:variables
 }
