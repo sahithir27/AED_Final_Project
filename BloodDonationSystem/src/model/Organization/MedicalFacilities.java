@@ -14,9 +14,22 @@ import model.Role.Role;
  */
 public class MedicalFacilities extends Organization{
 
+    int counter;
+    
     public MedicalFacilities(String name) {
         super(name);
     }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
+
+    
+    
     
     @Override
     public ArrayList<Role> getSupportedRole() {
