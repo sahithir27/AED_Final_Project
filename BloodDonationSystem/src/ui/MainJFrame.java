@@ -13,6 +13,7 @@ import model.Network.Network;
 import model.Organization.Organization;
 import model.Person.DonorsDirectory;
 import model.Users.Users;
+import ui.Donor.DonorRegistrationJPanel;
 
 /**
  *
