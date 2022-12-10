@@ -4,17 +4,40 @@
  */
 package ui.EventOrganizer;
 
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+import model.EcoSystem;
+import model.Enterprise.Enterprise;
+import model.Enterprise.EnterpriseDirectory;
+import model.Organization.MedicalAwarnessCampaign;
+import model.Users.Users;
+import model.WorkQueue.EventWorkRequest;
+import model.WorkQueue.WorkRequest;
+
 /**
  *
- * @author Admin
+ * @author sindhurabandaru
  */
 public class EventOrganizerJPanel extends javax.swing.JPanel {
+    
+    private Users userAccount;
+    private EnterpriseDirectory enterpriseDirectory;
+    private EcoSystem ecosystem;
+    private JPanel userProcessContainer;
+    private MedicalAwarnessCampaign medicalAwarnessCampaign;
+    private Enterprise enterprise;
 
     /**
      * Creates new form EventOrganizerJPanel
      */
-    public EventOrganizerJPanel() {
+    public EventOrganizerJPanel(JPanel userProcessContainer, Users userAccount, MedicalAwarnessCampaign medicalAwarnessCampaign, EcoSystem ecosystem) {
         initComponents();
+          this.userAccount=userAccount;
+          this.medicalAwarnessCampaign = medicalAwarnessCampaign;
+          this.ecosystem = ecosystem;
+          this.userProcessContainer = userProcessContainer;
+          populateRequestTable();
     }
 
     /**
@@ -26,19 +49,144 @@ public class EventOrganizerJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblTitle = new javax.swing.JLabel();
+        tblEventDetails = new javax.swing.JScrollPane();
+        tblEventsDetails = new javax.swing.JTable();
+        btnCreateEvent = new javax.swing.JButton();
+        btnRefresh = new javax.swing.JButton();
+
+        lblTitle.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 0, 51));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Event Commiteee Work Area");
+
+        tblEventsDetails.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        tblEventsDetails.setForeground(new java.awt.Color(153, 0, 0));
+        tblEventsDetails.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Event Name", "Venue", "Date", "Time", "Amount Required", "Comments", "Status"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblEventsDetails.setGridColor(new java.awt.Color(0, 51, 51));
+        tblEventsDetails.setSelectionBackground(new java.awt.Color(255, 102, 102));
+        tblEventsDetails.setSelectionForeground(new java.awt.Color(255, 255, 0));
+        tblEventDetails.setViewportView(tblEventsDetails);
+
+        btnCreateEvent.setBackground(new java.awt.Color(255, 0, 51));
+        btnCreateEvent.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        btnCreateEvent.setText("Create");
+        btnCreateEvent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateEventActionPerformed(evt);
+            }
+        });
+
+        btnRefresh.setBackground(new java.awt.Color(255, 0, 51));
+        btnRefresh.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        btnRefresh.setText("Refresh");
+        btnRefresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRefreshActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 901, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(110, 110, 110)
+                            .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 679, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tblEventDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 773, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(18, 18, 18)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnCreateEvent)
+                        .addComponent(btnRefresh))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(26, 26, 26)
+                    .addComponent(lblTitle)
+                    .addGap(18, 18, 18)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(tblEventDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btnCreateEvent, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(27, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnCreateEventActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateEventActionPerformed
+        // TODO add your handling code here:
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        userProcessContainer.add("CreateEventJPanel", new CreateEventJPanel(userProcessContainer, userAccount, enterprise,ecosystem));
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnCreateEventActionPerformed
+
+    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
+        // TODO add your handling code here:
+        populateRequestTable();
+    }//GEN-LAST:event_btnRefreshActionPerformed
+
+    public void populateRequestTable(){
+    
+    if(userAccount.getWorkQueue()==null){}
+    else{
+     DefaultTableModel modelTable = (DefaultTableModel) tblEventsDetails.getModel();
+        
+        modelTable.setRowCount(0);
+        for (WorkRequest workRequest : userAccount.getWorkQueue().getWorkRequestList()){
+             if(workRequest instanceof EventWorkRequest){
+            Object[] tableRow = new Object[8];
+            tableRow[0] = workRequest;
+            tableRow[1] = ((EventWorkRequest) workRequest).getEventVenue();
+            tableRow[2] = ((EventWorkRequest) workRequest).getEventDate();
+            tableRow[3] =((EventWorkRequest) workRequest).getEventTime();
+            tableRow[4] =((EventWorkRequest) workRequest).getAmount();
+            tableRow[5] =((EventWorkRequest) workRequest).getComment();
+            tableRow[6] =((EventWorkRequest) workRequest).getStatus();
+            
+            modelTable.addRow(tableRow);}
+        }
+    }
+        
+    
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCreateEvent;
+    private javax.swing.JButton btnRefresh;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JScrollPane tblEventDetails;
+    private javax.swing.JTable tblEventsDetails;
     // End of variables declaration//GEN-END:variables
 }
