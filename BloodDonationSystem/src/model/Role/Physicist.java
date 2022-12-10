@@ -12,6 +12,7 @@ import model.Organization.DiagnosticCenter;
 import model.Organization.Organization;
 import model.Person.DonorsDirectory;
 import model.Users.Users;
+import ui.Physicist.DiagnosticsJPanel;
 
 /**
  *
