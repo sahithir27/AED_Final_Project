@@ -16,13 +16,6 @@ public class BloodMatchWorkRequest extends WorkRequest{
     Patients bloodDonor;
     Patients bloodRecepient;
 
-    public BloodMatchWorkRequest(String team, String bloodType, Patients bloodDonor, Patients bloodRecepient) {
-        this.team = team;
-        this.bloodType = bloodType;
-        this.bloodDonor = bloodDonor;
-        this.bloodRecepient = bloodRecepient;
-    }
-
     public String getTeam() {
         return team;
     }

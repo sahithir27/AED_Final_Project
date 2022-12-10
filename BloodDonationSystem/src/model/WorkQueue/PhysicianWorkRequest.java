@@ -16,10 +16,7 @@ public class PhysicianWorkRequest extends WorkRequest{
     Patients patient;
     private ArrayList<String> listOfOrgans = new ArrayList<>();
 
-    public PhysicianWorkRequest(Patients patient) {
-        this.patient = patient;
-    }
-
+    
     public Patients getPatient() {
         return patient;
     }
