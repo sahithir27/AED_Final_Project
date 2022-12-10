@@ -4,17 +4,32 @@
  */
 package ui.Admin;
 
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import model.EcoSystem;
+import model.Enterprise.Enterprise;
+import model.Network.Network;
+import model.Organization.OrganizationDirectory;
+
 /**
  *
  * @author sahithigaddam
  */
 public class HospitalAdminJPanel extends javax.swing.JPanel {
-
+    JPanel usersPanel;
+    Enterprise enterprise;
+    EcoSystem ecoSystem;
+    Network network;
     /**
      * Creates new form HospitalAdminJPanel
      */
-    public HospitalAdminJPanel() {
+    public HospitalAdminJPanel(JPanel userProcessContainer, Enterprise enterprise,EcoSystem ecoSystem,Network network) {
         initComponents();
+        this.usersPanel = usersPanel;
+        this.enterprise = enterprise;
+        this.ecoSystem=ecoSystem;
+        this.network=network;
     }
 
     /**
@@ -26,19 +41,129 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lbl_admin_dashboard_heading = new javax.swing.JLabel();
+        btnUsers = new javax.swing.JButton();
+        btnOrganizations = new javax.swing.JButton();
+        btnEmployees = new javax.swing.JButton();
+        btnPatients = new javax.swing.JButton();
+
+        lbl_admin_dashboard_heading.setBackground(new java.awt.Color(255, 0, 51));
+        lbl_admin_dashboard_heading.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
+        lbl_admin_dashboard_heading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl_admin_dashboard_heading.setText("ADMIN DASHBOARD");
+
+        btnUsers.setBackground(new java.awt.Color(255, 0, 51));
+        btnUsers.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnUsers.setText("Manage User Accounts");
+        btnUsers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUsersActionPerformed(evt);
+            }
+        });
+
+        btnOrganizations.setBackground(new java.awt.Color(255, 0, 51));
+        btnOrganizations.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnOrganizations.setText("Manage Organization");
+        btnOrganizations.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOrganizationsActionPerformed(evt);
+            }
+        });
+
+        btnEmployees.setBackground(new java.awt.Color(255, 0, 51));
+        btnEmployees.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnEmployees.setText("Manage Employees");
+        btnEmployees.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEmployeesActionPerformed(evt);
+            }
+        });
+
+        btnPatients.setBackground(new java.awt.Color(255, 0, 51));
+        btnPatients.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnPatients.setText("Manage Patients");
+        btnPatients.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPatientsActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(250, 250, 250)
+                .addComponent(btnEmployees, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(104, 104, 104)
+                .addComponent(btnPatients, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(162, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(206, 206, 206)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(43, 43, 43)
+                            .addComponent(btnOrganizations, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(108, 108, 108)
+                            .addComponent(btnUsers))
+                        .addComponent(lbl_admin_dashboard_heading, javax.swing.GroupLayout.PREFERRED_SIZE, 788, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(269, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnPatients)
+                    .addComponent(btnEmployees, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(178, 178, 178))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(77, 77, 77)
+                    .addComponent(lbl_admin_dashboard_heading)
+                    .addGap(251, 251, 251)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnOrganizations)
+                        .addComponent(btnUsers))
+                    .addContainerGap(89, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsersActionPerformed
+        UsersJPanel manage_users = new UsersJPanel(usersPanel, enterprise);
+        usersPanel.add("ManageUserAccountJPanel", manage_users);
+        CardLayout layout = (CardLayout) usersPanel.getLayout();
+        layout.next(usersPanel);
+    }//GEN-LAST:event_btnUsersActionPerformed
+
+    private void btnOrganizationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrganizationsActionPerformed
+        OrganizationsJPanel manage_organization = new OrganizationsJPanel(usersPanel, enterprise.getLisOfOrganizations(),enterprise);
+        usersPanel.add("manageOrganizationJPanel", manage_organization);
+        CardLayout layout = (CardLayout) usersPanel.getLayout();
+        layout.next(usersPanel);
+    }//GEN-LAST:event_btnOrganizationsActionPerformed
+
+    private void btnEmployeesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmployeesActionPerformed
+        EmployeesJPanel manage_employees = new EmployeesJPanel(usersPanel, enterprise.getLisOfOrganizations(),enterprise,ecoSystem);
+        usersPanel.add("manageOrganizationJPanel", manage_employees);
+        CardLayout layout = (CardLayout) usersPanel.getLayout();
+        layout.next(usersPanel);
+    }//GEN-LAST:event_btnEmployeesActionPerformed
+
+    private void btnPatientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientsActionPerformed
+        PatientsJPanel manage_patients = new PatientsJPanel(usersPanel, enterprise.getLisOfOrganizations(),enterprise,ecoSystem);
+        usersPanel.add("manageOrganizationJPanel", manage_patients);
+        CardLayout layout = (CardLayout) usersPanel.getLayout();
+        layout.next(usersPanel);
+    }//GEN-LAST:event_btnPatientsActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEmployees;
+    private javax.swing.JButton btnOrganizations;
+    private javax.swing.JButton btnPatients;
+    private javax.swing.JButton btnUsers;
+    private javax.swing.JLabel lbl_admin_dashboard_heading;
     // End of variables declaration//GEN-END:variables
 }
