@@ -213,7 +213,7 @@ public class DonorRegistrationJPanel extends javax.swing.JPanel {
 
         cbBloodGroup.setBackground(new java.awt.Color(255, 0, 0));
         cbBloodGroup.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        cbBloodGroup.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "B+", "B-", "A+", "A-", "O+", "O-" }));
+        cbBloodGroup.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
         cbBloodGroup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbBloodGroupActionPerformed(evt);

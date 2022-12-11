@@ -59,7 +59,7 @@ public class EnterpriseJPanel extends javax.swing.JPanel {
 
             }
         }
-        if (estEnterprises.contains(type)&&(type.getType().equalsIgnoreCase("government")||type.getType().equalsIgnoreCase("organ bank"))) {
+        if (estEnterprises.contains(type)&&(type.getType().equalsIgnoreCase("Federal Government")||type.getType().equalsIgnoreCase("Blood Bank"))) {
             JOptionPane.showMessageDialog(null, "One enterprise allowed for the selected option");
             return true;
         }

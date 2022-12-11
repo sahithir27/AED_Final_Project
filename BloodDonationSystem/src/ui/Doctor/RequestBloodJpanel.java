@@ -126,7 +126,7 @@ public class RequestBloodJpanel extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel1.setText("Organ Request");
+        jLabel1.setText("Blood Request");
 
         jLabel2.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 51));
@@ -138,7 +138,7 @@ public class RequestBloodJpanel extends javax.swing.JPanel {
 
         jLabel4.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel4.setText("Required Organ :");
+        jLabel4.setText("Required Blood Type :");
 
         jLabel5.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 51));
@@ -157,7 +157,12 @@ public class RequestBloodJpanel extends javax.swing.JPanel {
         jLabel8.setText("Urgency :");
 
         cbRequestBlood.setBackground(new java.awt.Color(255, 0, 51));
-        cbRequestBlood.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Select--", "Heart", "Kidney", "Liver" }));
+        cbRequestBlood.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Select--", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
+        cbRequestBlood.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbRequestBloodActionPerformed(evt);
+            }
+        });
 
         cbAgeGroup.setBackground(new java.awt.Color(255, 0, 51));
         cbAgeGroup.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Select--", "0-20", "20-35", "35-50", "50-65", ">65" }));
@@ -228,7 +233,7 @@ public class RequestBloodJpanel extends javax.swing.JPanel {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnSubmit)
                             .addGap(107, 107, 107)))
-                    .addContainerGap(178, Short.MAX_VALUE)))
+                    .addContainerGap(145, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -329,6 +334,10 @@ public class RequestBloodJpanel extends javax.swing.JPanel {
         CardLayout layout=(CardLayout)usersPanel.getLayout();
         layout.next(usersPanel);
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void cbRequestBloodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbRequestBloodActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbRequestBloodActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

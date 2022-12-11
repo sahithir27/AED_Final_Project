@@ -44,7 +44,7 @@ public class PatientsJPanel extends javax.swing.JPanel {
         for(Organization org: organizationDirectory.getOrganizationList()){
             System.out.println("Specialization");
             System.out.println(org.getOrganizationType().getValue());
-            if(org.getOrganizationType().getValue().equalsIgnoreCase("medical care")){
+            if(org.getOrganizationType().getValue().equalsIgnoreCase("medical")){
                 cbDepartment.addItem(org.getOrganizationName());
             }
         }
@@ -53,7 +53,7 @@ public class PatientsJPanel extends javax.swing.JPanel {
     public void PatientCount(String doctor){
         int counter=0;
         for(Organization org: organizationDirectory.getOrganizationList()){
-            if(org.getOrganizationType().getValue().equalsIgnoreCase("medical care")){
+            if(org.getOrganizationType().getValue().equalsIgnoreCase("medical")){
                 for(Patients p: org.getListOfPatients().getLofPatient()){
                     if(p.isIsAlive()&&p.getDoctor().equalsIgnoreCase(doctor)){
                         counter++;
@@ -289,6 +289,7 @@ public class PatientsJPanel extends javax.swing.JPanel {
         int counter=0;
         for(int i=0;i<organizationDirectory.getOrganizationList().size();i++){
             Organization org=organizationDirectory.getOrganizationList().get(i);
+            System.out.println(org.getOrganizationName());
             if(cbDepartment.getSelectedItem().toString().equalsIgnoreCase(org.getOrganizationName())){
                 for(int j=0;j<org.getListOfUsers().getAccountList().size();j++){
                     Employee emp=org.getListOfUsers().getAccountList().get(j).getEmployee();
@@ -353,12 +354,12 @@ public class PatientsJPanel extends javax.swing.JPanel {
             return;
         }
 
-        ArrayList<String> organs=new ArrayList<>();
+        ArrayList<String> bloodTypes=new ArrayList<>();
         ArrayList<String> testData=new ArrayList<>();
         for(int i=0;i<organizationDirectory.getOrganizationList().size();i++){
             if(organizationDirectory.getOrganizationList().get(i).getOrganizationName().equalsIgnoreCase(cbDepartment.getSelectedItem().toString())){
                 Organization organization=organizationDirectory.getOrganizationList().get(i);
-                organization.getListOfPatients().createPatient(ecoSystem.getPatientId(),tfPatientName.getText(),tfPatientAge.getText(),cbSex.getSelectedItem().toString(),tfContact.getText(),cbDepartment.getSelectedItem().toString(),cbDoctor.getSelectedItem().toString(),true,true,true,organs,testData);
+                organization.getListOfPatients().createPatient(ecoSystem.getPatientId(),tfPatientName.getText(),tfPatientAge.getText(),cbSex.getSelectedItem().toString(),tfContact.getText(),cbDepartment.getSelectedItem().toString(),cbDoctor.getSelectedItem().toString(),true,true,true,bloodTypes,testData);
                 ecoSystem.incrementPatientId();
                 break;
             }

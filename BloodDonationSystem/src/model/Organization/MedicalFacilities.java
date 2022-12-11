@@ -5,6 +5,7 @@
 package model.Organization;
 
 import java.util.ArrayList;
+import model.Role.BloodFindingTeam;
 import model.Role.Doctor;
 import model.Role.Role;
 
@@ -30,7 +31,7 @@ public class MedicalFacilities extends Organization{
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> role = new ArrayList();
-        role.add(new Doctor());
+        role.add(new BloodFindingTeam());
         return role;
     }
     

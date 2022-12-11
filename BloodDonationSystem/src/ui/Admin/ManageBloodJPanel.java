@@ -174,7 +174,7 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Patient ID", "Patient Name", "OrgansRequired", "Doctor", "Comments", "Status"
+                "Patient ID", "Patient Name", "Blood Type Required", "Doctor", "Comments", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -209,7 +209,7 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
 
         btnProcureBlood.setBackground(new java.awt.Color(255, 0, 51));
         btnProcureBlood.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnProcureBlood.setText("Acquire Organ");
+        btnProcureBlood.setText("Acquire Blood");
         btnProcureBlood.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProcureBloodActionPerformed(evt);
@@ -224,14 +224,14 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Donor Patient", "Donor Doctor", "Organ", "Receiving patient", "Receiving Doctor", "Status"
+                "Donor Patient", "Donor Doctor", "Blood Type", "Receiving patient", "Receiving Doctor", "Status"
             }
         ));
         jScrollPane2.setViewportView(tblDonorData);
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(255, 0, 51));
-        lblTitle.setText("Organ Acquirement Requests");
+        lblTitle.setText("Blood Acquirement Requests");
 
         btnBack.setBackground(new java.awt.Color(255, 0, 51));
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -244,7 +244,7 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
 
         lblMatch.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblMatch.setForeground(new java.awt.Color(255, 0, 51));
-        lblMatch.setText("Organ Matching Requests");
+        lblMatch.setText("Blood Matching Requests");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
