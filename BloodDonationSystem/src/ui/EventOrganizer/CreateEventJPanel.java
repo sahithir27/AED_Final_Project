@@ -35,7 +35,7 @@ public class CreateEventJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateEventJPanel
      */
-    public CreateEventJPanel(JPanel userProcessContainer,Users userAccount,Enterprise enterprise,EcoSystem ecosystem) {
+    public CreateEventJPanel(JPanel userProcessContainer,Users userAccount,Enterprise enterprise,EcoSystem ecoSystem) {
        initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = userAccount;
