@@ -101,6 +101,7 @@ public class OrganizationsJPanel extends javax.swing.JPanel {
         lblPresentOrganization = new javax.swing.JLabel();
         lblOrganizationName = new javax.swing.JLabel();
         tfOrganizationName = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         tblCurrentOrganizations.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tblCurrentOrganizations.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
@@ -129,8 +130,9 @@ public class OrganizationsJPanel extends javax.swing.JPanel {
         });
         tblOrganization.setViewportView(tblCurrentOrganizations);
 
-        btnCreateOrganization.setBackground(new java.awt.Color(255, 0, 51));
+        btnCreateOrganization.setBackground(new java.awt.Color(0, 183, 210));
         btnCreateOrganization.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        btnCreateOrganization.setForeground(new java.awt.Color(255, 255, 255));
         btnCreateOrganization.setText("Add Organization");
         btnCreateOrganization.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,7 +140,6 @@ public class OrganizationsJPanel extends javax.swing.JPanel {
             }
         });
 
-        cbOrganizationType.setBackground(new java.awt.Color(255, 0, 51));
         cbOrganizationType.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         cbOrganizationType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbOrganizationType.addActionListener(new java.awt.event.ActionListener() {
@@ -148,12 +149,12 @@ public class OrganizationsJPanel extends javax.swing.JPanel {
         });
 
         lblOrganizationType.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblOrganizationType.setForeground(new java.awt.Color(255, 0, 51));
         lblOrganizationType.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblOrganizationType.setText("Organization Type :");
 
-        btnBack.setBackground(new java.awt.Color(255, 0, 51));
+        btnBack.setBackground(new java.awt.Color(0, 183, 210));
         btnBack.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,75 +163,77 @@ public class OrganizationsJPanel extends javax.swing.JPanel {
         });
 
         lblCreateOrganization.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
-        lblCreateOrganization.setForeground(new java.awt.Color(255, 0, 51));
+        lblCreateOrganization.setForeground(new java.awt.Color(0, 183, 210));
         lblCreateOrganization.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCreateOrganization.setText("CREATE ORGANIZATION");
 
         lblPresentOrganization.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblPresentOrganization.setForeground(new java.awt.Color(255, 0, 51));
         lblPresentOrganization.setText("Current Organizations");
 
         lblOrganizationName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblOrganizationName.setForeground(new java.awt.Color(255, 0, 51));
         lblOrganizationName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblOrganizationName.setText("Organization Name :");
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Organization/organization-PhotoRoom (1).png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1200, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnBack)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(lblCreateOrganization, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(82, 82, 82)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(lblOrganizationName, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblOrganizationType, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(cbOrganizationType, 0, 234, Short.MAX_VALUE)
-                                        .addComponent(tfOrganizationName)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(31, 31, 31)
-                                            .addComponent(btnCreateOrganization))))
-                                .addComponent(lblPresentOrganization)
-                                .addComponent(tblOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(638, 638, 638)))
-                    .addContainerGap()))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnBack)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblCreateOrganization, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(146, 146, 146))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(73, 73, 73)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblOrganizationName, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblOrganizationType, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cbOrganizationType, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(tfOrganizationName)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(31, 31, 31)
+                                        .addComponent(btnCreateOrganization))))
+                            .addComponent(lblPresentOrganization)
+                            .addComponent(tblOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addGap(164, 164, 164))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 458, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblCreateOrganization)
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(32, 32, 32)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(cbOrganizationType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblOrganizationType))
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblOrganizationName)
-                        .addComponent(tfOrganizationName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
-                    .addComponent(btnCreateOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(lblPresentOrganization)
-                    .addGap(18, 18, 18)
-                    .addComponent(tblOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCreateOrganization))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbOrganizationType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblOrganizationType))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblOrganizationName)
+                            .addComponent(tfOrganizationName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnCreateOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(98, 98, 98)
+                        .addComponent(lblPresentOrganization)
+                        .addGap(28, 28, 28)
+                        .addComponent(tblOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1))
+                .addContainerGap(351, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -264,6 +267,7 @@ public class OrganizationsJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnCreateOrganization;
     private javax.swing.JComboBox cbOrganizationType;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblCreateOrganization;
     private javax.swing.JLabel lblOrganizationName;
     private javax.swing.JLabel lblOrganizationType;

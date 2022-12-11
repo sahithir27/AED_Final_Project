@@ -45,14 +45,18 @@ public class AdminJPanel extends javax.swing.JPanel {
         btnUsers = new javax.swing.JButton();
         btnOrganizations = new javax.swing.JButton();
         btnEmployees = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         tfAdminDashboard.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
-        tfAdminDashboard.setForeground(new java.awt.Color(255, 0, 51));
+        tfAdminDashboard.setForeground(new java.awt.Color(0, 183, 210));
         tfAdminDashboard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tfAdminDashboard.setText("ADMIN DASHBOARD");
 
-        btnUsers.setBackground(new java.awt.Color(255, 0, 51));
+        btnUsers.setBackground(new java.awt.Color(0, 183, 210));
         btnUsers.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        btnUsers.setForeground(new java.awt.Color(255, 255, 255));
         btnUsers.setText(" Users");
         btnUsers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,8 +64,9 @@ public class AdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnOrganizations.setBackground(new java.awt.Color(255, 0, 51));
+        btnOrganizations.setBackground(new java.awt.Color(0, 183, 210));
         btnOrganizations.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        btnOrganizations.setForeground(new java.awt.Color(255, 255, 255));
         btnOrganizations.setText("  Organization");
         btnOrganizations.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,8 +74,9 @@ public class AdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnEmployees.setBackground(new java.awt.Color(255, 0, 51));
+        btnEmployees.setBackground(new java.awt.Color(0, 183, 210));
         btnEmployees.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        btnEmployees.setForeground(new java.awt.Color(255, 255, 255));
         btnEmployees.setText("Employees");
         btnEmployees.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,38 +84,59 @@ public class AdminJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Admin/EmployeeAdminJPanel.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Admin/UserAccountAdminJPanel.png"))); // NOI18N
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/Admin/OrganizationAdminJPanel (4).jpg"))); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btnEmployees, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
-                    .addComponent(btnOrganizations, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnUsers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(745, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(tfAdminDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 983, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(122, 122, 122)
+                                .addComponent(jLabel4)
+                                .addGap(145, 145, 145)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(134, 134, 134)
+                                .addComponent(btnOrganizations, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnEmployees, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(121, 121, 121)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(btnUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(797, 797, 797))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(194, 194, 194)
-                .addComponent(btnOrganizations)
-                .addGap(18, 18, 18)
-                .addComponent(btnEmployees)
-                .addGap(18, 18, 18)
-                .addComponent(btnUsers)
-                .addContainerGap(313, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(98, 98, 98)
-                    .addComponent(tfAdminDashboard)
-                    .addContainerGap(484, Short.MAX_VALUE)))
+                .addGap(100, 100, 100)
+                .addComponent(tfAdminDashboard)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
+                        .addGap(48, 48, 48))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel3)
+                        .addGap(64, 64, 64)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnOrganizations)
+                    .addComponent(btnEmployees)
+                    .addComponent(btnUsers))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -140,6 +167,9 @@ public class AdminJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnEmployees;
     private javax.swing.JButton btnOrganizations;
     private javax.swing.JButton btnUsers;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel tfAdminDashboard;
     // End of variables declaration//GEN-END:variables
 }

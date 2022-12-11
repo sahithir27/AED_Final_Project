@@ -46,8 +46,12 @@ public class BloodBankJPanel extends javax.swing.JPanel {
         btnEmployees = new javax.swing.JButton();
         btnRequests = new javax.swing.JButton();
         tfAdminDashboard = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        btnUsers.setBackground(new java.awt.Color(255, 0, 51));
+        btnUsers.setBackground(new java.awt.Color(0, 183, 210));
         btnUsers.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnUsers.setForeground(new java.awt.Color(255, 255, 255));
         btnUsers.setText("Users");
@@ -57,7 +61,7 @@ public class BloodBankJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnOrganization.setBackground(new java.awt.Color(255, 0, 51));
+        btnOrganization.setBackground(new java.awt.Color(0, 183, 210));
         btnOrganization.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnOrganization.setForeground(new java.awt.Color(255, 255, 255));
         btnOrganization.setText("Organizations");
@@ -67,7 +71,7 @@ public class BloodBankJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnEmployees.setBackground(new java.awt.Color(255, 0, 51));
+        btnEmployees.setBackground(new java.awt.Color(0, 183, 210));
         btnEmployees.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnEmployees.setForeground(new java.awt.Color(255, 255, 255));
         btnEmployees.setText("Employees");
@@ -77,7 +81,7 @@ public class BloodBankJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnRequests.setBackground(new java.awt.Color(255, 0, 51));
+        btnRequests.setBackground(new java.awt.Color(0, 183, 210));
         btnRequests.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnRequests.setForeground(new java.awt.Color(255, 255, 255));
         btnRequests.setText("View Requests");
@@ -88,45 +92,76 @@ public class BloodBankJPanel extends javax.swing.JPanel {
         });
 
         tfAdminDashboard.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        tfAdminDashboard.setForeground(new java.awt.Color(255, 0, 51));
+        tfAdminDashboard.setForeground(new java.awt.Color(0, 183, 210));
         tfAdminDashboard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tfAdminDashboard.setText("ADMIN DASHBOARD");
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/BloodBankJPanel/User.png"))); // NOI18N
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/BloodBankJPanel/Employee.png"))); // NOI18N
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/BloodBankJPanel/Organization.png"))); // NOI18N
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/BloodBankJPanel/viewrequest.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(0, 143, Short.MAX_VALUE)
+                .addComponent(tfAdminDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 916, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(134, 134, 134))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnRequests, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEmployees, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(647, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(tfAdminDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 916, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(166, 166, 166)
+                        .addComponent(btnOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(181, 181, 181)
+                        .addComponent(jLabel6))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+                            .addComponent(btnUsers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(220, 220, 220))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(218, 218, 218))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnRequests, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnEmployees, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(210, 210, 210))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(127, 127, 127)
-                .addComponent(btnOrganization)
-                .addGap(18, 18, 18)
-                .addComponent(btnEmployees)
-                .addGap(18, 18, 18)
-                .addComponent(btnUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnRequests)
-                .addContainerGap(315, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(25, 25, 25)
-                    .addComponent(tfAdminDashboard)
-                    .addContainerGap(534, Short.MAX_VALUE)))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(tfAdminDashboard)
+                        .addGap(136, 136, 136)
+                        .addComponent(jLabel6))
+                    .addComponent(jLabel5))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnOrganization)
+                    .addComponent(btnEmployees))
+                .addGap(103, 103, 103)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel1))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRequests))
+                .addContainerGap(161, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -166,6 +201,10 @@ public class BloodBankJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnOrganization;
     private javax.swing.JButton btnRequests;
     private javax.swing.JButton btnUsers;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel tfAdminDashboard;
     // End of variables declaration//GEN-END:variables
 }
