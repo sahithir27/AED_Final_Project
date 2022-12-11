@@ -72,10 +72,11 @@ public class DiagnosticsJPanel extends javax.swing.JPanel {
         assign_button = new javax.swing.JButton();
         process_btn = new javax.swing.JButton();
         btn_refresh = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         lbl_diagnostics_dashboard.setBackground(new java.awt.Color(255, 255, 255));
         lbl_diagnostics_dashboard.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
-        lbl_diagnostics_dashboard.setForeground(new java.awt.Color(255, 0, 51));
+        lbl_diagnostics_dashboard.setForeground(new java.awt.Color(0, 183, 210));
         lbl_diagnostics_dashboard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_diagnostics_dashboard.setText("DIAGNOSTICS DASHBOARD");
 
@@ -108,8 +109,9 @@ public class DiagnosticsJPanel extends javax.swing.JPanel {
         tbl_work_request.setSelectionForeground(new java.awt.Color(255, 255, 51));
         jScrollPane1.setViewportView(tbl_work_request);
 
-        assign_button.setBackground(new java.awt.Color(255, 0, 51));
+        assign_button.setBackground(new java.awt.Color(0, 183, 210));
         assign_button.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        assign_button.setForeground(new java.awt.Color(255, 255, 255));
         assign_button.setText("Assign me");
         assign_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,8 +119,9 @@ public class DiagnosticsJPanel extends javax.swing.JPanel {
             }
         });
 
-        process_btn.setBackground(new java.awt.Color(255, 0, 51));
+        process_btn.setBackground(new java.awt.Color(0, 183, 210));
         process_btn.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        process_btn.setForeground(new java.awt.Color(255, 255, 255));
         process_btn.setText("Process");
         process_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,14 +129,18 @@ public class DiagnosticsJPanel extends javax.swing.JPanel {
             }
         });
 
-        btn_refresh.setBackground(new java.awt.Color(255, 0, 51));
+        btn_refresh.setBackground(new java.awt.Color(0, 183, 210));
         btn_refresh.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        btn_refresh.setForeground(new java.awt.Color(255, 255, 255));
         btn_refresh.setText("Refresh");
         btn_refresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_refreshActionPerformed(evt);
             }
         });
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Diagnostics/diagnostic.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -142,32 +149,37 @@ public class DiagnosticsJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(283, 283, 283)
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 643, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(377, 377, 377)
                         .addComponent(lbl_diagnostics_dashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
+                        .addGap(250, 250, 250)
                         .addComponent(assign_button, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
+                        .addGap(76, 76, 76)
                         .addComponent(process_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)
-                        .addComponent(btn_refresh, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 866, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(590, Short.MAX_VALUE))
+                        .addGap(108, 108, 108)
+                        .addComponent(btn_refresh, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(lbl_diagnostics_dashboard)
-                .addGap(38, 38, 38)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(process_btn)
                     .addComponent(assign_button)
+                    .addComponent(process_btn)
                     .addComponent(btn_refresh))
-                .addGap(102, 102, 102))
+                .addGap(154, 154, 154))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -229,6 +241,7 @@ public class DiagnosticsJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton assign_button;
     private javax.swing.JButton btn_refresh;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbl_diagnostics_dashboard;
     private javax.swing.JButton process_btn;

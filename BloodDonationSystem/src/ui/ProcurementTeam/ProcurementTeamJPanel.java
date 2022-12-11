@@ -132,6 +132,7 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
         btnInProcess = new javax.swing.JButton();
         btnCompleted = new javax.swing.JButton();
         lblDashboard = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         tbl_work_request.setForeground(new java.awt.Color(153, 51, 0));
         tbl_work_request.setModel(new javax.swing.table.DefaultTableModel(
@@ -149,7 +150,7 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
         tbl_work_request.setSelectionForeground(new java.awt.Color(255, 255, 0));
         jScrollPane1.setViewportView(tbl_work_request);
 
-        btnInProcess.setBackground(new java.awt.Color(255, 0, 51));
+        btnInProcess.setBackground(new java.awt.Color(0, 183, 210));
         btnInProcess.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnInProcess.setForeground(new java.awt.Color(255, 255, 255));
         btnInProcess.setText("InProcess");
@@ -159,7 +160,7 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnCompleted.setBackground(new java.awt.Color(255, 0, 51));
+        btnCompleted.setBackground(new java.awt.Color(0, 183, 210));
         btnCompleted.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnCompleted.setForeground(new java.awt.Color(255, 255, 255));
         btnCompleted.setText("Completed");
@@ -170,46 +171,49 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
         });
 
         lblDashboard.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblDashboard.setForeground(new java.awt.Color(255, 0, 51));
+        lblDashboard.setForeground(new java.awt.Color(0, 183, 210));
         lblDashboard.setText("Procurement Team Dashboard");
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Procurement/procurement.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 820, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(279, 279, 279)
-                                    .addComponent(lblDashboard))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(303, 303, 303)
-                                    .addComponent(btnInProcess)
-                                    .addGap(54, 54, 54)
-                                    .addComponent(btnCompleted)))
-                            .addGap(0, 0, Short.MAX_VALUE)))
-                    .addContainerGap()))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblDashboard)
+                .addGap(256, 256, 256))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(262, 262, 262)
+                        .addComponent(btnInProcess, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(95, 95, 95)
+                        .addComponent(btnCompleted, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addComponent(jLabel1)))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 611, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(194, 194, 194)
-                    .addComponent(lblDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnInProcess)
-                        .addComponent(btnCompleted))
-                    .addContainerGap(194, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(lblDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnInProcess, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCompleted, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
+                .addComponent(jLabel1)
+                .addContainerGap(46, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -261,6 +265,7 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCompleted;
     private javax.swing.JButton btnInProcess;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblDashboard;
     private javax.swing.JTable tbl_work_request;

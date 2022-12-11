@@ -189,7 +189,7 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
         tblBloodworkRequests.setSelectionForeground(new java.awt.Color(255, 255, 51));
         tblPatientData.setViewportView(tblBloodworkRequests);
 
-        btnAssignRequest.setBackground(new java.awt.Color(255, 0, 51));
+        btnAssignRequest.setBackground(new java.awt.Color(0, 183, 210));
         btnAssignRequest.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnAssignRequest.setText("Assign");
         btnAssignRequest.addActionListener(new java.awt.event.ActionListener() {
@@ -198,7 +198,7 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
             }
         });
 
-        cbfacilityProcurement.setBackground(new java.awt.Color(255, 0, 51));
+        cbfacilityProcurement.setBackground(new java.awt.Color(0, 183, 210));
         cbfacilityProcurement.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         cbfacilityProcurement.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbfacilityProcurement.addActionListener(new java.awt.event.ActionListener() {
@@ -207,7 +207,7 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnProcureBlood.setBackground(new java.awt.Color(255, 0, 51));
+        btnProcureBlood.setBackground(new java.awt.Color(0, 183, 210));
         btnProcureBlood.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnProcureBlood.setText("Acquire Blood");
         btnProcureBlood.addActionListener(new java.awt.event.ActionListener() {
@@ -230,10 +230,10 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tblDonorData);
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(255, 0, 51));
+        lblTitle.setForeground(new java.awt.Color(0, 183, 210));
         lblTitle.setText("Blood Acquirement Requests");
 
-        btnBack.setBackground(new java.awt.Color(255, 0, 51));
+        btnBack.setBackground(new java.awt.Color(0, 183, 210));
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -243,8 +243,8 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
         });
 
         lblMatch.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblMatch.setForeground(new java.awt.Color(255, 0, 51));
-        lblMatch.setText("Blood Matching Requests");
+        lblMatch.setForeground(new java.awt.Color(0, 183, 210));
+        lblMatch.setText("Organ Matching Requests");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

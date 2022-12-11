@@ -134,8 +134,9 @@ public class UsersJPanel extends javax.swing.JPanel {
         lblTitle = new javax.swing.JLabel();
         lblCurrentAccount = new javax.swing.JLabel();
         lblMustText = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        btnCreateUser.setBackground(new java.awt.Color(255, 0, 51));
+        btnCreateUser.setBackground(new java.awt.Color(0, 183, 210));
         btnCreateUser.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnCreateUser.setText("Create");
         btnCreateUser.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +148,6 @@ public class UsersJPanel extends javax.swing.JPanel {
         tfUsername.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
 
         lblUsername.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblUsername.setForeground(new java.awt.Color(255, 0, 51));
         lblUsername.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblUsername.setText("User Name*:");
 
@@ -179,18 +179,15 @@ public class UsersJPanel extends javax.swing.JPanel {
         tblUserDetails.setViewportView(tblCurrentAccounts);
 
         lblPassword.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblPassword.setForeground(new java.awt.Color(255, 0, 51));
         lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblPassword.setText("Password*:");
 
         tfPassword.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
 
         lblEmployeeName.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblEmployeeName.setForeground(new java.awt.Color(255, 0, 51));
         lblEmployeeName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblEmployeeName.setText("Employee:");
 
-        cbEmployeeName.setBackground(new java.awt.Color(255, 0, 51));
         cbEmployeeName.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         cbEmployeeName.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbEmployeeName.addActionListener(new java.awt.event.ActionListener() {
@@ -199,7 +196,7 @@ public class UsersJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnBack.setBackground(new java.awt.Color(255, 0, 51));
+        btnBack.setBackground(new java.awt.Color(0, 183, 210));
         btnBack.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -209,11 +206,9 @@ public class UsersJPanel extends javax.swing.JPanel {
         });
 
         lblOrganization.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblOrganization.setForeground(new java.awt.Color(255, 0, 51));
         lblOrganization.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblOrganization.setText("Organization:");
 
-        cbOrganization.setBackground(new java.awt.Color(255, 0, 51));
         cbOrganization.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         cbOrganization.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbOrganization.addActionListener(new java.awt.event.ActionListener() {
@@ -223,11 +218,9 @@ public class UsersJPanel extends javax.swing.JPanel {
         });
 
         lblRole.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblRole.setForeground(new java.awt.Color(255, 0, 51));
         lblRole.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblRole.setText("Role:");
 
-        cbRole.setBackground(new java.awt.Color(255, 0, 51));
         cbRole.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         cbRole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbRole.addActionListener(new java.awt.event.ActionListener() {
@@ -237,7 +230,6 @@ public class UsersJPanel extends javax.swing.JPanel {
         });
 
         lblAddress.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblAddress.setForeground(new java.awt.Color(255, 0, 51));
         lblAddress.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblAddress.setText("Address*:");
 
@@ -249,21 +241,18 @@ public class UsersJPanel extends javax.swing.JPanel {
         });
 
         lblQualification.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblQualification.setForeground(new java.awt.Color(255, 0, 51));
         lblQualification.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblQualification.setText("Qualifications*:");
 
         tfQualification.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
 
         lblContact.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblContact.setForeground(new java.awt.Color(255, 0, 51));
         lblContact.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblContact.setText("Contact*:");
 
         tfContact.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
 
         lblAge.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblAge.setForeground(new java.awt.Color(255, 0, 51));
         lblAge.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblAge.setText("Age*:");
 
@@ -275,7 +264,6 @@ public class UsersJPanel extends javax.swing.JPanel {
         });
 
         lblSex.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblSex.setForeground(new java.awt.Color(255, 0, 51));
         lblSex.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblSex.setText("Gender*:");
 
@@ -288,23 +276,31 @@ public class UsersJPanel extends javax.swing.JPanel {
         radFemale.setText("F");
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(255, 0, 51));
+        lblTitle.setForeground(new java.awt.Color(0, 183, 210));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("CREATE USER ACCOUNT");
 
         lblCurrentAccount.setFont(new java.awt.Font("Cambria", 3, 18)); // NOI18N
-        lblCurrentAccount.setForeground(new java.awt.Color(255, 0, 51));
         lblCurrentAccount.setText("Current accounts");
 
         lblMustText.setFont(new java.awt.Font("Cambria", 3, 12)); // NOI18N
         lblMustText.setForeground(new java.awt.Color(255, 51, 51));
         lblMustText.setText("* fields are mandatory to fill");
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/BloodBankJPanel/User.png"))); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1097, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(785, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(62, 62, 62))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -344,7 +340,7 @@ public class UsersJPanel extends javax.swing.JPanel {
                                     .addComponent(radMale, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(radFemale, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(0, 144, Short.MAX_VALUE))
+                                    .addGap(0, 150, Short.MAX_VALUE))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(lblEmployeeName, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(10, 10, 10)
@@ -369,29 +365,26 @@ public class UsersJPanel extends javax.swing.JPanel {
                             .addComponent(lblMustText, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(0, 0, Short.MAX_VALUE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(34, 34, 34)
-                                    .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(tblUserDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(196, 196, 196)
-                                    .addComponent(lblCurrentAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                            .addGap(146, 146, 146)
+                            .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tblUserDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(196, 196, 196)
+                            .addComponent(lblCurrentAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 676, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(btnBack)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 368, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(15, 15, 15))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(13, 13, 13)
-                            .addComponent(lblTitle))
-                        .addComponent(btnBack))
+                    .addGap(19, 19, 19)
+                    .addComponent(lblTitle)
                     .addGap(18, 18, 18)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
@@ -590,6 +583,7 @@ public class UsersJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox cbEmployeeName;
     private javax.swing.JComboBox cbOrganization;
     private javax.swing.JComboBox cbRole;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblContact;

@@ -220,8 +220,9 @@ public class DoctorJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblWorkRequest);
 
+        btnOrderTest.setBackground(new java.awt.Color(0, 183, 210));
         btnOrderTest.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
-        btnOrderTest.setForeground(new java.awt.Color(255, 0, 51));
+        btnOrderTest.setForeground(new java.awt.Color(255, 255, 255));
         btnOrderTest.setText("Order test");
         btnOrderTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -256,8 +257,9 @@ public class DoctorJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblBloodRequest);
 
-        btnRequestBlood.setBackground(new java.awt.Color(255, 0, 51));
+        btnRequestBlood.setBackground(new java.awt.Color(0, 183, 210));
         btnRequestBlood.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
+        btnRequestBlood.setForeground(new java.awt.Color(255, 255, 255));
         btnRequestBlood.setText("Request Blood");
         btnRequestBlood.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -266,7 +268,6 @@ public class DoctorJPanel extends javax.swing.JPanel {
         });
 
         lblSelectPatient.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblSelectPatient.setForeground(new java.awt.Color(255, 0, 51));
         lblSelectPatient.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblSelectPatient.setText("Select Patient:");
 
@@ -279,17 +280,16 @@ public class DoctorJPanel extends javax.swing.JPanel {
         });
 
         lblAge.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblAge.setForeground(new java.awt.Color(255, 0, 51));
         lblAge.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblAge.setText("Age:");
 
         lblName1.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblName1.setForeground(new java.awt.Color(255, 0, 51));
         lblName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblName1.setText("Name:");
 
-        btnViewReport.setBackground(new java.awt.Color(255, 0, 51));
+        btnViewReport.setBackground(new java.awt.Color(0, 183, 210));
         btnViewReport.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
+        btnViewReport.setForeground(new java.awt.Color(255, 255, 255));
         btnViewReport.setText("View Test Report");
         btnViewReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -299,7 +299,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
 
         lblDashboard.setBackground(new java.awt.Color(255, 255, 255));
         lblDashboard.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
-        lblDashboard.setForeground(new java.awt.Color(255, 0, 51));
+        lblDashboard.setForeground(new java.awt.Color(0, 183, 210));
         lblDashboard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDashboard.setText("DOCTOR DASHBOARD");
 
@@ -316,8 +316,9 @@ public class DoctorJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnView.setBackground(new java.awt.Color(0, 183, 210));
         btnView.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
-        btnView.setForeground(new java.awt.Color(255, 0, 51));
+        btnView.setForeground(new java.awt.Color(255, 255, 255));
         btnView.setText("View");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -326,16 +327,15 @@ public class DoctorJPanel extends javax.swing.JPanel {
         });
 
         lblPatientsList.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
-        lblPatientsList.setForeground(new java.awt.Color(255, 0, 51));
         lblPatientsList.setText("List of Old patients and test results");
 
         lblBlood.setBackground(new java.awt.Color(255, 255, 255));
         lblBlood.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
         lblBlood.setForeground(new java.awt.Color(255, 0, 51));
         lblBlood.setText("Your Patients waiting for Blood");
-
-        btnNotifyBlood.setBackground(new java.awt.Color(255, 0, 51));
+        btnNotifyBlood.setBackground(new java.awt.Color(0, 183, 210));
         btnNotifyBlood.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
+        btnNotifyBlood.setForeground(new java.awt.Color(255, 255, 255));
         btnNotifyBlood.setText("Notify Blood");
         btnNotifyBlood.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -343,14 +343,16 @@ public class DoctorJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnPhysician.setBackground(new java.awt.Color(255, 0, 51));
+        btnPhysician.setBackground(new java.awt.Color(0, 183, 210));
         btnPhysician.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
+        btnPhysician.setForeground(new java.awt.Color(255, 255, 255));
         btnPhysician.setText("Physician");
         btnPhysician.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPhysicianActionPerformed(evt);
             }
         });
+
 
         chk_AP.setBackground(new java.awt.Color(255, 0, 51));
         chk_AP.setText("A+");
@@ -400,6 +402,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 chk_ONActionPerformed(evt);
             }
         });
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Doctor/Doctor.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -415,6 +418,19 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(chk_BN)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(chk_AB)
+                .addGap(106, 106, 106))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblBlood)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblPatientsList)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 307, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addGap(356, 356, 356))))
                 .addComponent(chk_ABP)
                 .addGap(15, 15, 15)
                 .addComponent(chk_ABN)
@@ -426,59 +442,62 @@ public class DoctorJPanel extends javax.swing.JPanel {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblBlood)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 881, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 881, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(btnViewReport)
+                                .addGap(38, 38, 38)
+                                .addComponent(btnRequestBlood, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(37, 37, 37)
+                                .addComponent(btnPhysician)
+                                .addGap(32, 32, 32)
+                                .addComponent(btnNotifyBlood))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addGap(14, 14, 14)
-                                    .addComponent(btnViewReport)
-                                    .addGap(38, 38, 38)
-                                    .addComponent(btnRequestBlood, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(37, 37, 37)
-                                    .addComponent(btnPhysician)
-                                    .addGap(32, 32, 32)
-                                    .addComponent(btnNotifyBlood))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(4, 4, 4)
-                                        .addComponent(jScrollPane1))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(115, 115, 115)
-                                                .addComponent(lblDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(62, 62, 62)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(lblPatientsList)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                            .addComponent(lblName1)
-                                                            .addComponent(lblAge, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGap(18, 18, 18)
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(lblSelectPatient)
-                                                .addGap(18, 18, 18)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(cbPatients, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addGap(51, 51, 51)
-                                                        .addComponent(btnView))))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(179, 179, 179)
-                                                .addComponent(btnOrderTest)))
-                                        .addGap(50, 50, 50))))))
+                                    .addGap(4, 4, 4)
+                                    .addComponent(jScrollPane1))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(115, 115, 115)
+                                            .addComponent(lblDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(62, 62, 62)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(lblName1)
+                                                .addComponent(lblAge, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGap(18, 18, 18)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(lblSelectPatient)
+                                            .addGap(18, 18, 18)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(cbPatients, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGap(51, 51, 51)
+                                                    .addComponent(btnView))))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(179, 179, 179)
+                                            .addComponent(btnOrderTest)))
+                                    .addGap(50, 50, 50)))))
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(484, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 209, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblPatientsList)
+                        .addGap(192, 192, 192)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(chk_AP)
                     .addComponent(chk_BN)
@@ -509,9 +528,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
                         .addComponent(lblAge, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addComponent(btnOrderTest, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblPatientsList)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -519,9 +536,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
                         .addComponent(btnRequestBlood)
                         .addComponent(btnNotifyBlood)
                         .addComponent(btnPhysician))
-                    .addGap(57, 57, 57)
-                    .addComponent(lblBlood)
-                    .addGap(18, 18, 18)
+                    .addGap(93, 93, 93)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap()))
         );

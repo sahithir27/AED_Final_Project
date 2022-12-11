@@ -79,6 +79,7 @@ public class EmployeesJPanel extends javax.swing.JPanel {
         lbOrganizationName = new javax.swing.JLabel();
         tfCreateNewEmployeeHeading = new javax.swing.JLabel();
         lblCurrentEmployeesHead = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         tblCurrentEmployeeList.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         tblCurrentEmployeeList.setForeground(new java.awt.Color(153, 51, 0));
@@ -109,7 +110,7 @@ public class EmployeesJPanel extends javax.swing.JPanel {
         tblCurrentEmployeeList.setSelectionForeground(new java.awt.Color(255, 255, 51));
         jScrollPane1.setViewportView(tblCurrentEmployeeList);
 
-        btnCreateNewEmployee.setBackground(new java.awt.Color(255, 0, 51));
+        btnCreateNewEmployee.setBackground(new java.awt.Color(0, 183, 210));
         btnCreateNewEmployee.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnCreateNewEmployee.setForeground(new java.awt.Color(255, 255, 255));
         btnCreateNewEmployee.setText("Create");
@@ -119,7 +120,7 @@ public class EmployeesJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnGoBack.setBackground(new java.awt.Color(255, 0, 51));
+        btnGoBack.setBackground(new java.awt.Color(0, 183, 210));
         btnGoBack.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnGoBack.setForeground(new java.awt.Color(255, 255, 255));
         btnGoBack.setText("Go Back");
@@ -130,7 +131,6 @@ public class EmployeesJPanel extends javax.swing.JPanel {
         });
 
         lblName.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblName.setForeground(new java.awt.Color(255, 0, 51));
         lblName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblName.setText("Employee Name:");
 
@@ -141,31 +141,33 @@ public class EmployeesJPanel extends javax.swing.JPanel {
             }
         });
 
-        cbOrganization.setBackground(new java.awt.Color(255, 153, 153));
         cbOrganization.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         cbOrganization.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         lbOrganizationName.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lbOrganizationName.setForeground(new java.awt.Color(255, 0, 51));
         lbOrganizationName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lbOrganizationName.setText("Organization:");
 
         tfCreateNewEmployeeHeading.setBackground(new java.awt.Color(255, 255, 255));
         tfCreateNewEmployeeHeading.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
-        tfCreateNewEmployeeHeading.setForeground(new java.awt.Color(255, 0, 51));
+        tfCreateNewEmployeeHeading.setForeground(new java.awt.Color(0, 183, 210));
         tfCreateNewEmployeeHeading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tfCreateNewEmployeeHeading.setText("CREATE EMPLOYEE");
 
         lblCurrentEmployeesHead.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        lblCurrentEmployeesHead.setForeground(new java.awt.Color(255, 0, 51));
         lblCurrentEmployeesHead.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblCurrentEmployeesHead.setText("Existing Employees");
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Employee/createEmployee.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 715, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(583, 583, 583)
+                .addComponent(jLabel1)
+                .addContainerGap(585, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -192,11 +194,14 @@ public class EmployeesJPanel extends javax.swing.JPanel {
                                             .addComponent(tfNameVal)))
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(11, 11, 11))))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addContainerGap(1065, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(jLabel1)
+                .addContainerGap(79, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -265,6 +270,7 @@ public class EmployeesJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCreateNewEmployee;
     private javax.swing.JButton btnGoBack;
     private javax.swing.JComboBox cbOrganization;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbOrganizationName;
     private javax.swing.JLabel lblCurrentEmployeesHead;

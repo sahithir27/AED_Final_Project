@@ -76,12 +76,12 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        logoutJPanel.setBackground(new java.awt.Color(214, 235, 255));
+        logoutJPanel.setBackground(new java.awt.Color(255, 255, 255));
         logoutJPanel.setMinimumSize(new java.awt.Dimension(100, 200));
         logoutJPanel.setPreferredSize(new java.awt.Dimension(250, 1080));
         logoutJPanel.setLayout(null);
 
-        btnLogout.setBackground(new java.awt.Color(51, 51, 255));
+        btnLogout.setBackground(new java.awt.Color(0, 183, 210));
         btnLogout.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnLogout.setForeground(new java.awt.Color(255, 255, 255));
         btnLogout.setText("Logout");
@@ -103,7 +103,7 @@ public class MainJFrame extends javax.swing.JFrame {
         loginContainer.setPreferredSize(new java.awt.Dimension(1670, 1080));
         loginContainer.setLayout(new java.awt.CardLayout());
 
-        loginJPanel.setBackground(new java.awt.Color(214, 235, 255));
+        loginJPanel.setBackground(new java.awt.Color(255, 255, 255));
         loginJPanel.setMaximumSize(new java.awt.Dimension(1200, 800));
         loginJPanel.setPreferredSize(new java.awt.Dimension(1200, 800));
         loginJPanel.setLayout(null);
@@ -120,13 +120,13 @@ public class MainJFrame extends javax.swing.JFrame {
         tfUsername.setBounds(360, 230, 280, 40);
 
         lblUsername.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
-        lblUsername.setForeground(new java.awt.Color(51, 110, 208));
+        lblUsername.setForeground(new java.awt.Color(0, 183, 210));
         lblUsername.setText("Username:");
         loginJPanel.add(lblUsername);
         lblUsername.setBounds(260, 230, 90, 30);
 
         lblPassword.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
-        lblPassword.setForeground(new java.awt.Color(51, 110, 208));
+        lblPassword.setForeground(new java.awt.Color(0, 183, 210));
         lblPassword.setText("Password:");
         loginJPanel.add(lblPassword);
         lblPassword.setBounds(260, 290, 90, 30);
@@ -135,7 +135,7 @@ public class MainJFrame extends javax.swing.JFrame {
         loginJPanel.add(tfPassword);
         tfPassword.setBounds(360, 290, 280, 40);
 
-        btnLogin.setBackground(new java.awt.Color(51, 51, 255));
+        btnLogin.setBackground(new java.awt.Color(0, 183, 210));
         btnLogin.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("Login");
@@ -156,7 +156,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
         loginJPanel.add(btnDonorRegisteration);
-        btnDonorRegisteration.setBounds(600, 620, 250, 23);
+        btnDonorRegisteration.setBounds(600, 620, 250, 25);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFocusable(false);
@@ -166,7 +166,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 110, 208));
+        jLabel2.setForeground(new java.awt.Color(0, 183, 210));
         jLabel2.setText("Blood Management System");
         loginJPanel.add(jLabel2);
         jLabel2.setBounds(270, 0, 690, 120);
@@ -179,11 +179,11 @@ public class MainJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1103, Short.MAX_VALUE)
+            .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1170, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 519, Short.MAX_VALUE)
+            .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 586, Short.MAX_VALUE)
         );
 
         pack();
