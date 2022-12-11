@@ -99,7 +99,7 @@ public class HealthOfficerJPanel extends javax.swing.JPanel {
         btn_decline = new javax.swing.JButton();
 
         lbl_ngo_title.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lbl_ngo_title.setForeground(new java.awt.Color(255, 0, 51));
+        lbl_ngo_title.setForeground(new java.awt.Color(0, 183, 210));
         lbl_ngo_title.setText("Event Fund Requests ");
 
         tbl_list_of_events.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -128,7 +128,7 @@ public class HealthOfficerJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tbl_list_of_events);
 
         lbl_list_of_donors.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lbl_list_of_donors.setForeground(new java.awt.Color(255, 0, 51));
+        lbl_list_of_donors.setForeground(new java.awt.Color(0, 183, 210));
         lbl_list_of_donors.setText("List of Donors ");
 
         tbl_list_of_donors.setForeground(new java.awt.Color(153, 0, 0));
@@ -155,8 +155,9 @@ public class HealthOfficerJPanel extends javax.swing.JPanel {
         tbl_list_of_donors.setSelectionForeground(new java.awt.Color(255, 255, 51));
         jScrollPane2.setViewportView(tbl_list_of_donors);
 
-        btn_accept.setBackground(new java.awt.Color(255, 0, 51));
+        btn_accept.setBackground(new java.awt.Color(0, 183, 210));
         btn_accept.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
+        btn_accept.setForeground(new java.awt.Color(255, 255, 255));
         btn_accept.setText("ACCEPT");
         btn_accept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,8 +165,9 @@ public class HealthOfficerJPanel extends javax.swing.JPanel {
             }
         });
 
-        btn_decline.setBackground(new java.awt.Color(255, 0, 51));
+        btn_decline.setBackground(new java.awt.Color(0, 183, 210));
         btn_decline.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
+        btn_decline.setForeground(new java.awt.Color(255, 255, 255));
         btn_decline.setText("DECLINE");
         btn_decline.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,45 +181,42 @@ public class HealthOfficerJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lbl_ngo_title, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(491, 491, 491))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(332, 332, 332)
-                        .addComponent(lbl_ngo_title, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(723, 723, 723)
+                        .addGap(368, 368, 368)
                         .addComponent(btn_accept, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(196, 196, 196)
                         .addComponent(btn_decline, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(471, 471, 471)
+                        .addComponent(lbl_list_of_donors, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(171, 171, 171)
-                        .addComponent(lbl_list_of_donors, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(355, 355, 355)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(lbl_ngo_title)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(btn_decline)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
-                        .addComponent(lbl_list_of_donors)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(51, 51, 51))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_accept)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_accept)
+                    .addComponent(btn_decline))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addComponent(lbl_list_of_donors)
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
         );
     }// </editor-fold>//GEN-END:initComponents
 

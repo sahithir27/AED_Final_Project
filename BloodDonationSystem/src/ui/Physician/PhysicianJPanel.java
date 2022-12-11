@@ -70,6 +70,7 @@ public class PhysicianJPanel extends javax.swing.JPanel {
         tblPatientData = new javax.swing.JTable();
         btnAssignTherapist = new javax.swing.JButton();
         lblTitle = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         tblPatientData.setForeground(new java.awt.Color(102, 0, 0));
         tblPatientData.setModel(new javax.swing.table.DefaultTableModel(
@@ -108,8 +109,9 @@ public class PhysicianJPanel extends javax.swing.JPanel {
         tblPatientData.setSelectionForeground(new java.awt.Color(255, 255, 0));
         jScrollPane1.setViewportView(tblPatientData);
 
-        btnAssignTherapist.setBackground(new java.awt.Color(255, 0, 51));
+        btnAssignTherapist.setBackground(new java.awt.Color(0, 183, 210));
         btnAssignTherapist.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnAssignTherapist.setForeground(new java.awt.Color(255, 255, 255));
         btnAssignTherapist.setText("Assign me");
         btnAssignTherapist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,36 +120,45 @@ public class PhysicianJPanel extends javax.swing.JPanel {
         });
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(255, 0, 51));
+        lblTitle.setForeground(new java.awt.Color(0, 183, 210));
         lblTitle.setText("Therapist Dashboard");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Therapy/Therapy.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(238, Short.MAX_VALUE)
-                        .addComponent(btnAssignTherapist)
-                        .addGap(540, 540, 540))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jScrollPane1)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(384, 384, 384)
+                .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(176, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 702, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(135, 135, 135))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnAssignTherapist, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(405, 405, 405))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(4, 4, 4)
+                .addContainerGap()
                 .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(16, 16, 16)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(34, 34, 34)
                 .addComponent(btnAssignTherapist)
-                .addContainerGap(491, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(93, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -180,6 +191,7 @@ public class PhysicianJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAssignTherapist;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JTable tblPatientData;
