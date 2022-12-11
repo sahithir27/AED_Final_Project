@@ -13,7 +13,7 @@ import model.Person.Patients;
  */
 public class WaitlistWorkRequest extends WorkRequest{
     Patients patient;
-    private ArrayList<String> listOfOrgans = new ArrayList<>();
+    private ArrayList<String> listOfBloodTypes = new ArrayList<>();
 
     public WaitlistWorkRequest(Patients patient) {
         this.patient = patient;
@@ -27,12 +27,12 @@ public class WaitlistWorkRequest extends WorkRequest{
         this.patient = patient;
     }
 
-    public ArrayList<String> getListOfOrgans() {
-        return listOfOrgans;
+    public ArrayList<String> getListOfBloodTypes() {
+        return listOfBloodTypes;
     }
 
-    public void setListOfOrgans(ArrayList<String> listOfOrgans) {
-        this.listOfOrgans = listOfOrgans;
+    public void setListOfBloodTypes(ArrayList<String> listOfBloodTypes) {
+        this.listOfBloodTypes = listOfBloodTypes;
     }
     
 }

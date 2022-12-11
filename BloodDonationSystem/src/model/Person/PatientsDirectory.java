@@ -14,9 +14,9 @@ public class PatientsDirectory {
     private ArrayList<Patients> listOfPatients;
      public Patients createPatient(int id,String patientName,String patientAge,
              String gender,String contact, String speciality,String doctor,
-             boolean isAlive, boolean isDonor, boolean isDirectDonor, ArrayList<String> organList,
+             boolean isAlive, boolean isDonor, boolean isDirectDonor, ArrayList<String> bloodTypeList,
              ArrayList<String> testDataList){
-         Patients patient = new Patients(id, patientName, patientAge,gender, contact, speciality, doctor, isAlive, isDonor, isDirectDonor,organList,testDataList);
+         Patients patient = new Patients(id, patientName, patientAge,gender, contact, speciality, doctor, isAlive, isDonor, isDirectDonor,bloodTypeList,testDataList);
          listOfPatients.add(patient);
          return patient;
      }

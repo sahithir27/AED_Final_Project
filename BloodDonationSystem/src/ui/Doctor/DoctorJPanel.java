@@ -186,10 +186,14 @@ public class DoctorJPanel extends javax.swing.JPanel {
         lblBlood = new javax.swing.JLabel();
         btnNotifyBlood = new javax.swing.JButton();
         btnPhysician = new javax.swing.JButton();
-        chk_A = new javax.swing.JCheckBox();
-        chk_AB = new javax.swing.JCheckBox();
-        chk_O = new javax.swing.JCheckBox();
-        chk_B = new javax.swing.JCheckBox();
+        chk_AP = new javax.swing.JCheckBox();
+        chk_BN = new javax.swing.JCheckBox();
+        chk_AN = new javax.swing.JCheckBox();
+        chk_BP = new javax.swing.JCheckBox();
+        chk_ABP = new javax.swing.JCheckBox();
+        chk_ABN = new javax.swing.JCheckBox();
+        chk_OP = new javax.swing.JCheckBox();
+        chk_ON = new javax.swing.JCheckBox();
 
         tblWorkRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -328,7 +332,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
         lblBlood.setBackground(new java.awt.Color(255, 255, 255));
         lblBlood.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
         lblBlood.setForeground(new java.awt.Color(255, 0, 51));
-        lblBlood.setText("Your Patients waiting for Organs");
+        lblBlood.setText("Your Patients waiting for Blood");
 
         btnNotifyBlood.setBackground(new java.awt.Color(255, 0, 51));
         btnNotifyBlood.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
@@ -348,32 +352,77 @@ public class DoctorJPanel extends javax.swing.JPanel {
             }
         });
 
-        chk_A.setBackground(new java.awt.Color(255, 0, 51));
-        chk_A.setText("A Group");
+        chk_AP.setBackground(new java.awt.Color(255, 0, 51));
+        chk_AP.setText("A+");
 
-        chk_AB.setBackground(new java.awt.Color(255, 0, 51));
-        chk_AB.setText("AB Group");
+        chk_BN.setBackground(new java.awt.Color(255, 0, 51));
+        chk_BN.setText("B-");
+        chk_BN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_BNActionPerformed(evt);
+            }
+        });
 
-        chk_O.setBackground(new java.awt.Color(255, 0, 51));
-        chk_O.setText("O Group");
+        chk_AN.setBackground(new java.awt.Color(255, 0, 51));
+        chk_AN.setText("A-");
 
-        chk_B.setBackground(new java.awt.Color(255, 0, 51));
-        chk_B.setText("B Group");
+        chk_BP.setBackground(new java.awt.Color(255, 0, 51));
+        chk_BP.setText("B+");
+
+        chk_ABP.setBackground(new java.awt.Color(255, 0, 51));
+        chk_ABP.setText("AB+");
+        chk_ABP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_ABPActionPerformed(evt);
+            }
+        });
+
+        chk_ABN.setBackground(new java.awt.Color(255, 0, 51));
+        chk_ABN.setText("AB-");
+        chk_ABN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_ABNActionPerformed(evt);
+            }
+        });
+
+        chk_OP.setBackground(new java.awt.Color(255, 0, 51));
+        chk_OP.setText("O+");
+        chk_OP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_OPActionPerformed(evt);
+            }
+        });
+
+        chk_ON.setBackground(new java.awt.Color(255, 0, 51));
+        chk_ON.setText("O-");
+        chk_ON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_ONActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(441, Short.MAX_VALUE)
-                .addComponent(chk_A)
+                .addGap(30, 30, 30)
+                .addComponent(chk_AP)
                 .addGap(18, 18, 18)
-                .addComponent(chk_O)
-                .addGap(24, 24, 24)
-                .addComponent(chk_B)
+                .addComponent(chk_AN)
+                .addGap(18, 18, 18)
+                .addComponent(chk_BP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(chk_AB)
-                .addGap(106, 106, 106))
+                .addComponent(chk_BN)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(chk_ABP)
+                .addGap(15, 15, 15)
+                .addComponent(chk_ABN)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(chk_OP)
+                .addGap(12, 12, 12)
+                .addComponent(chk_ON)
+                .addContainerGap(444, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -431,10 +480,14 @@ public class DoctorJPanel extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(484, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chk_A)
-                    .addComponent(chk_AB)
-                    .addComponent(chk_O)
-                    .addComponent(chk_B))
+                    .addComponent(chk_AP)
+                    .addComponent(chk_BN)
+                    .addComponent(chk_AN)
+                    .addComponent(chk_BP)
+                    .addComponent(chk_ABN)
+                    .addComponent(chk_ABP)
+                    .addComponent(chk_ON)
+                    .addComponent(chk_OP))
                 .addGap(163, 163, 163))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -573,7 +626,8 @@ public class DoctorJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Select a patient");
             return;
         }
-        check=(chk_A.isSelected()||chk_AB.isSelected()||chk_O.isSelected()||chk_B.isSelected());
+        check=(chk_AP.isSelected()||chk_BN.isSelected()||chk_AN.isSelected()||chk_BP.isSelected()||chk_ABP.isSelected()||chk_ABN.isSelected()
+                ||chk_OP.isSelected()||chk_ON.isSelected());
         if(!check){
             JOptionPane.showMessageDialog(null, "Select atleast one checkbox");
             return;
@@ -586,17 +640,29 @@ public class DoctorJPanel extends javax.swing.JPanel {
         mr.setBloodDonor(patientAcc(tblWorkRequest.getValueAt(tblWorkRequest.getSelectedRow(), 0).toString()));
 
         ArrayList<String> orList=new ArrayList<>();
-        if(chk_A.isSelected()){
-            orList.add("A Group");
+        if(chk_AP.isSelected()){
+            orList.add("A+");
         }
-        if(chk_AB.isSelected()){
-            orList.add("AB Group");
+        if(chk_AN.isSelected()){
+            orList.add("A-");
         }
-        if(chk_O.isSelected()){
-            orList.add("O Group");
+        if(chk_BP.isSelected()){
+            orList.add("B+");
         }
-        if(chk_B.isSelected()){
-            orList.add("B Group");
+        if(chk_BN.isSelected()){
+            orList.add("B-");
+        }
+        if(chk_ABP.isSelected()){
+            orList.add("AB+");
+        }
+        if(chk_ABN.isSelected()){
+            orList.add("AB-");
+        }
+        if(chk_OP.isSelected()){
+            orList.add("O+");
+        }
+        if(chk_ON.isSelected()){
+            orList.add("O-");
         }
 
         request.setListOfBloodTypes(orList);
@@ -685,6 +751,26 @@ public class DoctorJPanel extends javax.swing.JPanel {
         layout.next(usersPanel);
     }//GEN-LAST:event_btnPhysicianActionPerformed
 
+    private void chk_BNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_BNActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chk_BNActionPerformed
+
+    private void chk_ABPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_ABPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chk_ABPActionPerformed
+
+    private void chk_ABNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_ABNActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chk_ABNActionPerformed
+
+    private void chk_OPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_OPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chk_OPActionPerformed
+
+    private void chk_ONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_ONActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chk_ONActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNotifyBlood;
@@ -694,10 +780,14 @@ public class DoctorJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnView;
     private javax.swing.JButton btnViewReport;
     private javax.swing.JComboBox cbPatients;
-    private javax.swing.JCheckBox chk_A;
-    private javax.swing.JCheckBox chk_AB;
-    private javax.swing.JCheckBox chk_B;
-    private javax.swing.JCheckBox chk_O;
+    private javax.swing.JCheckBox chk_ABN;
+    private javax.swing.JCheckBox chk_ABP;
+    private javax.swing.JCheckBox chk_AN;
+    private javax.swing.JCheckBox chk_AP;
+    private javax.swing.JCheckBox chk_BN;
+    private javax.swing.JCheckBox chk_BP;
+    private javax.swing.JCheckBox chk_ON;
+    private javax.swing.JCheckBox chk_OP;
     private javax.swing.JPopupMenu jPopupMenu2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
