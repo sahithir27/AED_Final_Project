@@ -42,7 +42,9 @@ public class PatientsJPanel extends javax.swing.JPanel {
     public void populateDepartmentCB(){
         cbDepartment.addItem("--Select--");
         for(Organization org: organizationDirectory.getOrganizationList()){
-            if(org.getOrganizationType().getValue().equalsIgnoreCase("medical")){
+            System.out.println("Specialization");
+            System.out.println(org.getOrganizationType().getValue());
+            if(org.getOrganizationType().getValue().equalsIgnoreCase("medical care")){
                 cbDepartment.addItem(org.getOrganizationName());
             }
         }
@@ -51,7 +53,7 @@ public class PatientsJPanel extends javax.swing.JPanel {
     public void PatientCount(String doctor){
         int counter=0;
         for(Organization org: organizationDirectory.getOrganizationList()){
-            if(org.getOrganizationType().getValue().equalsIgnoreCase("medical")){
+            if(org.getOrganizationType().getValue().equalsIgnoreCase("medical care")){
                 for(Patients p: org.getListOfPatients().getLofPatient()){
                     if(p.isIsAlive()&&p.getDoctor().equalsIgnoreCase(doctor)){
                         counter++;

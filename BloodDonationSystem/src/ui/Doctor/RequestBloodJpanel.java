@@ -36,7 +36,7 @@ public class RequestBloodJpanel extends javax.swing.JPanel {
     Network network;
     Patients p;
     
-    public RequestBloodJpanel(JPanel userProcusersPanelessContainer, MedicalCare organization, Users userAccount, Patients p, EcoSystem ecosystem, Enterprise enterprise, Network network) {
+    public RequestBloodJpanel(JPanel usersPanel, MedicalCare organization, Users userAccount, Patients p, EcoSystem ecosystem, Enterprise enterprise, Network network) {
         initComponents();
         
         this.usersPanel=usersPanel;

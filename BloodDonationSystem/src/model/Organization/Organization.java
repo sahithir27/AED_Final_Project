@@ -27,14 +27,14 @@ public abstract class Organization {
 
     
     public enum OrganizationType{
-        MedicalCare("Medical Care"), 
-        MedicalDiagnostics("Medical Diagnostics"), 
-        MedicalFacilities("Medical Facilities"),
+        MedicalCare("Medical"), 
+        MedicalDiagnostics("Diagnostics"), 
+        MedicalFacilities("Facilities"),
         BloodManagement("Blood Management"),
         PoliciesFinance("Policies and Finance"),
-        MedicalAwarnessCampaign("MedicalAwarnessCampaign"),
+        MedicalAwarnessCampaign("Awarness Event"),
         User("User"),
-        Physician("Physician");
+        Physician("Physio Therapist");
         
         private String type;
         private OrganizationType(String type) {

@@ -42,9 +42,12 @@ public class OrganizationsJPanel extends javax.swing.JPanel {
     private void initComboBox(){
         cbOrganizationType.removeAllItems();
         cbOrganizationType.addItem("--Select--");
+        System.out.println("Enterprise");
+        System.out.println(enterprise);
         for (OrganizationType type : Organization.OrganizationType.values()){
+               System.out.print(type.toString());
              if(enterprise instanceof HospitalEnterprise){
-                 if(type.toString().equals("HealthCare") || type.toString().equals("Diagnostics")){
+                 if(type.toString().equals("Medical") || type.toString().equals("Diagnostics")){
                  cbOrganizationType.addItem(type);}
              }
              if(enterprise instanceof BloodBankEnterprise){
@@ -138,6 +141,11 @@ public class OrganizationsJPanel extends javax.swing.JPanel {
         cbOrganizationType.setBackground(new java.awt.Color(255, 0, 51));
         cbOrganizationType.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         cbOrganizationType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbOrganizationType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbOrganizationTypeActionPerformed(evt);
+            }
+        });
 
         lblOrganizationType.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblOrganizationType.setForeground(new java.awt.Color(255, 0, 51));
@@ -246,6 +254,10 @@ public class OrganizationsJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void cbOrganizationTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbOrganizationTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbOrganizationTypeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
