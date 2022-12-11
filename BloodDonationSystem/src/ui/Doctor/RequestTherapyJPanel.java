@@ -78,13 +78,12 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
         cbTherapyCatalog = new javax.swing.JComboBox<>();
         btnBack = new javax.swing.JButton();
         lblRequesTherapy = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         lblPatientId.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblPatientId.setForeground(new java.awt.Color(255, 0, 0));
         lblPatientId.setText("Patient ID:");
 
         lblPatientName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblPatientName.setForeground(new java.awt.Color(255, 0, 0));
         lblPatientName.setText("Patient Name:");
 
         tfPatientId.setEditable(false);
@@ -92,7 +91,6 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
         tfPatientName.setEditable(false);
 
         lblNetwork.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblNetwork.setForeground(new java.awt.Color(255, 0, 0));
         lblNetwork.setText("Network:");
 
         cbNetwork.addActionListener(new java.awt.event.ActionListener() {
@@ -102,14 +100,12 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
         });
 
         lblTherapyCenter.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblTherapyCenter.setForeground(new java.awt.Color(255, 0, 0));
         lblTherapyCenter.setText("Therapy Centers:");
 
         lblTherapyCatalog.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblTherapyCatalog.setForeground(new java.awt.Color(255, 0, 0));
         lblTherapyCatalog.setText("Therapy Category:");
 
-        btnSubmit.setBackground(new java.awt.Color(255, 0, 51));
+        btnSubmit.setBackground(new java.awt.Color(0, 183, 210));
         btnSubmit.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnSubmit.setForeground(new java.awt.Color(255, 255, 255));
         btnSubmit.setText("Submit");
@@ -119,7 +115,6 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
             }
         });
 
-        cbCenters.setBackground(new java.awt.Color(255, 0, 51));
         cbCenters.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Select--" }));
         cbCenters.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,7 +122,6 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
             }
         });
 
-        cbTherapyCatalog.setBackground(new java.awt.Color(255, 0, 51));
         cbTherapyCatalog.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Select--" }));
         cbTherapyCatalog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,7 +129,7 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnBack.setBackground(new java.awt.Color(255, 0, 51));
+        btnBack.setBackground(new java.awt.Color(0, 183, 210));
         btnBack.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("Back");
@@ -146,8 +140,11 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
         });
 
         lblRequesTherapy.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        lblRequesTherapy.setForeground(new java.awt.Color(255, 0, 51));
+        lblRequesTherapy.setForeground(new java.awt.Color(0, 183, 210));
         lblRequesTherapy.setText("Request Therapy");
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/RequestTherapy/requestTherapy1.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -156,70 +153,79 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(btnBack))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(299, 299, 299)
+                        .addGap(80, 80, 80)
+                        .addComponent(btnBack)
+                        .addGap(311, 311, 311)
                         .addComponent(lblRequesTherapy, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblTherapyCenter)
+                        .addGap(384, 384, 384)
+                        .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cbTherapyCatalog, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(231, 231, 231)
                                         .addComponent(lblPatientId))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(223, 223, 223)
-                                        .addComponent(lblPatientName))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(235, 235, 235)
-                                        .addComponent(lblNetwork))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(203, 203, 203)
-                                .addComponent(lblTherapyCatalog)))
-                        .addGap(68, 68, 68)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbTherapyCatalog, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbNetwork, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tfPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tfPatientId, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbCenters, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(331, 331, 331)
-                        .addComponent(btnSubmit)))
-                .addContainerGap(233, Short.MAX_VALUE))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblNetwork)
+                                            .addComponent(lblPatientName)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblTherapyCenter)
+                                            .addComponent(lblTherapyCatalog))))
+                                .addGap(78, 78, 78)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tfPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tfPatientId, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbNetwork, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbCenters, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(58, 58, 58)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(159, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(lblRequesTherapy, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPatientId, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfPatientId, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNetwork, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbNetwork, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTherapyCenter, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbCenters, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTherapyCatalog, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbTherapyCatalog, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblRequesTherapy, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnBack))
+                        .addGap(58, 58, 58)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblPatientId, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfPatientId, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(52, 52, 52)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblNetwork, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbNetwork, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(49, 49, 49)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cbCenters, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblTherapyCenter, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(46, 46, 46)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblTherapyCatalog, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbTherapyCatalog, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(76, 76, 76))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(btnSubmit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                .addComponent(btnBack)
-                .addContainerGap())
+                .addContainerGap(341, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -316,6 +322,7 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> cbCenters;
     private javax.swing.JComboBox<String> cbNetwork;
     private javax.swing.JComboBox<String> cbTherapyCatalog;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblNetwork;
     private javax.swing.JLabel lblPatientId;
     private javax.swing.JLabel lblPatientName;

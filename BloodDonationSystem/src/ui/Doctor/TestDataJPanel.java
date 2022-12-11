@@ -87,6 +87,8 @@ public class TestDataJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         taTestReport = new javax.swing.JTextArea();
 
+        btnDone.setBackground(new java.awt.Color(0, 183, 210));
+        btnDone.setForeground(new java.awt.Color(255, 255, 255));
         btnDone.setText("Done");
         btnDone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,10 +97,11 @@ public class TestDataJPanel extends javax.swing.JPanel {
         });
 
         lblReport.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
+        lblReport.setForeground(new java.awt.Color(0, 183, 210));
         lblReport.setText("Test Report");
 
         taTestReport.setEditable(false);
-        taTestReport.setBackground(new java.awt.Color(0, 0, 0));
+        taTestReport.setBackground(new java.awt.Color(0, 200, 217));
         taTestReport.setColumns(20);
         taTestReport.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
         taTestReport.setForeground(new java.awt.Color(255, 255, 255));
@@ -112,15 +115,15 @@ public class TestDataJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(295, 295, 295)
-                        .addComponent(btnDone, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(302, 302, 302)
+                        .addComponent(lblReport))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
+                        .addGap(95, 95, 95)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 589, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(302, 302, 302)
-                        .addComponent(lblReport)))
-                .addContainerGap(144, Short.MAX_VALUE))
+                        .addGap(326, 326, 326)
+                        .addComponent(btnDone, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,9 +132,9 @@ public class TestDataJPanel extends javax.swing.JPanel {
                 .addComponent(lblReport)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(60, 60, 60)
                 .addComponent(btnDone)
-                .addGap(191, 191, 191))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
