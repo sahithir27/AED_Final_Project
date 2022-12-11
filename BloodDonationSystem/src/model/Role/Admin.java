@@ -28,7 +28,7 @@ public class Admin extends Role{
         if(enterprise.getClass().getTypeName().contains("HospitalEnterprise")){
             jp=new HospitalAdminJPanel(userProcessContainer, enterprise, business,network);
         }
-        else if(enterprise.getClass().getTypeName().contains("OrganBankEnterprise")){
+        else if(enterprise.getClass().getTypeName().contains("BloodBankEnterprise")){
             jp=new BloodBankJPanel (userProcessContainer, enterprise, business,network);
         }
         else{
