@@ -147,7 +147,7 @@ public class MainJFrame extends javax.swing.JFrame {
         loginJPanel.add(btnLogin);
         btnLogin.setBounds(410, 350, 170, 40);
 
-        btnDonorRegisteration.setBackground(new java.awt.Color(255, 0, 51));
+        btnDonorRegisteration.setBackground(new java.awt.Color(0, 183, 210));
         btnDonorRegisteration.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
         btnDonorRegisteration.setText("Want to become a Donor?");
         btnDonorRegisteration.addActionListener(new java.awt.event.ActionListener() {
@@ -156,7 +156,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
         loginJPanel.add(btnDonorRegisteration);
-        btnDonorRegisteration.setBounds(600, 620, 250, 25);
+        btnDonorRegisteration.setBounds(670, 460, 250, 25);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFocusable(false);
@@ -179,11 +179,11 @@ public class MainJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1170, Short.MAX_VALUE)
+            .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1072, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 586, Short.MAX_VALUE)
+            .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE)
         );
 
         pack();

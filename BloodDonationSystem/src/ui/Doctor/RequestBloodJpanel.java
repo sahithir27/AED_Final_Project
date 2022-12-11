@@ -137,7 +137,6 @@ public class RequestBloodJpanel extends javax.swing.JPanel {
         jLabel3.setText("Patient Name :");
 
         jLabel4.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 0, 51));
         jLabel4.setText("Required Blood Type :");
 
         jLabel5.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
@@ -151,7 +150,7 @@ public class RequestBloodJpanel extends javax.swing.JPanel {
 
         jLabel8.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jLabel8.setText("Urgency :");
-        cbRequestBlood.setBackground(new java.awt.Color(255, 0, 51));
+
         cbRequestBlood.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Select--", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
         cbRequestBlood.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -220,34 +219,18 @@ public class RequestBloodJpanel extends javax.swing.JPanel {
                         .addComponent(jLabel7)
                         .addComponent(jLabel8)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnBack)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel6)
-                                .addComponent(jLabel7)
-                                .addComponent(jLabel8)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel2)
-                                    .addGap(12, 12, 12)))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel1)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(tfPatientId)
-                                    .addComponent(tfPatientName)
-                                    .addComponent(cbRequestBlood, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cbAgeGroup, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cdMarriageStatus, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cbSurvivalBenefit, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cbUrgency, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSubmit)
-                            .addGap(107, 107, 107)))
-                    .addContainerGap(145, Short.MAX_VALUE)))
+                            .addComponent(jLabel2)
+                            .addGap(12, 12, 12)))
+                    .addGap(18, 18, 18)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(tfPatientId)
+                        .addComponent(tfPatientName)
+                        .addComponent(cbRequestBlood, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cbAgeGroup, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cdMarriageStatus, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cbSurvivalBenefit, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cbUrgency, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap(533, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

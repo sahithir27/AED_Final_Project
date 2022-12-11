@@ -146,11 +146,9 @@ public class EnterpriseJPanel extends javax.swing.JPanel {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 51));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel1.setText("City Name:");
 
-        cbCityName.setBackground(new java.awt.Color(255, 0, 51));
         cbCityName.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         cbCityName.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbCityName.addActionListener(new java.awt.event.ActionListener() {
@@ -161,7 +159,6 @@ public class EnterpriseJPanel extends javax.swing.JPanel {
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 0, 51));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel2.setText("Enterprise Name:");
 
@@ -169,11 +166,9 @@ public class EnterpriseJPanel extends javax.swing.JPanel {
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 0, 51));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel3.setText("Type of Enterprise:");
 
-        cbEnterpriseType.setBackground(new java.awt.Color(255, 0, 51));
         cbEnterpriseType.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         cbEnterpriseType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbEnterpriseType.addActionListener(new java.awt.event.ActionListener() {
@@ -182,7 +177,7 @@ public class EnterpriseJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnAddNewEnterprise.setBackground(new java.awt.Color(255, 0, 51));
+        btnAddNewEnterprise.setBackground(new java.awt.Color(0, 183, 210));
         btnAddNewEnterprise.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnAddNewEnterprise.setForeground(new java.awt.Color(255, 255, 255));
         btnAddNewEnterprise.setText("Add");
@@ -192,7 +187,7 @@ public class EnterpriseJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnBack.setBackground(new java.awt.Color(255, 0, 51));
+        btnBack.setBackground(new java.awt.Color(0, 183, 210));
         btnBack.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("Back");
@@ -204,22 +199,21 @@ public class EnterpriseJPanel extends javax.swing.JPanel {
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel4.setForeground(new java.awt.Color(0, 183, 210));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("ENTERPRISES");
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Cambria", 2, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel7.setForeground(new java.awt.Color(0, 183, 210));
         jLabel7.setText("Current enterprises");
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel5.setForeground(new java.awt.Color(0, 183, 210));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel5.setText("Add Enterprise");
 
-        cbCurrentEnterprise.setBackground(new java.awt.Color(255, 0, 51));
         cbCurrentEnterprise.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         cbCurrentEnterprise.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -236,9 +230,7 @@ public class EnterpriseJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(btnBack)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnBack))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -260,7 +252,10 @@ public class EnterpriseJPanel extends javax.swing.JPanel {
                                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(cbCurrentEnterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(311, 311, 311))))
                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1055, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );

@@ -42,8 +42,12 @@ public class SystemAdminJPanel extends javax.swing.JPanel {
         btn_manage_network = new javax.swing.JButton();
         btn_manage_enterprise = new javax.swing.JButton();
         btn_manage_admins = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
-        btn_manage_network.setBackground(new java.awt.Color(255, 0, 51));
+        btn_manage_network.setBackground(new java.awt.Color(0, 183, 210));
         btn_manage_network.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
         btn_manage_network.setForeground(new java.awt.Color(255, 255, 255));
         btn_manage_network.setText("Manage Network");
@@ -53,7 +57,7 @@ public class SystemAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        btn_manage_enterprise.setBackground(new java.awt.Color(255, 0, 51));
+        btn_manage_enterprise.setBackground(new java.awt.Color(0, 183, 210));
         btn_manage_enterprise.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btn_manage_enterprise.setForeground(new java.awt.Color(255, 255, 255));
         btn_manage_enterprise.setText("Manage Enterprise");
@@ -63,7 +67,7 @@ public class SystemAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        btn_manage_admins.setBackground(new java.awt.Color(255, 0, 51));
+        btn_manage_admins.setBackground(new java.awt.Color(0, 183, 210));
         btn_manage_admins.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btn_manage_admins.setForeground(new java.awt.Color(255, 255, 255));
         btn_manage_admins.setText("Manage Enterprise Admin");
@@ -73,35 +77,60 @@ public class SystemAdminJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 183, 210));
+        jLabel1.setText("SYSTEM ADMIN DASHBOARD");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SystemAdmin/enterpriseAdmin.png"))); // NOI18N
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SystemAdmin/enterprise-PhotoRoom.png"))); // NOI18N
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SystemAdmin/network1.jpg"))); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(252, 252, 252)
-                .addComponent(btn_manage_enterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(btn_manage_admins)
-                .addContainerGap(244, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(150, 150, 150)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_manage_network, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(757, 757, 757)))
+                    .addComponent(jLabel4))
+                .addGap(100, 100, 100)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btn_manage_enterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(124, 124, 124)
+                        .addComponent(btn_manage_admins)
+                        .addGap(125, 125, 125))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(102, 102, 102)
+                        .addComponent(jLabel2)
+                        .addGap(121, 121, 121)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(336, 336, 336))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(353, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_manage_enterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_manage_admins))
-                .addGap(346, 346, 346))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(351, 351, 351)
-                    .addComponent(btn_manage_network, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(348, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(104, 104, 104)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btn_manage_enterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_manage_admins))
+                    .addComponent(btn_manage_network, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -131,5 +160,9 @@ public class SystemAdminJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btn_manage_admins;
     private javax.swing.JButton btn_manage_enterprise;
     private javax.swing.JButton btn_manage_network;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

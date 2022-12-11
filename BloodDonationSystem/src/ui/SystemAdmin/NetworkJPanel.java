@@ -108,7 +108,7 @@ public class NetworkJPanel extends javax.swing.JPanel {
         tbllistOfNetworks.setSelectionForeground(new java.awt.Color(255, 255, 51));
         jScrollPane1.setViewportView(tbllistOfNetworks);
 
-        btnBack.setBackground(new java.awt.Color(255, 0, 51));
+        btnBack.setBackground(new java.awt.Color(0, 183, 210));
         btnBack.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("Back");
@@ -119,20 +119,20 @@ public class NetworkJPanel extends javax.swing.JPanel {
         });
 
         lblNetworkOfCities.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
-        lblNetworkOfCities.setForeground(new java.awt.Color(255, 0, 51));
+        lblNetworkOfCities.setForeground(new java.awt.Color(0, 183, 210));
         lblNetworkOfCities.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblNetworkOfCities.setText("Network of Cities");
 
         lblCitiesPresentInNetwork.setBackground(new java.awt.Color(255, 255, 255));
         lblCitiesPresentInNetwork.setFont(new java.awt.Font("Cambria", 2, 18)); // NOI18N
-        lblCitiesPresentInNetwork.setForeground(new java.awt.Color(255, 0, 51));
+        lblCitiesPresentInNetwork.setForeground(new java.awt.Color(0, 183, 210));
         lblCitiesPresentInNetwork.setText("Cities present in network");
 
         lblCityToNetwork.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        lblCityToNetwork.setForeground(new java.awt.Color(255, 0, 51));
+        lblCityToNetwork.setForeground(new java.awt.Color(0, 183, 210));
         lblCityToNetwork.setText("Add a city to the network");
 
-        btnAddCity.setBackground(new java.awt.Color(255, 0, 51));
+        btnAddCity.setBackground(new java.awt.Color(0, 183, 210));
         btnAddCity.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         btnAddCity.setForeground(new java.awt.Color(255, 255, 255));
         btnAddCity.setText("Add City");
@@ -145,7 +145,6 @@ public class NetworkJPanel extends javax.swing.JPanel {
         tfCityName.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
 
         lblCityName.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        lblCityName.setForeground(new java.awt.Color(255, 0, 51));
         lblCityName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblCityName.setText("Name:");
 
@@ -246,8 +245,6 @@ public class NetworkJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddCity;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btn_back_button;
-    private javax.swing.JButton btn_back_button1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCitiesPresentInNetwork;
