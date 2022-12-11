@@ -34,7 +34,7 @@ public class MainJFrame extends javax.swing.JFrame {
         system = dB4OUtil.retrieveSystem();
         this.setSize(1200, 800);
         if(system.getEmployeeId()==0){
-            system.setEmployeeId(20211001);
+            system.setEmployeeId(20221001);
         }
         if(system.getDonorId()==0){
             system.setDonorId(9001);
@@ -265,6 +265,8 @@ public class MainJFrame extends javax.swing.JFrame {
         }
         else{
             CardLayout layout=(CardLayout)loginContainer.getLayout();
+            System.out.println("Role");
+            System.out.println(userAccount.getUserRole());
             loginContainer.add("workArea",userAccount.getUserRole().createWorkArea(loginContainer, userAccount, inOrganization, inEnterprise, system, inNetwork, donorDirectory));
             layout.next(loginContainer);
         }

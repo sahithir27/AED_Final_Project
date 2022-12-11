@@ -28,12 +28,20 @@
               <EmptySpace max="32767" attributes="0"/>
               <Component id="chk_A" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="chk_O" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-              <Component id="chk_B" min="-2" max="-2" attributes="0"/>
+              <Component id="chk_AN" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="chk_BP" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="chk_AB" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+              <Component id="chk_BN" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="chk_ABP" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <Component id="chk_ABN" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="chk_OP" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Component id="chk_ON" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="444" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
@@ -131,10 +139,14 @@
                   </Group>
               </Group>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="chk_A" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="chk_AB" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="chk_O" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="chk_B" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk_AP" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk_BN" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk_AN" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk_BP" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk_ABN" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk_ABP" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk_ON" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk_OP" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="lblBlood" min="-2" max="-2" attributes="0"/>
@@ -197,7 +209,7 @@
                 <Column editable="false" title="Message by Doctor" type="java.lang.Object"/>
                 <Column editable="false" title="Physicist" type="java.lang.String"/>
                 <Column editable="false" title="Lab Status" type="java.lang.String"/>
-                <Column editable="false" title="PhysioTherapy" type="java.lang.String"/>
+                <Column editable="false" title="Physician" type="java.lang.String"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -464,7 +476,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Bahnschrift" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Your Patients waiting for Organs"/>
+        <Property name="text" type="java.lang.String" value="Your Patients waiting for Blood"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnNotifyBlood">
@@ -501,7 +513,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPhysicianActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="chk_A">
+    <Component class="javax.swing.JCheckBox" name="chk_AP">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="d2" green="b7" red="0" type="rgb"/>
@@ -509,10 +521,10 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="A Group"/>
+        <Property name="text" type="java.lang.String" value="A+"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="chk_AB">
+    <Component class="javax.swing.JCheckBox" name="chk_BN">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="d2" green="b7" red="0" type="rgb"/>
@@ -520,21 +532,43 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="AB Group"/>
+        <Property name="text" type="java.lang.String" value="B-"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_BNActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chk_AN">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d2" green="b7" red="0" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="A-"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="chk_O">
+    <Component class="javax.swing.JCheckBox" name="chk_BP">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="d2" green="b7" red="0" type="rgb"/>
+          <Color blue="33" green="0" red="ff" type="rgb"/>
         </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="O Group"/>
+        <Property name="text" type="java.lang.String" value="B+"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="chk_B">
+    <Component class="javax.swing.JCheckBox" name="chk_ABP">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="0" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="AB+"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_ABPActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chk_ABN">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="d2" green="b7" red="0" type="rgb"/>
@@ -542,8 +576,33 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="B Group"/>
+        <Property name="text" type="java.lang.String" value="AB-"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_ABNActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chk_OP">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="0" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="O+"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_OPActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chk_ON">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="0" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="O-"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_ONActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>

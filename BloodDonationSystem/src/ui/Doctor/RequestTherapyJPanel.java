@@ -232,11 +232,14 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
     private void cbNetworkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbNetworkActionPerformed
 
         cbCenters.removeAllItems();
-        cbCenters.addItem("--Select--");
+        //cbCenters.addItem("--Select--");
         for(Network n: ecoSystem.getNetworkList()){
             if(cbNetwork.getSelectedItem().toString().equalsIgnoreCase(n.getName())){
                 for(Enterprise e: n.getListOfEnterprises().getEnterpriseList()){
-                    if(e.getenterpriseType().getType().equalsIgnoreCase("Physio")){
+                    System.out.print("Enterprise Type******");
+                    System.out.print(e.getenterpriseType().getType());
+                    String type = e.getenterpriseType().toString();
+                    if(type.equalsIgnoreCase("Rehabilitation Center")){
                         cbCenters.addItem(e.getOrganizationName());
                     }
 

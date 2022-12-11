@@ -453,7 +453,7 @@ public class UsersJPanel extends javax.swing.JPanel {
         int f=0;
         int newage=0;
         boolean availability=true;
-        boolean organavail = true;
+        boolean bloodavail = true;
         String age = tfAge.getText();
         if(radMale.isSelected()){
             sex = radMale.getText();
@@ -532,7 +532,7 @@ public class UsersJPanel extends javax.swing.JPanel {
             Organization organization = (Organization) cbOrganization.getSelectedItem();
             Employee employee = (Employee) cbEmployeeName.getSelectedItem();
             Role role = (Role) cbRole.getSelectedItem();
-            organization.getListOfUsers().createUserAccount(userName,password,phNum,address,qualification, sex, availability, newage, employee, role,organavail);
+            organization.getListOfUsers().createUserAccount(userName,password,phNum,address,qualification, sex, availability, newage, employee, role,bloodavail);
             getUserName();
             populateData();
         }

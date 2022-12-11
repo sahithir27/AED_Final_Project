@@ -113,14 +113,14 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
                             if(wr instanceof BloodProcureWorkRequest){
                                 System.out.println("I am inside");
                             BloodProcureWorkRequest bloodProcurementWorkRequest = (BloodProcureWorkRequest)wr;
-                            String a ="";
-                            for( String s: bloodProcurementWorkRequest.getListOfBloodTypes()){
-                                a= s+";"+a;
-                            }
+//                            String a ="";
+//                            for( String s: bloodProcurementWorkRequest.getListOfBloodTypes()){
+//                                a= s+";"+a;
+//                            }
                             Object[] row = new Object[6];
                             row[0] = bloodProcurementWorkRequest;
                             row[1] = bloodProcurementWorkRequest.getPatient().getPatientName();
-                            row[2] = a;
+                            row[2] = bloodProcurementWorkRequest.getListOfBloodTypes().get(0);
                             row[3] = bloodProcurementWorkRequest.getPatient().getDoctor();
                             row[4] = bloodProcurementWorkRequest.getMessage();
                             row[5] = bloodProcurementWorkRequest.getStatus();
@@ -174,7 +174,7 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Patient ID", "Patient Name", "OrgansRequired", "Doctor", "Comments", "Status"
+                "Patient ID", "Patient Name", "Blood Type Required", "Doctor", "Comments", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -224,7 +224,7 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Donor Patient", "Donor Doctor", "Organ", "Receiving patient", "Receiving Doctor", "Status"
+                "Donor Patient", "Donor Doctor", "Blood Type", "Receiving patient", "Receiving Doctor", "Status"
             }
         ));
         jScrollPane2.setViewportView(tblDonorData);

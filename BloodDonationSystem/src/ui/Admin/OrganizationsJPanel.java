@@ -47,26 +47,24 @@ public class OrganizationsJPanel extends javax.swing.JPanel {
         for (OrganizationType type : Organization.OrganizationType.values()){
                System.out.print(type.toString());
              if(enterprise instanceof HospitalEnterprise){
-                 if(type.toString().equals("Medical") || type.toString().equals("Diagnostics")){
+                 if(type.toString().equals("MedicalCare") || type.toString().equals("MedicalDiagnostics")){
                  cbOrganizationType.addItem(type);}
              }
              if(enterprise instanceof BloodBankEnterprise){
-                 if(type.toString().equals("Facilities")){
+                 if(type.toString().equals("MedicalFacilities")){
                  cbOrganizationType.addItem(type);}
                  
              }
              if(enterprise instanceof FederalGovernmentEnterprise){
-                 if(type.toString().equals("PoliciesFinance")|| type.toString().equals("AwarnessEvent")){
+                 if(type.toString().equals("PoliciesFinance")|| type.toString().equals("MedicalAwarnessCampaign")){
                  cbOrganizationType.addItem(type);}
                  
              }
              if(enterprise instanceof RehabEnterprise){
-                 if(type.toString().equals("Physio")){
+                 if(type.toString().equals("Physician")){
                  cbOrganizationType.addItem(type);}
                  
              }
-                
-            
         }
     }
 

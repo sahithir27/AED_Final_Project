@@ -14,7 +14,7 @@ import model.Person.Patients;
 public class PhysicianWorkRequest extends WorkRequest{
     
     Patients patient;
-    private ArrayList<String> listOfOrgans = new ArrayList<>();
+    private ArrayList<String> listOfBloodTypes = new ArrayList<>();
 
     
     public Patients getPatient() {
@@ -25,11 +25,11 @@ public class PhysicianWorkRequest extends WorkRequest{
         this.patient = patient;
     }
 
-    public ArrayList<String> getListOfOrgans() {
-        return listOfOrgans;
+    public ArrayList<String> getListOfBloodTypes() {
+        return listOfBloodTypes;
     }
 
-    public void setListOfOrgans(ArrayList<String> listOfOrgans) {
-        this.listOfOrgans = listOfOrgans;
+    public void setListOfBloodTypes(ArrayList<String> listOfBloodTypes) {
+        this.listOfBloodTypes = listOfBloodTypes;
     }
 }

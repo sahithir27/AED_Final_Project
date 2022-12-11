@@ -4,11 +4,20 @@
  */
 package ui.Donor;
 
+import com.db4o.cs.internal.messages.Message;
 import java.awt.CardLayout;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.mail.Authenticator;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import model.DB4OUtil.DB4OUtil;
@@ -210,7 +219,7 @@ public class DonorRegistrationJPanel extends javax.swing.JPanel {
         lblBloodGroup.setText("Blood Group:");
 
         cbBloodGroup.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        cbBloodGroup.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "B+", "B-", "A+", "A-", "O+", "O-" }));
+        cbBloodGroup.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
         cbBloodGroup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbBloodGroupActionPerformed(evt);
@@ -222,6 +231,11 @@ public class DonorRegistrationJPanel extends javax.swing.JPanel {
         lblContact.setText("Contact Number:");
 
         tfContact.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
+        tfContact.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfContactActionPerformed(evt);
+            }
+        });
 
         lblEmail.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         lblEmail.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -244,11 +258,9 @@ public class DonorRegistrationJPanel extends javax.swing.JPanel {
         lblBloodAvailable.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         lblBloodAvailable.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblBloodAvailable.setText("Is Blood available now:");
-
         radBloodAvailableNowYes.setBackground(new java.awt.Color(255, 255, 255));
         radBloodAvailableNowYes.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         radBloodAvailableNowYes.setText("Yes");
-
         radBloodAvailableNo.setBackground(new java.awt.Color(255, 255, 255));
         radBloodAvailableNo.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         radBloodAvailableNo.setText("No");
@@ -457,7 +469,6 @@ public class DonorRegistrationJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_tfPOCContactActionPerformed
 
     private void btnRegisterDonorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterDonorActionPerformed
-
         int f = 0;
         String name = tfName.getText();
         //String lastname= txtName1.getText();
@@ -473,8 +484,8 @@ public class DonorRegistrationJPanel extends javax.swing.JPanel {
         String address = tfAddress.getText();
         String emergencyPOC = tfPOCName.getText();
         String emergencyPOC_Num = tfPOCContact.getText();
+        //int age =Integer.parseInt(txtAge.getText());
         int age = 30;
-
         boolean isBloodAvaiNow = false;
         if (radBloodAvailableNowYes.isSelected()) {
             isBloodAvaiNow = true;
@@ -493,18 +504,18 @@ public class DonorRegistrationJPanel extends javax.swing.JPanel {
         } else {
             return;
         }
-
-        if(contactNumber == null || contactNumber.equals("")){
-            JOptionPane.showMessageDialog(null, "Please enter Contact Number");
-            return;
-        }
-        else{
-            if(!contactNumber.matches("^(?=.*[0-9]).{10,10}")){
-                JOptionPane.showMessageDialog(null, "Please enter valid Contact Number");
+        
+        //String contactNumber=(phoneJTextField.getText());
+       if(contactNumber == null || contactNumber.equals("")){
+                JOptionPane.showMessageDialog(null, "Please enter Contact Number");
                 return;
             }
-        }
-
+             else{
+                 if(!contactNumber.matches("^(?=.*[0-9]).{10,10}")){
+                     JOptionPane.showMessageDialog(null, "Please enter valid Contact Number");
+                     return;
+                 }
+             }
         if (checkUsernamePattern(emailAdd)) {
             f++;
         } else {
@@ -514,17 +525,16 @@ public class DonorRegistrationJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Address cannot be empty");
             return;
         }
-        if(emergencyPOC_Num == null || emergencyPOC_Num.equals("")){
-            JOptionPane.showMessageDialog(null, "Please enter Contact Number");
-            return;
-        }
-        else{
-            if(!emergencyPOC_Num.matches("^(?=.*[0-9]).{10,10}")){
-                JOptionPane.showMessageDialog(null, "Please enter valid Contact Number");
+          if(emergencyPOC_Num == null || emergencyPOC_Num.equals("")){
+                JOptionPane.showMessageDialog(null, "Please enter Contact Number");
                 return;
             }
-        }
-
+             else{
+                 if(!emergencyPOC_Num.matches("^(?=.*[0-9]).{10,10}")){
+                     JOptionPane.showMessageDialog(null, "Please enter valid Contact Number");
+                     return;
+                 }
+             }
         if (checkFirstname(emergencyPOC)) {
             f++;
         } else {
@@ -535,7 +545,21 @@ public class DonorRegistrationJPanel extends javax.swing.JPanel {
         dB4OUtil.storeSystem(ecosystem);
         JOptionPane.showMessageDialog(null, "Thanks for donation");
         populateUser();
+
+        if (f == 0) {
+            JOptionPane.showConfirmDialog(null, "Please enter the right details");
+
+        }
+        sendMail(emailAdd);
     }//GEN-LAST:event_btnRegisterDonorActionPerformed
+
+    private void tfContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfContactActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfContactActionPerformed
+
+    private void radOrganAvailableNowYesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radOrganAvailableNowYesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radOrganAvailableNowYesActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -569,4 +593,53 @@ public class DonorRegistrationJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField tfPOCContact;
     private javax.swing.JTextField tfPOCName;
     // End of variables declaration//GEN-END:variables
+
+    private void sendMail(String toEmail) {
+        try
+	    {
+                final String fromEmail = "blooddonationsystem22@gmail.com"; //requires valid gmail id
+		final String password = "ordotzyygwvfjdnj"; // correct password for gmail id
+		String subject = "Thanks for the donation";
+                String body = "Thank you for saving people lives! Be safe and happy";
+		System.out.println("TLSEmail Start");
+		Properties props = new Properties();
+		props.put("mail.smtp.host", "smtp.gmail.com"); //SMTP Host
+		props.put("mail.smtp.port", "587"); //TLS Port
+		props.put("mail.smtp.auth", "true"); //enable authentication
+		props.put("mail.smtp.starttls.enable", "true"); //enable STARTTLS
+		
+                //create Authenticator object to pass in Session.getInstance argument
+		Authenticator auth = new Authenticator() {
+			//override the getPasswordAuthentication method
+			protected PasswordAuthentication getPasswordAuthentication() {
+				return new PasswordAuthentication(fromEmail, password);
+			}
+		};
+		Session session = Session.getInstance(props, auth);
+                MimeMessage msg = new MimeMessage(session);
+	      //set message headers
+	      msg.addHeader("Content-type", "text/HTML; charset=UTF-8");
+	      msg.addHeader("format", "flowed");
+	      msg.addHeader("Content-Transfer-Encoding", "8bit");
+
+	      msg.setFrom(new InternetAddress("no_reply@example.com", "NoReply-JD"));
+
+	      msg.setReplyTo(InternetAddress.parse("no_reply@example.com", false));
+
+	      msg.setSubject(subject, "UTF-8");
+
+	      msg.setText(body, "UTF-8");
+
+	      msg.setSentDate(new Date());
+              msg.setRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse(toEmail, false));
+	      System.out.println("Message is ready");
+    	  Transport.send(msg);  
+
+	      System.out.println("EMail Sent Successfully!!");
+              JOptionPane.showMessageDialog(null, "EMail Sent Successfully!!");
+	    }
+	catch (Exception e) {
+	    e.printStackTrace();
+	}
+    }
 }

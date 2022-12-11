@@ -58,27 +58,60 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
                     if(e.getWorkQueue()== null){
                         
                       break;}
-                    for(WorkRequest wr: e.getWorkQueue().getWorkRequestList()){
-                        
-                        if( wr.getStatus().equals("Assigned")|| wr.getStatus().equals("InProcess")|| wr.getStatus().equals("Completed")){
-                            BloodProcureWorkRequest opr = (BloodProcureWorkRequest)wr;
-                            
-                            String a ="";
-                            for( String s: opr.getListOfBloodTypes()){
-                                a= s+":"+a;
+                    
+                    System.out.println("Lenght of Work Requests");
+                    System.out.println(e.getWorkQueue().getWorkRequestList().size());
+                    for(WorkRequest workRequest: e.getWorkQueue().getWorkRequestList()){
+                        System.out.println(workRequest.getStatus());
+                        if(workRequest.getStatus().equalsIgnoreCase("Assigned") ||
+                                workRequest.getStatus().equalsIgnoreCase("InProcess") ||
+                                workRequest.getStatus().equalsIgnoreCase("Completed")){
+                            //System.out.println("BloodProcureWorkRequest*****");
+                            if(workRequest instanceof BloodProcureWorkRequest){
+                                BloodProcureWorkRequest bloodProcureWorkRequest = (BloodProcureWorkRequest)workRequest;
+//                                String bloodTypesString = "";
+//                                for(String s: bloodProcureWorkRequest.getListOfBloodTypes()){
+//                                    //bloodTypesString = s+";"+bloodTypesString;
+//                                }
+                                Object[] row = new Object[6];
+                                row[0] = bloodProcureWorkRequest;
+                                row[1] = bloodProcureWorkRequest.getStatus();
+                                row[2] = bloodProcureWorkRequest.getListOfBloodTypes().get(0);
+                                row[3] = bloodProcureWorkRequest.getPatient().getPatientName();
+                                
+                                row[4] = bloodProcureWorkRequest.getPatient().getDoctor();
+                                //row[5] = bloodProcureWorkRequest.getMessage();
+                                
+                                model.addRow(row);
+                                
                             }
-                            Object[] row = new Object[80];
-                        row[0]= opr;
-                        row[1] = opr.getMessage();
-                        
-                        row[1] = opr.getStatus();
-                        row[2] = a;
-                        
-                        row[4] = opr.getPatient().getDoctor();
-                        model.addRow(row);
                         }
-
                     }
+//                    for(WorkRequest wr: e.getWorkQueue().getWorkRequestList()){
+//                        
+//                        if( wr.getStatus().equals("Assigned")|| 
+//                                wr.getStatus().equals("InProcess")|| 
+//                                wr.getStatus().equals("Completed")){
+//                            if(wr instanceof BloodProcureWorkRequest){
+//                            BloodProcureWorkRequest opr = (BloodProcureWorkRequest)wr;
+//                            
+//                            String a ="";
+//                            for( String s: opr.getListOfBloodTypes()){
+//                                a= s+":"+a;
+//                            }
+//                            Object[] row = new Object[80];
+//                        row[0]= opr;
+//                        row[1] = opr.getMessage();
+//                        
+//                        row[1] = opr.getStatus();
+//                        row[2] = a;
+//                        
+//                        row[4] = opr.getPatient().getDoctor();
+//                        model.addRow(row);
+//                        }
+//                        }
+//
+//                    }
                 }
             }
             }
@@ -110,7 +143,7 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Patient", "Status", "Organs", "Patient", "Doctor"
+                "Patient", "Status", "Blood", "Patient", "Doctor"
             }
         ));
         tbl_work_request.setSelectionBackground(new java.awt.Color(255, 153, 153));
@@ -188,7 +221,7 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
 
         int selectedRow = tbl_work_request.getSelectedRow();
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(null,"Select request to Process", "Warining", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Select a request to Process", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
@@ -218,7 +251,7 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
 
         BloodProcureWorkRequest orgwr = (BloodProcureWorkRequest)tbl_work_request.getValueAt(selectedRow, 0);
         if(!orgwr.getStatus().equals("InProcess")){
-            JOptionPane.showMessageDialog(null,"Request should be InProcess", "Warining", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Request should be InProcess", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         if(organization instanceof MedicalFacilities){
