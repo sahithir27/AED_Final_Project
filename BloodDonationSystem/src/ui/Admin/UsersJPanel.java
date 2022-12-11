@@ -284,7 +284,7 @@ public class UsersJPanel extends javax.swing.JPanel {
         lblCurrentAccount.setText("Current accounts");
 
         lblMustText.setFont(new java.awt.Font("Cambria", 3, 12)); // NOI18N
-        lblMustText.setForeground(new java.awt.Color(255, 51, 51));
+        lblMustText.setForeground(new java.awt.Color(0, 183, 210));
         lblMustText.setText("* fields are mandatory to fill");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/BloodBankJPanel/User.png"))); // NOI18N
@@ -359,18 +359,20 @@ public class UsersJPanel extends javax.swing.JPanel {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(tfAge))))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(380, 380, 380)
-                            .addComponent(btnCreateUser, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(lblMustText, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(0, 0, Short.MAX_VALUE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(146, 146, 146)
-                            .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(tblUserDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(196, 196, 196)
-                            .addComponent(lblCurrentAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(380, 380, 380)
+                                    .addComponent(btnCreateUser, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(lblMustText, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(146, 146, 146)
+                                    .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tblUserDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(196, 196, 196)
+                                    .addComponent(lblCurrentAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(0, 248, Short.MAX_VALUE)))
                     .addContainerGap()))
         );
         layout.setVerticalGroup(
