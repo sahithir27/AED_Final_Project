@@ -96,11 +96,11 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
-                                      <Component id="lblOrganAvailable" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblBloodAvailable" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="radOrganAvailableNowYes" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radBloodAvailableNowYes" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="radOrganAvailableNo" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radBloodAvailableNo" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
@@ -169,9 +169,9 @@
                   </Group>
                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblOrganAvailable" alignment="3" max="32767" attributes="0"/>
-                      <Component id="radOrganAvailableNowYes" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="radOrganAvailableNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblBloodAvailable" alignment="3" max="32767" attributes="0"/>
+                      <Component id="radBloodAvailableNowYes" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="radBloodAvailableNo" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lblPOCTitle" min="-2" max="-2" attributes="0"/>
@@ -415,7 +415,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblOrganAvailable">
+    <Component class="javax.swing.JLabel" name="lblBloodAvailable">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Cambria" size="18" style="0"/>
@@ -424,10 +424,10 @@
           <Color blue="33" green="0" red="ff" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="11"/>
-        <Property name="text" type="java.lang.String" value="Is organ available now:"/>
+        <Property name="text" type="java.lang.String" value="Is Blood available now:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="radOrganAvailableNowYes">
+    <Component class="javax.swing.JRadioButton" name="radBloodAvailableNowYes">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -441,7 +441,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radOrganAvailableNowYesActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="radOrganAvailableNo">
+    <Component class="javax.swing.JRadioButton" name="radBloodAvailableNo">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
