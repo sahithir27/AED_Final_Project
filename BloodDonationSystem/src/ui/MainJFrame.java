@@ -34,7 +34,7 @@ public class MainJFrame extends javax.swing.JFrame {
         system = dB4OUtil.retrieveSystem();
         this.setSize(1200, 800);
         if(system.getEmployeeId()==0){
-            system.setEmployeeId(20211001);
+            system.setEmployeeId(20221001);
         }
         if(system.getDonorId()==0){
             system.setDonorId(9001);

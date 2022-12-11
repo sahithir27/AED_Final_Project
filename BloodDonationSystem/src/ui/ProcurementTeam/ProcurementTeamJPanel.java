@@ -63,20 +63,20 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
                     System.out.println(e.getWorkQueue().getWorkRequestList().size());
                     for(WorkRequest workRequest: e.getWorkQueue().getWorkRequestList()){
                         System.out.println(workRequest.getStatus());
-                        if(workRequest.getStatus().equals("Assigned") ||
-                                workRequest.getStatus().equals("InProgress") ||
-                                workRequest.getStatus().equals("Completed")){
+                        if(workRequest.getStatus().equalsIgnoreCase("Assigned") ||
+                                workRequest.getStatus().equalsIgnoreCase("InProcess") ||
+                                workRequest.getStatus().equalsIgnoreCase("Completed")){
                             //System.out.println("BloodProcureWorkRequest*****");
                             if(workRequest instanceof BloodProcureWorkRequest){
                                 BloodProcureWorkRequest bloodProcureWorkRequest = (BloodProcureWorkRequest)workRequest;
-                                String bloodTypesString = "";
-                                for(String s: bloodProcureWorkRequest.getListOfBloodTypes()){
-                                    bloodTypesString = s+";"+bloodTypesString;
-                                }
+//                                String bloodTypesString = "";
+//                                for(String s: bloodProcureWorkRequest.getListOfBloodTypes()){
+//                                    //bloodTypesString = s+";"+bloodTypesString;
+//                                }
                                 Object[] row = new Object[6];
                                 row[0] = bloodProcureWorkRequest;
                                 row[1] = bloodProcureWorkRequest.getStatus();
-                                row[2] = bloodTypesString;
+                                row[2] = bloodProcureWorkRequest.getListOfBloodTypes().get(0);
                                 row[3] = bloodProcureWorkRequest.getPatient().getPatientName();
                                 
                                 row[4] = bloodProcureWorkRequest.getPatient().getDoctor();
@@ -247,7 +247,7 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
 
         BloodProcureWorkRequest orgwr = (BloodProcureWorkRequest)tbl_work_request.getValueAt(selectedRow, 0);
         if(!orgwr.getStatus().equals("InProcess")){
-            JOptionPane.showMessageDialog(null,"Request should be InProcess", "Warining", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Request should be InProcess", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         if(organization instanceof MedicalFacilities){
