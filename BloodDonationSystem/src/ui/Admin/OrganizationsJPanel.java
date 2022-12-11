@@ -65,8 +65,6 @@ public class OrganizationsJPanel extends javax.swing.JPanel {
                  cbOrganizationType.addItem(type);}
                  
              }
-                
-            
         }
     }
 
