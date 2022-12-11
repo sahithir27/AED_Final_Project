@@ -23,7 +23,7 @@ public class DonorsDirectory {
     
     public Donors createDonor(int id, String donorName, int age, String gender, String bloodGroup, String contact,
             String address, String sign, String email, 
-            String emergencyPOC, String emergencyPOC_Num, boolean isOrganAvailable){
+            String emergencyPOC, String emergencyPOC_Num, boolean isBloodAvailable){
         Donors donor = new Donors();
         donor.setDonorId(id);
         donor.setDonorName(donorName);
