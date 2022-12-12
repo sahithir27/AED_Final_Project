@@ -121,7 +121,7 @@ public class PhysicianJPanel extends javax.swing.JPanel {
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 183, 210));
-        lblTitle.setText("Therapist Dashboard");
+        lblTitle.setText("Physician Dashboard");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Therapy/Therapy.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");

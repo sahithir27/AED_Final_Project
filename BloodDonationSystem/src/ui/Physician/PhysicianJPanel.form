@@ -117,7 +117,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="d2" green="b7" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Therapist Dashboard"/>
+        <Property name="text" type="java.lang.String" value="Physician Dashboard"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">

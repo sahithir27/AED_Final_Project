@@ -269,7 +269,7 @@ public class AdminsJPanel extends javax.swing.JPanel {
                                 .addGap(148, 148, 148)))
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(205, 205, 205)
+                        .addGap(209, 209, 209)
                         .addComponent(jLabel6)))
                 .addContainerGap(53, Short.MAX_VALUE))
         );
