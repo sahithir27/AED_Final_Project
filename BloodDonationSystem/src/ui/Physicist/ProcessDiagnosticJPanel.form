@@ -18,56 +18,60 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnBack" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="tfResult" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfAntibodies" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfSurvival" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfBloodtyping" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblWbcCount" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfRandom1" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfRandom2" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfRandom3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="tfResultCommentVal" min="-2" pref="200" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="cbWhiteBloodCells" min="-2" pref="120" max="-2" attributes="0"/>
-                          <Component id="cbReactiveAntibodies" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbSurvivalCapability" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbBloodTyping" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbRandomOne" min="-2" pref="200" max="-2" attributes="0"/>
-                          <Component id="cbRandomTwo" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="tfResult" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfAntibodies" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfSurvival" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfBloodtyping" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblWbcCount" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfRandom1" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfRandom2" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfRandom3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="91" max="32767" attributes="0"/>
-                      <Component id="jLabel2" min="-2" pref="352" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="tfResultCommentVal" min="-2" pref="200" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="cbRandomThree" min="-2" pref="200" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="cbWhiteBloodCells" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <Component id="cbReactiveAntibodies" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbSurvivalCapability" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbBloodTyping" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbRandomOne" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="cbRandomTwo" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="63" max="32767" attributes="0"/>
+                              <Component id="jLabel2" min="-2" pref="352" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="cbRandomThree" min="-2" pref="200" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="btnBack" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                              <Component id="btnGenerateResult" min="-2" pref="201" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="btnGenerateResult" min="-2" pref="201" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="385" max="-2" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
                   <Component id="lblLabTest" min="-2" pref="768" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="17" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -127,15 +131,15 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnGenerateResult" min="-2" pref="31" max="-2" attributes="0"/>
-              <EmptySpace pref="510" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lblLabTest" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="1000" max="32767" attributes="0"/>
+                  <EmptySpace pref="511" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>

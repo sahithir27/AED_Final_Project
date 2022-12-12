@@ -258,9 +258,16 @@ public class DonorRegistrationJPanel extends javax.swing.JPanel {
         lblBloodAvailable.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         lblBloodAvailable.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblBloodAvailable.setText("Is Blood available now:");
+
         radBloodAvailableNowYes.setBackground(new java.awt.Color(255, 255, 255));
         radBloodAvailableNowYes.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         radBloodAvailableNowYes.setText("Yes");
+        radBloodAvailableNowYes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radOrganAvailableNowYesActionPerformed(evt);
+            }
+        });
+
         radBloodAvailableNo.setBackground(new java.awt.Color(255, 255, 255));
         radBloodAvailableNo.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         radBloodAvailableNo.setText("No");
@@ -437,7 +444,7 @@ public class DonorRegistrationJPanel extends javax.swing.JPanel {
                     .addComponent(tfPOCContact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(btnRegisterDonor, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(262, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

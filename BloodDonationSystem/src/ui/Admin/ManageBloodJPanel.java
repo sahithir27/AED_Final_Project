@@ -88,8 +88,6 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
     }
     
     private void populateJTableData() {
-       
-
         DefaultTableModel model = (DefaultTableModel) tblBloodworkRequests.getModel();
          model.setRowCount(0);
          for(Network n: ecoSystem.getNetworkList()){
@@ -103,22 +101,19 @@ public class ManageBloodJPanel extends javax.swing.JPanel {
                       break;
                     }
                     for(WorkRequest wr: enterprise.getWorkQueue().getWorkRequestList()){
-                        System.out.println("I am outside");
                         if(wr.getStatus().equalsIgnoreCase("procurement requested") ||
                                 wr.getStatus().equalsIgnoreCase("work started")||
                                 wr.getStatus().equalsIgnoreCase("Assigned") ||
                                 wr.getStatus().equalsIgnoreCase("InProcess")||
                                 wr.getStatus()==null|| wr.getStatus().equalsIgnoreCase("Completed")){
-                            System.out.println("I am here bro");
                             if(wr instanceof BloodProcureWorkRequest){
-                                System.out.println("I am inside");
                             BloodProcureWorkRequest bloodProcurementWorkRequest = (BloodProcureWorkRequest)wr;
 //                            String a ="";
 //                            for( String s: bloodProcurementWorkRequest.getListOfBloodTypes()){
 //                                a= s+";"+a;
 //                            }
                             Object[] row = new Object[6];
-                            row[0] = bloodProcurementWorkRequest;
+                            row[0] = bloodProcurementWorkRequest.getPatient().getPatientId();
                             row[1] = bloodProcurementWorkRequest.getPatient().getPatientName();
                             row[2] = bloodProcurementWorkRequest.getListOfBloodTypes().get(0);
                             row[3] = bloodProcurementWorkRequest.getPatient().getDoctor();

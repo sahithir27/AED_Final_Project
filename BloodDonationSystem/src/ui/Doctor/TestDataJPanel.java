@@ -132,7 +132,7 @@ public class TestDataJPanel extends javax.swing.JPanel {
                 .addComponent(lblReport)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
+                .addGap(29, 29, 29)
                 .addComponent(btnDone)
                 .addContainerGap())
         );

@@ -69,10 +69,6 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
                             //System.out.println("BloodProcureWorkRequest*****");
                             if(workRequest instanceof BloodProcureWorkRequest){
                                 BloodProcureWorkRequest bloodProcureWorkRequest = (BloodProcureWorkRequest)workRequest;
-//                                String bloodTypesString = "";
-//                                for(String s: bloodProcureWorkRequest.getListOfBloodTypes()){
-//                                    //bloodTypesString = s+";"+bloodTypesString;
-//                                }
                                 Object[] row = new Object[6];
                                 row[0] = bloodProcureWorkRequest;
                                 row[1] = bloodProcureWorkRequest.getStatus();
@@ -87,31 +83,6 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
                             }
                         }
                     }
-//                    for(WorkRequest wr: e.getWorkQueue().getWorkRequestList()){
-//                        
-//                        if( wr.getStatus().equals("Assigned")|| 
-//                                wr.getStatus().equals("InProcess")|| 
-//                                wr.getStatus().equals("Completed")){
-//                            if(wr instanceof BloodProcureWorkRequest){
-//                            BloodProcureWorkRequest opr = (BloodProcureWorkRequest)wr;
-//                            
-//                            String a ="";
-//                            for( String s: opr.getListOfBloodTypes()){
-//                                a= s+":"+a;
-//                            }
-//                            Object[] row = new Object[80];
-//                        row[0]= opr;
-//                        row[1] = opr.getMessage();
-//                        
-//                        row[1] = opr.getStatus();
-//                        row[2] = a;
-//                        
-//                        row[4] = opr.getPatient().getDoctor();
-//                        model.addRow(row);
-//                        }
-//                        }
-//
-//                    }
                 }
             }
             }
@@ -143,7 +114,7 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Patient", "Status", "Blood", "Patient", "Doctor"
+                "Patient Object", "Status", "Blood", "Patient Name", "Doctor"
             }
         ));
         tbl_work_request.setSelectionBackground(new java.awt.Color(255, 153, 153));
@@ -191,14 +162,14 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(262, 262, 262)
+                        .addGap(234, 234, 234)
                         .addComponent(btnInProcess, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(95, 95, 95)
+                        .addGap(18, 18, 18)
                         .addComponent(btnCompleted, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(94, 94, 94)
+                        .addGap(25, 25, 25)
                         .addComponent(jLabel1)))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(163, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,13 +178,13 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
                 .addComponent(lblDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnInProcess, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCompleted, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

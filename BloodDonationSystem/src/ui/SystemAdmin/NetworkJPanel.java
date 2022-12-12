@@ -74,7 +74,6 @@ public class NetworkJPanel extends javax.swing.JPanel {
         lblCitiesPresentInNetwork = new javax.swing.JLabel();
         lblCityToNetwork = new javax.swing.JLabel();
         btnAddCity = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         tfCityName = new javax.swing.JTextField();
         lblCityName = new javax.swing.JLabel();
 
@@ -174,9 +173,6 @@ public class NetworkJPanel extends javax.swing.JPanel {
                             .addComponent(lblCitiesPresentInNetwork)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,9 +195,7 @@ public class NetworkJPanel extends javax.swing.JPanel {
                         .addComponent(lblCitiesPresentInNetwork)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(89, 89, 89)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(168, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -245,7 +239,6 @@ public class NetworkJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddCity;
     private javax.swing.JButton btnBack;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCitiesPresentInNetwork;
     private javax.swing.JLabel lblCityName;

@@ -43,7 +43,7 @@ public abstract class Enterprise extends Organization{
         return enterpriseType;
     }
 
-    public void setenterpriseType(EnterpriseType eType) {
+    public void setenterpriseType(EnterpriseType enterpriseType) {
         this.enterpriseType = enterpriseType;
     }
     

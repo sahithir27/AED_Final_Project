@@ -190,11 +190,12 @@ public class DoctorJPanel extends javax.swing.JPanel {
         chk_ABN = new javax.swing.JCheckBox();
         chk_OP = new javax.swing.JCheckBox();
         chk_ON = new javax.swing.JCheckBox();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblWorkRequest = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblBloodRequest = new javax.swing.JTable();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblWorkRequest = new javax.swing.JTable();
+        lbl_list_of_patients = new javax.swing.JLabel();
 
         btnRequestBlood.setBackground(new java.awt.Color(0, 183, 210));
         btnRequestBlood.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
@@ -205,12 +206,10 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 btnRequestBloodActionPerformed(evt);
             }
         });
-        add(btnRequestBlood);
 
         lblSelectPatient.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         lblSelectPatient.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblSelectPatient.setText("Select Patient:");
-        add(lblSelectPatient);
 
         cbPatients.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         cbPatients.setForeground(new java.awt.Color(255, 0, 51));
@@ -219,17 +218,14 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 cbPatientsActionPerformed(evt);
             }
         });
-        add(cbPatients);
 
         lblAge.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         lblAge.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblAge.setText("Age:");
-        add(lblAge);
 
         lblName1.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         lblName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblName1.setText("Name:");
-        add(lblName1);
 
         btnViewReport.setBackground(new java.awt.Color(0, 183, 210));
         btnViewReport.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
@@ -240,19 +236,21 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 btnViewReportActionPerformed(evt);
             }
         });
-        add(btnViewReport);
 
         lblDashboard.setBackground(new java.awt.Color(255, 255, 255));
         lblDashboard.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
         lblDashboard.setForeground(new java.awt.Color(0, 183, 210));
         lblDashboard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDashboard.setText("DOCTOR DASHBOARD");
-        add(lblDashboard);
 
         txtAge.setEditable(false);
         txtAge.setBackground(new java.awt.Color(255, 255, 255));
         txtAge.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        add(txtAge);
+        txtAge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAgeActionPerformed(evt);
+            }
+        });
 
         txtName.setEditable(false);
         txtName.setBackground(new java.awt.Color(255, 255, 255));
@@ -262,7 +260,6 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 txtNameActionPerformed(evt);
             }
         });
-        add(txtName);
 
         btnView.setBackground(new java.awt.Color(0, 183, 210));
         btnView.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
@@ -273,15 +270,12 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 btnViewActionPerformed(evt);
             }
         });
-        add(btnView);
 
         lblPatientsList.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
-        add(lblPatientsList);
 
         lblBlood.setBackground(new java.awt.Color(255, 255, 255));
         lblBlood.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
         lblBlood.setText("Your Patients waiting for Blood");
-        add(lblBlood);
 
         btnNotifyBlood.setBackground(new java.awt.Color(0, 183, 210));
         btnNotifyBlood.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
@@ -292,7 +286,6 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 btnNotifyBloodActionPerformed(evt);
             }
         });
-        add(btnNotifyBlood);
 
         btnOrderTest.setBackground(new java.awt.Color(0, 183, 210));
         btnOrderTest.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
@@ -303,7 +296,6 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 btnOrderTestActionPerformed(evt);
             }
         });
-        add(btnOrderTest);
 
         btnPhysician.setBackground(new java.awt.Color(0, 183, 210));
         btnPhysician.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
@@ -314,75 +306,82 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 btnPhysicianActionPerformed(evt);
             }
         });
-        add(btnPhysician);
 
         chk_AP.setBackground(new java.awt.Color(0, 183, 210));
-        chk_AP.setForeground(new java.awt.Color(255, 255, 255));
         chk_AP.setText("A+");
-        add(chk_AP);
 
         chk_BN.setBackground(new java.awt.Color(0, 183, 210));
-        chk_BN.setForeground(new java.awt.Color(255, 255, 255));
         chk_BN.setText("B-");
         chk_BN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chk_BNActionPerformed(evt);
             }
         });
-        add(chk_BN);
 
         chk_AN.setBackground(new java.awt.Color(0, 183, 210));
-        chk_AN.setForeground(new java.awt.Color(255, 255, 255));
         chk_AN.setText("A-");
-        add(chk_AN);
 
         chk_BP.setBackground(new java.awt.Color(0, 183, 210));
-        chk_BP.setForeground(new java.awt.Color(255, 255, 255));
         chk_BP.setText("B+");
-        add(chk_BP);
 
         chk_ABP.setBackground(new java.awt.Color(0, 183, 210));
-        chk_ABP.setForeground(new java.awt.Color(255, 255, 255));
         chk_ABP.setText("AB+");
         chk_ABP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chk_ABPActionPerformed(evt);
             }
         });
-        add(chk_ABP);
 
         chk_ABN.setBackground(new java.awt.Color(0, 183, 210));
-        chk_ABN.setForeground(new java.awt.Color(255, 255, 255));
         chk_ABN.setText("AB-");
         chk_ABN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chk_ABNActionPerformed(evt);
             }
         });
-        add(chk_ABN);
 
         chk_OP.setBackground(new java.awt.Color(0, 183, 210));
-        chk_OP.setForeground(new java.awt.Color(255, 255, 255));
         chk_OP.setText("O+");
         chk_OP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chk_OPActionPerformed(evt);
             }
         });
-        add(chk_OP);
 
         chk_ON.setBackground(new java.awt.Color(0, 183, 210));
-        chk_ON.setForeground(new java.awt.Color(255, 255, 255));
         chk_ON.setText("O-");
         chk_ON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chk_ONActionPerformed(evt);
             }
         });
-        add(chk_ON);
+
+        tblWorkRequest.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Patient Id", "Patient Name", "Message by Doctor", "Physicist", "Lab Status", "Physician"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tblWorkRequest);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Doctor/Doctor.jpg"))); // NOI18N
-        add(jLabel1);
 
         jScrollPane2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -411,34 +410,133 @@ public class DoctorJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblBloodRequest);
 
-        add(jScrollPane2);
+        lbl_list_of_patients.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        lbl_list_of_patients.setText("List of Old patients and test results");
 
-        tblWorkRequest.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Patient Id", "Patient Name", "Message by Doctor", "Physicist", "Lab Status", "Physician"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(tblWorkRequest);
-
-        add(jScrollPane1);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(5, 5, 5)
+                                .addComponent(lbl_list_of_patients)
+                                .addGap(485, 485, 485))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(btnViewReport)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnRequestBlood)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnPhysician)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnNotifyBlood))
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 736, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lblSelectPatient)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(lblAge)
+                                                .addComponent(lblName1)))
+                                        .addGap(26, 26, 26)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(cbPatients, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(58, 58, 58)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(btnView)
+                                                    .addComponent(lblDashboard)))
+                                            .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(31, 31, 31)
+                                                .addComponent(btnOrderTest)))))
+                                .addGap(15, 15, 15)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 695, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblBlood)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(416, 416, 416)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chk_BP)
+                    .addComponent(chk_AP))
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(chk_BN)
+                        .addGap(18, 18, 18)
+                        .addComponent(chk_OP)
+                        .addGap(18, 18, 18)
+                        .addComponent(chk_ON))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(chk_AN)
+                        .addGap(18, 18, 18)
+                        .addComponent(chk_ABP)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(chk_ABN))))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(116, 116, 116)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblSelectPatient)
+                                    .addComponent(cbPatients, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(28, 28, 28)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblName1)
+                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(lblDashboard)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnOrderTest)
+                                .addGap(2, 2, 2)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblAge)
+                            .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addComponent(lbl_list_of_patients)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnViewReport)
+                            .addComponent(btnRequestBlood)
+                            .addComponent(btnPhysician)
+                            .addComponent(btnNotifyBlood)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(126, 126, 126)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chk_AN)
+                    .addComponent(chk_AP)
+                    .addComponent(chk_ABP, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(chk_ABN))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chk_BN)
+                    .addComponent(chk_BP)
+                    .addComponent(chk_OP)
+                    .addComponent(chk_ON))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addComponent(lblBlood)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOrderTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderTestActionPerformed
@@ -522,7 +620,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 lblName1.setVisible(true);
                 txtName.setVisible(true);
                 txtAge.setVisible(true);
-                txtAge.setText(p.getPatientName());
+                txtAge.setText(p.getPatientAge());
                 txtName.setText(p.getPatientName());
                 txtAge.setEnabled(false);
                 txtName.setEnabled(false);
@@ -685,6 +783,10 @@ public class DoctorJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_chk_ONActionPerformed
 
+    private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAgeActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNotifyBlood;
@@ -712,6 +814,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblName1;
     private javax.swing.JLabel lblPatientsList;
     private javax.swing.JLabel lblSelectPatient;
+    private javax.swing.JLabel lbl_list_of_patients;
     private javax.swing.JTable tblBloodRequest;
     private javax.swing.JTable tblWorkRequest;
     private javax.swing.JTextField txtAge;
